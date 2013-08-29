@@ -1,0 +1,279 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; }
+code > span.dt { color: #902000; }
+code > span.dv { color: #40a070; }
+code > span.bn { color: #40a070; }
+code > span.fl { color: #40a070; }
+code > span.ch { color: #4070a0; }
+code > span.st { color: #4070a0; }
+code > span.co { color: #60a0b0; font-style: italic; }
+code > span.ot { color: #007020; }
+code > span.al { color: #ff0000; font-weight: bold; }
+code > span.fu { color: #06287e; }
+code > span.er { color: #ff0000; font-weight: bold; }
+  </style>
+  <link rel="stylesheet" href="../css/pmag.css" type="text/css" />
+</head>
+<body>
+<div id="header_wrap">
+   <h1><a href="https://www.facebook.com/groups/programmerMagazine">程式人雜誌</a> <sub> --  <a href="https://dl.dropbox.com/u/101584453/pmag/201309/htm/home.html">2013 年 9 月號</a> (開放公益出版品)</sub></h1>
+</div>
+<div id="content">
+<div id="TOC">
+<ul>
+<li><a href="#r-講題分享-利用-r-和-shiny-製作網頁應用-作者taiwan-r-user-group">R 講題分享 – 利用 R 和 Shiny 製作網頁應用 (作者：Taiwan R User Group)</a></li>
+</ul>
+</div>
+<h2 id="r-講題分享-利用-r-和-shiny-製作網頁應用-作者taiwan-r-user-group"><a href="#r-講題分享-利用-r-和-shiny-製作網頁應用-作者taiwan-r-user-group">R 講題分享 – 利用 R 和 Shiny 製作網頁應用 (作者：Taiwan R User Group)</a></h2>
+<h3 id="簡介shiny"><a href="#簡介shiny">簡介Shiny</a></h3>
+<p>大家好，這篇文章要跟大家分享的是Rstudio這間公司在2012年釋出的R 套件: <strong>Shiny</strong>。</p>
+<p>Shiny的設計目標，是希望讓不懂網頁技術的R使用者，可以用最短的時間，將他們的分析結果呈現在網站上和使用者互動。而且，透過Shiny，開發者只需要懂R的語法，就可以寫網頁了！（報告學長，完全不用學HTML，完全不用學javascript）</p>
+<p>推出至今，在R社群內獲得廣大的迴響。在這篇文章中，我們將介紹近期最火紅的R套件: Shiny，並希望讀者能在閱讀後，獲得使用Shiny來建立網頁應用的能力，以更多元的方式呈現分析結果。</p>
+<h3 id="hello-shiny"><a href="#hello-shiny">Hello Shiny</a></h3>
+<p>使用的第一步，當然是先到CRAN下載Shiny來安裝，並且試著執行範例(請一定要在本機上執行，在遠端伺服器上執行會出錯):</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(shiny)
+<span class="kw">runExample</span>(<span class="st">&quot;01_hello&quot;</span>)</code></pre>
+<p>執行後會自動打開預設瀏覽器，並看到如圖一顯示的網頁。讀者可以試著拉拉看左上角的拉條(slide bar)來調整數量，右邊的圖片會隨著更新！這就是Shiny所強調的互動式網頁應用。</p>
+<div class="figure">
+<img src="../img/01_hello.png" alt="圖一" /><p class="caption">圖一</p>
+</div>
+<p>Shiny也提供網頁模版供開發者使用。圖一中使用的模版<code>pageWithSidebar</code>，將網頁切割為以下三個部份： - 標題，也就是 <em>Hello Shiny!</em> - 控制面板(輸入)，左上角的灰色區塊 - 顯示面板(輸出)，右半邊的圖片</p>
+<p><code>runExample(&quot;01_hello&quot;)</code>的效果等同於在目錄下建立以下兩個檔案:</p>
+<p>ui.R:</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(shiny)
+
+<span class="co"># Define UI for application that plots random distributions </span>
+<span class="kw">shinyUI</span>(<span class="kw">pageWithSidebar</span>(
+
+  <span class="co"># Application title</span>
+  <span class="kw">headerPanel</span>(<span class="st">&quot;Hello Shiny!&quot;</span>),
+
+  <span class="co"># Sidebar with a slider input for number of observations</span>
+  <span class="kw">sidebarPanel</span>(
+    <span class="kw">sliderInput</span>(<span class="st">&quot;obs&quot;</span>, 
+                <span class="st">&quot;Number of observations:&quot;</span>, 
+                <span class="dt">min =</span> <span class="dv">1</span>,
+                <span class="dt">max =</span> <span class="dv">1000</span>, 
+                <span class="dt">value =</span> <span class="dv">500</span>)
+  ),
+
+  <span class="co"># Show a plot of the generated distribution</span>
+  <span class="kw">mainPanel</span>(
+    <span class="kw">plotOutput</span>(<span class="st">&quot;distPlot&quot;</span>)
+  )
+))</code></pre>
+<p>server.R:</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(shiny)
+
+<span class="co"># Define server logic required to generate and plot a random distribution</span>
+<span class="kw">shinyServer</span>(function(input, output) {
+    
+    <span class="co"># Expression that generates a plot of the distribution. The expression is</span>
+    <span class="co"># wrapped in a call to renderPlot to indicate that:</span>
+    <span class="co"># </span>
+    <span class="co"># 1) It is &#39;reactive&#39; and therefore should be automatically re-executed</span>
+    <span class="co"># when inputs change 2) Its output type is a plot</span>
+    output$distPlot &lt;-<span class="st"> </span><span class="kw">renderPlot</span>({
+        
+        <span class="co"># generate an rnorm distribution and plot it</span>
+        dist &lt;-<span class="st"> </span><span class="kw">rnorm</span>(input$obs)
+        <span class="kw">hist</span>(dist)
+    })
+})</code></pre>
+<p>接著再執行:</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">runApp</span>()</code></pre>
+<p>以下本文將以「Hello Shiny!」為例介紹Shiny的架構。</p>
+<h3 id="shiny的架構"><a href="#shiny的架構">Shiny的架構</a></h3>
+<p>所有Shiny的網頁應用，都可以切割成兩個部份：</p>
+<ol style="list-style-type: decimal">
+<li>使用者在瀏覽器看到的網頁，這部份的程式碼放在ui.R。實際上網頁的呈現，以及互動式的效果，都是由瀏覽器所執行。</li>
+<li>背景執行的R，這部份的程式碼放在server.R。這裡的R 是由開發者於佈署網頁應用時就啟動的，並靜靜地等待瀏覽器傳送參數。</li>
+</ol>
+<p>瀏覽器和R 之間，則是透過網路來溝通。</p>
+<div class="figure">
+<img src="../img/follow.png" alt="圖二" /><p class="caption">圖二</p>
+</div>
+<p>當使用者打開瀏覽器，連接到Shiny應用程式時，R 會依照ui.R中的程式碼，產生出使用者看到的網頁內容，並在瀏覽器中顯示。</p>
+<p>使用者在控制面板更改參數之後，瀏覽器就會將新的參數傳遞給背景執行的R，也就是server.R 。R 就會依照參數和server.R中的程式碼， 產生對應的物件。這物件可能是圖片、報表，甚至是其他的網頁元件。最後server.R會將物件回傳到瀏覽器，以ui.R定義的方式呈現給使用者。 這就是互動式網頁背後的原理。</p>
+<h4 id="ui.r"><a href="#ui.r">ui.R</a></h4>
+<p>當使用者打開網頁之後，R 會將<code>shinyUI</code>的參數轉換成瀏覽器中的網頁元件。<code>shinyUI</code>的參數都對應到一個網頁元件，而這些物件的參數又分別對應到元件中的元件，形成一種巢狀結構。</p>
+<p>第一個元件: <code>pageWithSidebar</code>提供了預設的模版，裏面包含三個參數:</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">str</span>(pageWithSidebar)</code></pre>
+<pre><code>## function (headerPanel, sidebarPanel, mainPanel)</code></pre>
+<ul>
+<li><code>headerPanel</code>對應到上圖中標題部份的網頁元件，也就是 <em>Hello Shiny!</em></li>
+<li><code>sidebarPanel</code>對應著控制面板(輸入)部份的網頁元件，也就是左上角的灰色區塊</li>
+<li><code>mainPanel</code>對應著顯示面板(輸出)部份的網頁元件，也就是右半邊的圖片</li>
+</ul>
+<p>這裡的<code>headerPanel</code>是比較簡單的，我們只要把要當標題的字串物件傳入，就可以設定網頁的標題了。</p>
+<p><code>sidebarPenl</code>和<code>mainPanel</code>中則可以再放入其他的網頁元件。</p>
+<h5 id="sidebarpanel"><a href="#sidebarpanel"><code>sidebarPanel</code></a></h5>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">str</span>(sidebarPanel)</code></pre>
+<pre><code>## function (...)</code></pre>
+<p><code>sidebarPanel</code>函數接受任意數量的參數，而每一個參數就是顯示在網頁上控制面板的元件。</p>
+<p>Shiny提供了幾乎所有基本的網頁輸入(Input)元件。上圖中使用的<code>sliderInput</code>元件，是供使用者透過拉條(slide bar)來輸入數值參數。</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">str</span>(sliderInput)</code></pre>
+<pre><code>## function (inputId, label, min, max, value, step = NULL, round = FALSE, 
+##     format = &quot;#,##0.#####&quot;, locale = &quot;us&quot;, ticks = TRUE, animate = FALSE)</code></pre>
+<p><code>inputId</code>非常重要，是瀏覽器和server.R溝通的依據。請讀者先記得，上圖範例中的<code>sliderInput</code>元件的<code>inputId</code>叫作<code>&quot;obs&quot;</code>，之後會在server.R中看到對應的<code>input$obs</code>。</p>
+<p>其他的參數，則會依據不同的輸入元件而有不同的意義。請讀者再參閱Shiny的說明文件，在此就不一一解釋。</p>
+<h5 id="mainpanel"><a href="#mainpanel"><code>mainPanel</code></a></h5>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">str</span>(mainPanel)</code></pre>
+<pre><code>## function (...)</code></pre>
+<p><code>mainPanel</code>函數也接受任意數量的參數，而每一個參數就是在網頁上顯示面板的元件。</p>
+<p>Shiny也提供數種不同的輸出元件，從基本的文字輸出，到圖、表、HTML元件和javascript。圖一中的<code>plotOutput</code>就是輸出圖片的元件。</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">str</span>(plotOutput)</code></pre>
+<pre><code>## function (outputId, width = &quot;100%&quot;, height = &quot;400px&quot;)</code></pre>
+<p>這裡的<code>outputId</code>非常重要，也是瀏覽器和server.R溝通的依據。請讀者先記得，上圖範例中的<code>plotOutput</code>元件的<code>outputId</code>叫作<code>&quot;distPlot&quot;</code>。之後會在server.R中看到對應的<code>output$distPlot</code>。</p>
+<h4 id="server.r"><a href="#server.r">server.R</a></h4>
+<p>server.R定義了背景執行的R 如何處理瀏覽器傳遞來的參數，以及如何產生對應的R 物件。為了建立互動式的效果，server.R和一般R 的程式是不同的。</p>
+<p>server.R 是一種依照事件驅動(event driven)的架構來執行的程式。當開發者在伺服器上啟動Shiny時，R會先執行<code>shinyServer</code>之前的程式碼，再進入等待狀態。</p>
+<h5 id="事件驅動event-driven"><a href="#事件驅動event-driven">事件驅動(event driven)</a></h5>
+<p><code>shinyServer</code>中的程式碼，會等使用者打開網頁，並待瀏覽器傳送參數給R 之後，R才會依照<code>reactive</code>或是<code>renderXXX</code>等函數中定義的方式來處理這些參數，並且產生對應的物件。R 會再回傳給瀏覽器，並依照ui.R所定義的方式呈現。R 會再回到等待狀態，直到收到下一組參數。</p>
+<p>收到參數，就是一個「事件」，而所有的動作都是在收到事件後才會發生的。所以程式碼的執行是沒有一定的順序。這就是「事件驅動」架構的原理。</p>
+<h5 id="shinyserver"><a href="#shinyserver"><code>shinyServer</code></a></h5>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">str</span>(shinyServer)</code></pre>
+<pre><code>## function (func)</code></pre>
+<p><code>shinyServer</code>只有一個函數參數: <code>func</code>。它的長相必須是:</p>
+<pre class="sourceCode r"><code class="sourceCode r">function(input, output) { ... }</code></pre>
+<p><code>input</code>代表ui.R送給server.R的物件；<code>output</code>代表server.R送給ui.R的物件。</p>
+<p>Shiny幫開發者處理<code>input</code>和<code>output</code>的傳遞，所以開發者只需要專注於設計ui.R呈現的功能，和server.R處理參數以及產生回應的功能即可。</p>
+<h5 id="訊息的傳遞"><a href="#訊息的傳遞">訊息的傳遞</a></h5>
+<p><code>func</code>的參數<code>input</code>就是將ui.R傳遞回來的參數打包好的R物件，開發者只要透過<code>input$obs</code>就可以讀取使用者於控制面板中，<code>inputId</code>為<code>&quot;obs&quot;</code>的元件內的參數。</p>
+<p><code>func</code>的參數<code>output</code>則是會被送回給ui.R的物件。而<code>output$distPlot</code>這個物件，則會由<code>outputId</code>為<code>&quot;distPlot&quot;</code>的網頁元件來處理。</p>
+<h5 id="生成回傳物件應用的核心"><a href="#生成回傳物件應用的核心">生成回傳物件(應用的核心)</a></h5>
+<p>開發者利用如</p>
+<pre class="sourceCode r"><code class="sourceCode r">output$distPlot &lt;-<span class="st"> </span><span class="kw">renderPlot</span>({...})</code></pre>
+<p>的方式定義產生回傳物件的動作。以Hello Shiny!為例:</p>
+<pre class="sourceCode r"><code class="sourceCode r">output$distPlot &lt;-<span class="st"> </span><span class="kw">renderPlot</span>({
+    dist &lt;-<span class="st"> </span><span class="kw">rnorm</span>(input$obs)
+    <span class="kw">hist</span>(dist)
+})</code></pre>
+<p>當偵測到<code>input$obs</code>改變之後，server.R就會依照<code>input$obs</code>的值重新繪製長條圖，再將圖片透過<code>renderPlot</code>函數，傳遞給瀏覽器。瀏覽器再透過ui.R中的定義，使用<code>outputId</code>為<code>&quot;distPlot&quot;</code>的網頁元件呈現給使用者。在Hello Shiny!的例子中，就是<code>plotOutput(&quot;distPlot&quot;)</code>所對應的網頁元件，也就是使用者在圖一右半邊看到的長條圖。</p>
+<p>繪圖的功能置於<code>renderPlot({...})</code>是重要的，因為這樣才會在事件發生(接收到ui.R的參數)後，重新執行繪圖功能，並更新網頁上的圖。Shiny互動式的功能就是透過這個機制達成的。開發者必須要分清楚哪些程式碼是靜態的，只需要執行一次(例如固定資料的匯入)，哪些程式碼是動態的，必須要放入<code>reactive</code>或<code>renderXXX</code>之間。</p>
+<h3 id="細解hello-shiny"><a href="#細解hello-shiny">細解Hello Shiny</a></h3>
+<p>對於整個Shiny的架構有初步的理解之後，我們再仔細的講解Shiny處理<code>runExample(&quot;01_hello&quot;)</code>的流程。</p>
+<ol style="list-style-type: decimal">
+<li>執行<code>shinyUI</code>之前的程式碼</li>
+<li>將頁面區隔為三大區塊: <code>headerPanel</code>、<code>sidebarPanel</code>和<code>mainPanel</code></li>
+<li>依照各Panel的參數顯示網頁元件，這時候<code>mainPanel</code>中的<code>plotOutput(&quot;distPlot&quot;)</code>還沒有物件可以呈獻。</li>
+<li><code>sidebarPanel</code>中的<code>sliderInput</code>傳送預設參數給server.R</li>
+<li>啟動server.R，執行<code>shinyServer</code>之前的程式碼</li>
+<li><p>執行<code>renderPlot({...})</code>之間的程式碼，也就是:</p>
+<pre class="sourceCode r"><code class="sourceCode r">dist &lt;-<span class="st"> </span><span class="kw">rnorm</span>(input$obs)
+<span class="kw">hist</span>(dist)</code></pre>
+依照<code>sliderInput</code>設定的參數，產生常態分佈的樣本，並且繪製長條圖(histogram)。</li>
+<li>將產生的長條圖放入<code>output$distPlot</code>之中，回傳到瀏覽器</li>
+<li><p>瀏覽器將<code>output$distPlot</code>的物件呈現於<code>plotOutput(&quot;distPlot&quot;)</code>之中</p></li>
+</ol>
+<p>若使用者於瀏覽器更動<code>sliderInput</code>，那整個網頁應用就會從步驟4再跑一次，以實現互動式的效果。</p>
+<h3 id="網頁元件範例"><a href="#網頁元件範例">網頁元件範例</a></h3>
+<p>Shiny 中已經提供了各種基礎網頁元件。還有一個叫 <em>shinyExt</em> 的R 套件提供更多的元件。</p>
+<p>本篇文章限於篇幅，無法一一講解，這部份只能請讀者依照自己的需求再去閱讀Shiny的套件說明。</p>
+<h4 id="輸入元件範例"><a href="#輸入元件範例">輸入元件範例</a></h4>
+<ul>
+<li><img src="../img/input_01.png" /></li>
+<li><img src="../img/input_02.png" /></li>
+<li><img src="../img/input_03.png" title="fig:" /></li>
+</ul>
+<h4 id="輸出元件範例"><a href="#輸出元件範例">輸出元件範例</a></h4>
+<ul>
+<li><img src="../img/output_01.png" /></li>
+<li><img src="../img/output_02.png" /></li>
+<li><img src="../img/output_03.png" /></li>
+<li><img src="../img/output_04.png" title="fig:" /></li>
+</ul>
+<h3 id="shiny網頁應用範例"><a href="#shiny網頁應用範例">Shiny網頁應用範例</a></h3>
+<p>使用者可以到 <a href="http://www.rstudio.com/shiny/showcase/">http://www.rstudio.com/shiny/showcase/</a> 觀看其他開發者所開發的 Shiny 網頁應用。</p>
+<p>如:</p>
+<ul>
+<li><img src="../img/ex-app1.png" /></li>
+<li><img src="../img/ex-app2.png" /></li>
+<li><img src="../img/ex-app3.png" /></li>
+<li><img src="../img/ex-app4.png" /></li>
+<li><img src="../img/ex-app5.png" /></li>
+<li><img src="../img/ex-app6.png" title="fig:" /></li>
+</ul>
+<h3 id="開發建議"><a href="#開發建議">開發建議</a></h3>
+<p>讀者如果想試著開發Shiny應用，我們有以下的tips供讀者參考:</p>
+<ul>
+<li>先從 <a href="http://rstudio.github.io/shiny/tutorial/">http://rstudio.github.io/shiny/tutorial/</a> 中找到符合需求的模版</li>
+<li>把其他套件的載入，或資料源的設定，放置於<code>shinyUI</code>和<code>shinyServer</code>之前，如資料庫連線設定</li>
+<li>先從ui.R開始建立使用者介面</li>
+<li>網頁沒有回應，通常是ui.R有語法錯誤，<code>runApp</code>下方應該有錯誤訊息</li>
+<li>在server.R中插入程式的核心演算法、分析方法。請務必理解server.R的架構，並且將功能正確的分為靜態的部份和動態的部份，才能將程式碼放置在正確的位置。靜態的部份放置於<code>shinyServer</code>之前，動態的部份會放在<code>reactive</code>，或對應的<code>renderXXX</code>裡</li>
+<li>網頁有出現，但是<code>mainPanel</code>出現紅色錯誤訊息，代表server.R有錯誤</li>
+<li>在server.R中插入<code>browser()</code>後，在<code>runApp</code>之後可以在執行相關事件時暫停在<code>browser</code>，開發者可以很方便的進行除錯</li>
+</ul>
+<p>讀者如果對於基本的Shiny功能不滿意，可以在學習HTML/CSS/javascript後擴充Shiny網頁應用的功能。</p>
+<h3 id="佈署網頁應用"><a href="#佈署網頁應用">佈署網頁應用</a></h3>
+<p>通常開發者撰寫出來的Shiny網頁應用可以依照以下方法來讓其他使用者使用:</p>
+<h4 id="直接傳遞相關檔案"><a href="#直接傳遞相關檔案">直接傳遞相關檔案</a></h4>
+<p>開發者可以將撰寫好程式e-mail給使用者。</p>
+<p>當使用者拿到相關檔案之後，仍需要有安裝R和Shiny，利用<code>runApp</code>來使用。</p>
+<h4 id="利用github"><a href="#利用github">利用Github</a></h4>
+<p>開發者可以將撰寫好的ui.R和server.R放到github或gist。使用者仍需安裝R和Shiny，再利用<code>runGist</code>或<code>runGithub</code>來使用。</p>
+<h4 id="rstudio的shiny伺服器"><a href="#rstudio的shiny伺服器">Rstudio的Shiny伺服器</a></h4>
+<p>開發者可以到 <a href="https://rstudio.wufoo.com/forms/shiny-server-beta-program/">https://rstudio.wufoo.com/forms/shiny-server-beta-program/</a> 註冊，之後將撰寫好的ui.R和server.R上傳到Rstudio伺服器上。</p>
+<p>使用者不需要安裝R，只需要打開瀏覽器後，連上相關網址就可以使用。</p>
+<h4 id="自行架設shiny伺服器"><a href="#自行架設shiny伺服器">自行架設Shiny伺服器</a></h4>
+<p>請依照 <a href="https://github.com/rstudio/shiny-server">https://github.com/rstudio/shiny-server</a> 的說明建制Shiny伺服器。目前僅提供Linux版本。</p>
+<p>建制完成後，使用者不需要安裝R，只需要打開瀏覽器，連上相關網址就可以使用。</p>
+<h3 id="參考資料"><a href="#參考資料">參考資料</a></h3>
+<ul>
+<li>Rstudio-Shiny 官方網站 <a href="http://www.rstudio.com/shiny/">http://www.rstudio.com/shiny/</a></li>
+</ul>
+<h3 id="作者"><a href="#作者">作者</a></h3>
+<ol style="list-style-type: decimal">
+<li>T.C. Hsieh (<script type="text/javascript">
+<!--
+h='&#x67;&#x6d;&#x61;&#x69;&#108;&#46;&#x63;&#x6f;&#x6d;';a='&#64;';n='&#x65;&#x75;&#108;&#x65;&#114;&#x39;&#54;';e=n+a+h;
+document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'">'+e+'<\/'+'a'+'>');
+// -->
+</script><noscript>&#x65;&#x75;&#108;&#x65;&#114;&#x39;&#54;&#32;&#x61;&#116;&#32;&#x67;&#x6d;&#x61;&#x69;&#108;&#32;&#100;&#x6f;&#116;&#32;&#x63;&#x6f;&#x6d;</noscript>)</li>
+</ol>
+<ul>
+<li>清華統計所博士(2009-2013)，致力於發展沒人懂的統計方法與開發沒人用的統計軟體</li>
+<li>R 相關著作：
+<ul>
+<li>R套件，<a href="http://cran.r-project.org/web/packages/CARE1/index.html">CARE1</a>主要作者</li>
+<li>Shiny應用，<a href="http://glimmer.rstudio.com/tchsieh/inext/">iNEXT-Online</a></li>
+</ul></li>
+<li>研究領域：Statistics, ecology and genetics</li>
+</ul>
+<ol start="2" style="list-style-type: decimal">
+<li>Wush Wu (<script type="text/javascript">
+<!--
+h='&#x67;&#x6d;&#x61;&#x69;&#108;&#46;&#x63;&#x6f;&#x6d;';a='&#64;';n='&#x77;&#x75;&#x73;&#104;&#x39;&#x37;&#56;';e=n+a+h;
+document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'">'+e+'<\/'+'a'+'>');
+// -->
+</script><noscript>&#x77;&#x75;&#x73;&#104;&#x39;&#x37;&#56;&#32;&#x61;&#116;&#32;&#x67;&#x6d;&#x61;&#x69;&#108;&#32;&#100;&#x6f;&#116;&#32;&#x63;&#x6f;&#x6d;</noscript>)</li>
+</ol>
+<ul>
+<li><a href="https://www.facebook.com/Tw.R.User">Taiwan R User Group</a> Organizer</li>
+<li>R 相關著作：
+<ul>
+<li><a href="http://cran.r-project.org/web/packages/RMessenger/index.html">RMessenger</a>的作者</li>
+<li><a href="https://bitbucket.org/wush_iis/rsus">RSUS</a>，這是<a href="http://www.cs.sfu.ca/~jpei/publications/MISQ_ICDE12.pdf">On Shortest Unique Substring Query</a>的實作</li>
+</ul></li>
+<li>研究領域：Large Scale Learning，<a href="http://www.cs.sfu.ca/~jpei/publications/MISQ_ICDE12.pdf">Text Mining</a>和<a href="http://www.cs.sfu.ca/~jpei/publications/Shortest%20Unique%20Substring%20Queries%20ICDE13.pdf">Uncertain Time Series</a></li>
+</ul>
+</div>
+<div id="footer">
+<a href="https://www.facebook.com/groups/programmerMagazine/">程式人雜誌</a> ，採用 <a href="http://creativecommons.org/licenses/by-sa/3.0/tw/ ">創作共用：姓名標示、相同方式分享</a> 授權，歡迎加入 <a href="https://www.facebook.com/groups/programmerMagazine/">雜誌社團</a>
+</div>
+</body>
+</html>

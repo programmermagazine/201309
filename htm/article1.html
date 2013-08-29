@@ -1,0 +1,234 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; }
+code > span.dt { color: #902000; }
+code > span.dv { color: #40a070; }
+code > span.bn { color: #40a070; }
+code > span.fl { color: #40a070; }
+code > span.ch { color: #4070a0; }
+code > span.st { color: #4070a0; }
+code > span.co { color: #60a0b0; font-style: italic; }
+code > span.ot { color: #007020; }
+code > span.al { color: #ff0000; font-weight: bold; }
+code > span.fu { color: #06287e; }
+code > span.er { color: #ff0000; font-weight: bold; }
+  </style>
+  <link rel="stylesheet" href="../css/pmag.css" type="text/css" />
+</head>
+<body>
+<div id="header_wrap">
+   <h1><a href="https://www.facebook.com/groups/programmerMagazine">程式人雜誌</a> <sub> --  <a href="https://dl.dropbox.com/u/101584453/pmag/201309/htm/home.html">2013 年 9 月號</a> (開放公益出版品)</sub></h1>
+</div>
+<div id="content">
+<div id="TOC">
+<ul>
+<li><a href="#arduino入門教學9-在-2x16-lcd-上顯示-hello-world-訊息-作者cooper-maa">Arduino入門教學(9) – 在 2x16 LCD 上顯示 &quot;Hello World&quot; 訊息 (作者：Cooper Maa)</a></li>
+</ul>
+</div>
+<h2 id="arduino入門教學9-在-2x16-lcd-上顯示-hello-world-訊息-作者cooper-maa"><a href="#arduino入門教學9-在-2x16-lcd-上顯示-hello-world-訊息-作者cooper-maa">Arduino入門教學(9) – 在 2x16 LCD 上顯示 &quot;Hello World&quot; 訊息 (作者：Cooper Maa)</a></h2>
+<h3 id="實驗目的"><a href="#實驗目的">實驗目的</a></h3>
+<p>練習使用 HD44780 相容的文字型 LCD(Liquid crystal display)，在 2x16 LCD 上顯示 &quot;Hello World” 訊息。</p>
+<h3 id="x16-lcd-簡介"><a href="#x16-lcd-簡介">2x16 LCD 簡介</a></h3>
+<div class="figure">
+<img src="../img/Arduino_LCD_device1.png" alt="圖片來源: arduino.cc" /><p class="caption">圖片來源: arduino.cc</p>
+</div>
+<p>HD44780 相容的 2x16 LCD 可以顯示兩行訊息，每行 16 個字元，它可以顯示英文字母、希臘字母、標點符號以及數學符號，除了顯示訊息外，它還有其它功能，包括訊息捲動(往左和往右捲動)、顯示游標和 LED背光等。</p>
+<div class="figure">
+<img src="../img/Arduino_LCD_device2.png" alt="圖片來源: LCD 101" /><p class="caption">圖片來源: LCD 101</p>
+</div>
+<p>LCD 總共有 14 支接腳，如果內建背光的話是 16 支，這些腳位的功能整理於下表:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">腳位編號</th>
+<th align="left">名稱</th>
+<th align="left">說明</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">1</td>
+<td align="left">Vss</td>
+<td align="left">接地 (0V)</td>
+</tr>
+<tr class="even">
+<td align="left">2</td>
+<td align="left">Vdd</td>
+<td align="left">電源 (+5V)</td>
+</tr>
+<tr class="odd">
+<td align="left">3</td>
+<td align="left">Vo 或稱 Vee</td>
+<td align="left">對比(0-5V), 可接一顆 1k 電阻，或利可變電阻調整適當的對比</td>
+</tr>
+<tr class="even">
+<td align="left">4</td>
+<td align="left">RS</td>
+<td align="left">Register Select: 1: D0 – D7 當作資料解釋 0: D0 – D7 當作指令解釋</td>
+</tr>
+<tr class="odd">
+<td align="left">5</td>
+<td align="left">R/W</td>
+<td align="left">Read/Write mode: 1: 從 LCD 讀取資料 0: 寫資料到 LCD, 因為很少從 LCD 這端讀取資料，可將此腳位接地以節省 I/O 腳位。</td>
+</tr>
+<tr class="even">
+<td align="left">6</td>
+<td align="left">E</td>
+<td align="left">Enable</td>
+</tr>
+<tr class="odd">
+<td align="left">7</td>
+<td align="left">D0</td>
+<td align="left">Bit 0 LSB</td>
+</tr>
+<tr class="even">
+<td align="left">8</td>
+<td align="left">D1</td>
+<td align="left">Bit 1</td>
+</tr>
+<tr class="odd">
+<td align="left">9</td>
+<td align="left">D2</td>
+<td align="left">Bit 2</td>
+</tr>
+<tr class="even">
+<td align="left">10</td>
+<td align="left">D3</td>
+<td align="left">Bit 3</td>
+</tr>
+<tr class="odd">
+<td align="left">11</td>
+<td align="left">D4</td>
+<td align="left">Bit 4</td>
+</tr>
+<tr class="even">
+<td align="left">12</td>
+<td align="left">D5</td>
+<td align="left">Bit 5</td>
+</tr>
+<tr class="odd">
+<td align="left">13</td>
+<td align="left">D6</td>
+<td align="left">Bit 6</td>
+</tr>
+<tr class="even">
+<td align="left">14</td>
+<td align="left">D7</td>
+<td align="left">Bit 7 MSB</td>
+</tr>
+<tr class="odd">
+<td align="left">15</td>
+<td align="left">A+</td>
+<td align="left">背光(串接 330R 電阻到電源)</td>
+</tr>
+<tr class="even">
+<td align="left">16</td>
+<td align="left">K-</td>
+<td align="left">背光(GND)</td>
+</tr>
+</tbody>
+</table>
+<p>日立 HD44780 相容的 LCD 有 4-bit 和 8-bit 兩種使用模式，使用 4-bit 模式主要的好處是節省 I/O 腳位，通訊的時候只會用到 4 個高位元 (D4-D7)，D0-D3 這四支腳位可以不用接。每個送到 LCD 的資料會被分成兩次傳送 – 先送 4 個高位元，然後才送 4 個低位元。</p>
+<h3 id="材料"><a href="#材料">材料</a></h3>
+<ul>
+<li>麵包板 x 1</li>
+<li>Arduino 主板 x 1</li>
+<li>HD44780 相容 LCD x 1 (本文所用的為 14 pin 無背光 LCD)</li>
+<li>旋轉式可變電阻 x 1</li>
+<li>單心線 x N</li>
+</ul>
+<h3 id="接線"><a href="#接線">接線</a></h3>
+<ul>
+<li>將 LCD 的 RS, Enable, D4, D5, D6, D7 依序接到 12, 11, 5, 4, 3, 2 等腳位上</li>
+<li>將 LCD 的 Vss 及 R/W 接到 GND，Vdd 接到 +5V</li>
+<li>可變電阻中間腳位接到 LCD 的 Vo，剩下的兩支腳位，一支接到 5V，另外一支接到 GND (註：也可以不使用可變電阻，只要在 LCD 的 Vo 上串接一顆 1k ohm 電阻連到 GND 即可)</li>
+</ul>
+<div class="figure">
+<img src="../img/Arduino_LCD_board1.png" />
+</div>
+<h3 id="電路圖"><a href="#電路圖">電路圖</a></h3>
+<div class="figure">
+<img src="../img/Arduino_LCD_circuit1.png" />
+</div>
+<h3 id="程式碼"><a href="#程式碼">程式碼</a></h3>
+<p>要在 LCD 上顯示訊息，會涉及初始化 LCD 、下指令以及傳送資料給 LCD 等工作，Arduino LiquidCrystal Library 已經把這些工作簡化了，所以你不需要知道這些低階的指令。底下的程式在 2x16 LCD 上第一行顯示 &quot;hello, world!” 訊息，並在第二行不斷更新 Arduino 重開之後經過的秒數，使用的是 4-bit 模式(HelloWorld.pde):</p>
+<pre class="sourceCode CPP"><code class="sourceCode cpp">
+<span class="co">/* Lab9 - 在 2x16 LCD 上顯示 &quot;Hello World&quot; 訊息  </span>
+<span class="co">  The circuit:</span>
+<span class="co"> * LCD RS pin to digital pin 12</span>
+<span class="co"> * LCD Enable pin to digital pin 11</span>
+<span class="co"> * LCD D4 pin to digital pin 5</span>
+<span class="co"> * LCD D5 pin to digital pin 4</span>
+<span class="co"> * LCD D6 pin to digital pin 3</span>
+<span class="co"> * LCD D7 pin to digital pin 2</span>
+<span class="co"> * 10K Potentiometer:</span>
+<span class="co"> * ends to +5V and ground</span>
+<span class="co"> * wiper to LCD VO pin (pin 3)</span>
+<span class="co"> </span>
+<span class="co"> This example code is in the public domain.</span>
+<span class="co"> http://www.arduino.cc/en/Tutorial/LiquidCrystal</span>
+<span class="co"> */</span>
+
+<span class="co">// 引用 LiquidCrystal Library</span>
+<span class="ot">#include &lt;LiquidCrystal.h&gt;</span>
+
+<span class="co">// 建立 LiquidCrystal 的變數 lcd</span>
+<span class="co">//                 LCD 接腳:  rs, enable, d4, d5, d6, d7  </span>
+<span class="co">//      對應到 Arduino 接腳:  12,     11,  5,  4,  3,  2</span>
+LiquidCrystal lcd(<span class="dv">12</span>, <span class="dv">11</span>, <span class="dv">5</span>, <span class="dv">4</span>, <span class="dv">3</span>, <span class="dv">2</span>);
+
+<span class="dt">void</span> setup() {
+  <span class="co">// 設定 LCD 的行列數目 (2 x 16)</span>
+  lcd.begin(<span class="dv">16</span>, <span class="dv">2</span>);
+
+  <span class="co">// 列印 &quot;Hello World&quot; 訊息到 LCD 上</span>
+  lcd.print(<span class="st">&quot;hello, world!&quot;</span>);
+}
+
+<span class="dt">void</span> loop() {
+  <span class="co">// 將游標設到 column 0, line 1</span>
+  <span class="co">// (注意: line 1 是第二行(row)&amp;#65292;因為是從 0 開始數起):</span>
+  lcd.setCursor(<span class="dv">0</span>, <span class="dv">1</span>);
+
+  <span class="co">// 列印 Arduino 重開之後經過的秒數</span>
+  lcd.print(millis()/<span class="dv">1000</span>);
+}</code></pre>
+<p>如果訊息沒有顯示在螢幕上，或者是模糊朦朧的，首先應該做的事是檢查可變電阻以調整對比。</p>
+<p>註：這支是 Arduino 內建的範例程式，點選 File &gt; Examples &gt; LiquidCrystal &gt; HelloWorld 就可以找到。</p>
+<h3 id="範例照片影片"><a href="#範例照片影片">範例照片／影片</a></h3>
+<ul>
+<li>Arduino 筆記 -- Lab9 在 2x16 LCD 上顯示 &quot;Hello World&quot; 訊息 -- <a href="http://youtu.be/jUbNR54mfgM">http://youtu.be/jUbNR54mfgM</a></li>
+</ul>
+<h3 id="動動腦"><a href="#動動腦">動動腦</a></h3>
+<ol style="list-style-type: decimal">
+<li>接一顆光敏電阻或可變電阻，然後寫一支程式讀取光敏電阻或可變電阻的讀值，並將讀到的數值顯示在 LCD 上。</li>
+<li>寫一支 SerialLCD 程式，程式的邏輯是： 接受來自 Serial Port 的資料(從 PC 或筆電端送出)，然後把資料顯示在 LCD 上。</li>
+<li>承上題，把 SerialLCD 變成一個網路型的 LCD，讓電腦透過網路就可以把資料丟到 LCD 上顯示。</li>
+</ol>
+<h3 id="延伸閱讀"><a href="#延伸閱讀">延伸閱讀</a></h3>
+<ul>
+<li><a href="http://home.iae.nl/users/pouweha/lcd/lcd.shtml">How to control a HD44780-based Character LCD</a></li>
+<li><a href="http://www.ladyada.net/learn/lcd/charlcd.html">ladyada – Wiring up a character LCD to Arduino</a></li>
+<li><a href="http://www.spikenzielabs.com/SpikenzieLabs/LCD_How_To.html">LCD 101</a></li>
+<li><a href="http://arduino.cc/en/Tutorial/LiquidCrystalScroll">Scroll</a> : scroll text left and right.</li>
+<li><a href="http://arduino.cc/en/Tutorial/LiquidCrystalAutoscroll">Autoscroll</a> : shift text right and left.</li>
+</ul>
+<p>【本文作者為馬萬圳，原文網址為： <a href="http://coopermaa2nd.blogspot.tw/2010/12/arduino-lab9-2x16-lcd-world.html">http://coopermaa2nd.blogspot.tw/2010/12/arduino-lab9-2x16-lcd-world.html</a> ，由陳鍾誠編輯後納入本雜誌】</p>
+</div>
+<div id="footer">
+<a href="https://www.facebook.com/groups/programmerMagazine/">程式人雜誌</a> ，採用 <a href="http://creativecommons.org/licenses/by-sa/3.0/tw/ ">創作共用：姓名標示、相同方式分享</a> 授權，歡迎加入 <a href="https://www.facebook.com/groups/programmerMagazine/">雜誌社團</a>
+</div>
+</body>
+</html>

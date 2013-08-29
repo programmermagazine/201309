@@ -1,0 +1,1831 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; }
+code > span.dt { color: #902000; }
+code > span.dv { color: #40a070; }
+code > span.bn { color: #40a070; }
+code > span.fl { color: #40a070; }
+code > span.ch { color: #4070a0; }
+code > span.st { color: #4070a0; }
+code > span.co { color: #60a0b0; font-style: italic; }
+code > span.ot { color: #007020; }
+code > span.al { color: #ff0000; font-weight: bold; }
+code > span.fu { color: #06287e; }
+code > span.er { color: #ff0000; font-weight: bold; }
+  </style>
+  <link rel="stylesheet" href="../css/pmag.css" type="text/css" />
+</head>
+<body>
+<div id="header_wrap">
+   <h1><a href="https://www.facebook.com/groups/programmerMagazine">程式人雜誌</a> <sub> --  <a href="https://dl.dropbox.com/u/101584453/pmag/201309/htm/home.html">2013 年 9 月號</a> (開放公益出版品)</sub></h1>
+</div>
+<div id="content">
+<div id="TOC">
+<ul>
+<li><a href="#前言">前言</a><ul>
+<li><a href="#編輯小語">編輯小語</a></li>
+<li><a href="#授權聲明">授權聲明</a></li>
+</ul></li>
+<li><a href="#程式人介紹">程式人介紹</a><ul>
+<li><a href="#資訊政治人stallman-lessig-swartz-與-assange">資訊政治人：Stallman, Lessig, Swartz 與 Assange</a></li>
+</ul></li>
+<li><a href="#程式人短訊">程式人短訊</a><ul>
+<li><a href="#資訊政治台灣鍵盤革命的歷史與近況">資訊政治：台灣「鍵盤革命」的歷史與近況</a></li>
+<li><a href="#資訊政治海盜黨簡介">資訊政治：海盜黨簡介</a></li>
+<li><a href="#資訊政治g0v-政府零時差組織">資訊政治：g0v 政府零時差組織</a></li>
+</ul></li>
+<li><a href="#程式人頻道">程式人頻道</a><ul>
+<li><a href="#看影片瞭解鍵盤革命的資訊政治學">看影片瞭解「鍵盤革命」的「資訊政治學」</a></li>
+</ul></li>
+<li><a href="#程式人討論區">程式人討論區</a><ul>
+<li><a href="#網路與政治網友們可以形成一個虛擬國家嗎">網路與政治：網友們可以形成一個「虛擬國家」嗎？</a></li>
+</ul></li>
+<li><a href="#程式人文集">程式人文集</a><ul>
+<li><a href="#arduino入門教學9-在-2x16-lcd-上顯示-hello-world-訊息-作者cooper-maa">Arduino入門教學(9) – 在 2x16 LCD 上顯示 &quot;Hello World&quot; 訊息 (作者：Cooper Maa)</a></li>
+<li><a href="#javascript-9-google-的語音合成-api-之使用-作者陳鍾誠">JavaScript (9) – Google 的語音合成 API 之使用 (作者：陳鍾誠)</a></li>
+<li><a href="#r-統計軟體6-迴歸分析-作者陳鍾誠">R 統計軟體(6) – 迴歸分析 (作者：陳鍾誠)</a></li>
+<li><a href="#verilog-3-組合邏輯電路-作者陳鍾誠">Verilog (3) – 組合邏輯電路 (作者：陳鍾誠)</a></li>
+<li><a href="#開放電腦計畫-3-vm0-虛擬機使用-javascriptnode.js-實作-作者陳鍾誠">開放電腦計畫 (3) – VM0 虛擬機：使用 JavaScript+Node.js 實作 (作者：陳鍾誠)</a></li>
+<li><a href="#r-講題分享-利用-r-和-shiny-製作網頁應用-作者taiwan-r-user-group">R 講題分享 – 利用 R 和 Shiny 製作網頁應用 (作者：Taiwan R User Group)</a></li>
+</ul></li>
+<li><a href="#雜誌訊息">雜誌訊息</a><ul>
+<li><a href="#讀者訂閱">讀者訂閱</a></li>
+<li><a href="#投稿須知">投稿須知</a></li>
+<li><a href="#參與編輯">參與編輯</a></li>
+<li><a href="#公益資訊">公益資訊</a></li>
+</ul></li>
+</ul>
+</div>
+<h1 id="前言"><a href="#前言">前言</a></h1>
+<h2 id="編輯小語"><a href="#編輯小語">編輯小語</a></h2>
+<p>在本期的「程式人雜誌」中，我們引入了一個比較奇怪的主題：「鍵盤革命」，這個主題有點「政治性」。</p>
+<p>雖然可能有些「程式人」的朋友們會不喜歡，不過由於 2013/08/03 凱達格蘭大道的 25 萬人集會，讓我們決定要引入這樣一個 與「程式」距離較遠的主題。</p>
+<p>如果讀者對這個主題比較不喜歡的話，可以選擇從「程式人文集」的技術類文章開始閱讀，跳過前半部的「鍵盤革命」主題。</p>
+<p>但是、「鍵盤革命」的主題其實也有一些與程式人的關連，像是今年在 COSCUP 開源人年會的 g0v 組織，開源之父 Richard Stallman 等， 都是這個主題的相關人物，不排斥政治主題的程式人，可能會有興趣也說不定。</p>
+<p>另外、由於小編已經從「中斷」(Interrupted) 的度假狀態，回復到「可工作」的 Ready 狀態，因此中斷一期的 「R、Verilog、開放電腦計畫」 等主題，都將回到正常狀態，繼續刊登了。</p>
+<p>---- （程式人雜誌編輯 - 陳鍾誠）</p>
+<h2 id="授權聲明"><a href="#授權聲明">授權聲明</a></h2>
+<p>本雜誌採用 創作共用：<a href="http://creativecommons.org/licenses/by-sa/3.0/tw/">姓名標示、相同方式分享</a> 授權，若您想要修改本書產生衍生著作時，至少應該遵守下列授權條件：</p>
+<ol style="list-style-type: decimal">
+<li>標示原作者姓名</li>
+<li>採用 創作共用：<a href="http://creativecommons.org/licenses/by-sa/3.0/tw/">姓名標示、相同方式分享</a> 的方式公開衍生著作。</li>
+</ol>
+<p>另外、當本雜誌中有文章或素材並非採用 <a href="http://creativecommons.org/licenses/by-sa/3.0/tw/">姓名標示、相同方式分享</a> 時，將會在該文章或素材後面標示其授權，此時該文章將以該標示的方式授權釋出，請修改者注意這些授權標示，以避免產生侵權糾紛。</p>
+<p>例如有些文章可能不希望被作為「商業性使用」，此時就可能會採用創作共用：<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/tw/">姓名標示、非商業性、相同方式分享</a> 的授權，此時您就不應當將該文章用於商業用途上。</p>
+<p>最後、懇請勿移除公益捐贈的相關描述，以便讓愛心得以持續散播！</p>
+<h1 id="程式人介紹"><a href="#程式人介紹">程式人介紹</a></h1>
+<h2 id="資訊政治人stallman-lessig-swartz-與-assange"><a href="#資訊政治人stallman-lessig-swartz-與-assange">資訊政治人：Stallman, Lessig, Swartz 與 Assange</a></h2>
+<p>看到上述的人名，很多讀者勢必心中會產生一大堆問號？他們是誰？這些人之間有甚麼關連呢？</p>
+<p>程式人雜誌曾經介紹過這四位當中的兩位，也就是 Stallman 與 Swartz，甚至也曾經談到過 Lessig ， 但是還沒有介紹過 Assange，讓我們稍微介紹一下這些人的重要事蹟。</p>
+<ul>
+<li>Stallman : <a href="https://dl.dropboxusercontent.com/u/101584453/pmag/201303/htm/people1.html">開放原始碼之父–Richard Stallman</a>, 是著名的程式人, GNU 組織的創建者，GPL 授權的制定者。</li>
+<li>Lessig : <a href="http://zh.wikipedia.org/wiki/%E5%8B%9E%E5%80%AB%E6%96%AF%C2%B7%E9%9B%B7%E5%B8%AD%E6%A0%BC">勞倫斯·雷席格</a>, 哈佛大學憲法學教授，創作共用 (Creative Commons) 授權的創造者。</li>
+<li>Swartz : <a href="https://dl.dropboxusercontent.com/u/101584453/pmag/201304/htm/people2.html">Markdown 與 RSS 的創造者-Aaron Swartz</a>, 2010 年從 MIT 校園內大量論文後被起訴，然後不堪檢察官威脅，在 2013 年 1 月 11 日時自殺身亡。</li>
+<li>Assange : 維基解密組織的創建者與核心人物。</li>
+</ul>
+<p>筆者之所以將這些人寫在一起，原因在於這些人是「鍵盤革命」這一個概念當中的重要人物，他們都利用「電腦、程式、網路」等工具，與當權者進行對抗。</p>
+<p>Stallman 因為不滿程式碼被商業公司封閉起來，而創造了 GNU 組織與 GPL 這個開放原始碼的程式授權，以便強制商業公司開放原始碼。 Lessig 延續 Stallman 的想法，將開放原始碼的概念引入一般著作與網頁，創造出了 Creative Commons 授權。而 Swartz 則為了讓資訊的流通更容易， 創造出 Markdown 格式與 RSS 訂閱技術，並且因為想把學術論文開放而遭到起訴，最後更因此而自殺。</p>
+<p>至於 Assange，則因為將那些政府機密大量上網，成為各國政府的頭號公敵，並因「性犯罪」的罪名而被瑞典通輯，因此後來向厄瓜多駐倫敦大使館尋求政治庇護，目前英國還企圖與「厄瓜多」談判將 Assange 引渡到瑞典受審當中。</p>
+<p>以上這些人與事件，都涉及到「資訊揭露」的政治學，有些人用合法的方式企圖揭露資訊 (像是 Stallman, Lessig)，而有些人則用目前法律不允許的手段去揭露資訊 (像是 Swartz 與 Assange)。</p>
+<p>18 世紀工業革命 (第二波) 的結果，造成工業取代農業，因此政治上從封建莊園制度轉向了議會政治，權力的核心從封建領主轉向了資本家。</p>
+<p>在今日 21 世紀的資訊革命 (第三波) 當中，權力又將如何移轉，這個世界會如何變化呢？</p>
+<p>未來、網路與資訊科技會帶領我們建立怎麼樣的一個「政治結構」呢？這是筆者很想知道，但卻也還在探索當中的一個重要關注項目啊！</p>
+<h3 id="參考文獻"><a href="#參考文獻">參考文獻</a></h3>
+<ul>
+<li><a href="https://dl.dropboxusercontent.com/u/101584453/pmag/201303/htm/people1.html">開放原始碼之父–Richard Stallman</a>, 程式人雜誌 2013 年 3 月號</li>
+<li><a href="https://dl.dropboxusercontent.com/u/101584453/pmag/201304/htm/people2.html">Markdown 與 RSS 的創造者-Aaron Swartz</a>, 程式人雜誌 2013 年 4 月號</li>
+<li><a href="http://en.wikipedia.org/wiki/Lawrence_Lessig">http://en.wikipedia.org/wiki/Lawrence_Lessig</a></li>
+<li>維基百科：<a href="http://zh.wikipedia.org/wiki/%E5%8B%9E%E5%80%AB%E6%96%AF%C2%B7%E9%9B%B7%E5%B8%AD%E6%A0%BC">勞倫斯·雷席格</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Julian_Assange">http://en.wikipedia.org/wiki/Julian_Assange</a></li>
+<li>維基百科：<a href="http://zh.wikipedia.org/wiki/Julian_Assange">朱利安·阿桑奇</a></li>
+<li><a href="http://www.apdnews.com/news/27457.html">英國厄瓜多爾或商談阿桑奇去留問題</a>, 作者：亞太日報綜合報導 發稿地：香港 時間：2013-6-03</li>
+<li><a href="http://en.wikipedia.org/wiki/Alvin_Toffler">http://en.wikipedia.org/wiki/Alvin_Toffler</a></li>
+<li><a href="http://www.books.com.tw/exep/prod/booksfile.php?item=0010069728">第三波 (The Third Wave)</a>, 作者：艾文‧托佛勒 (Alvin Toffler), 譯者：黃明堅, 時報出版社, 1994年06月20日.</li>
+<li><a href="http://ccckmit.wikidot.com/thethirdwave">第三波 - 農業、工業與資訊文明</a>, 陳鍾誠的網站。</li>
+</ul>
+<p>【本文由陳鍾誠取材並修改自維基百科，原本寫得很長，但是後來決定簡化，若您想看那個長的版本，我們也有留著，請點選 <a href="https://dl.dropboxusercontent.com/u/101584453/pmag/201309/htm/people1long.html">這裏</a>】</p>
+<h1 id="程式人短訊"><a href="#程式人短訊">程式人短訊</a></h1>
+<h2 id="資訊政治台灣鍵盤革命的歷史與近況"><a href="#資訊政治台灣鍵盤革命的歷史與近況">資訊政治：台灣「鍵盤革命」的歷史與近況</a></h2>
+<h3 id="前言-1"><a href="#前言-1">前言</a></h3>
+<p>最近台灣的「程式人」很多都投入了政治運動，企圖用程式改變政治，因此今年的開源人年會 COSCUP 上也出現了好幾場的「政治相關」演講。</p>
+<p>這個現象或許可以用「鍵盤革命」、「網路政治」、「程式政治學」等詞彙描述。</p>
+<h3 id="莫拉克風災"><a href="#莫拉克風災">莫拉克風災</a></h3>
+<p>從 2009 年的莫拉克風災開始，台灣的程式人就開始運用專業發揮了不小的影響力，以下是當年的一則 PTT 報導：</p>
+<ul>
+<li>PTT 精華區 - 閱讀文章 (Emergency) -- <a href="http://www.ptt.cc/man/Emergency/D8B1/M.1252037298.A.654.html">http://www.ptt.cc/man/Emergency/D8B1/M.1252037298.A.654.html</a></li>
+</ul>
+<p>莫拉克風災是我第一次看到「網友們」展現政治力量的事件，雖然這件事情很不政治，但是基於孫中山的名言：「管理眾人之事便是政治」， 我們看到當政府失能的時候，網友們透過網路進行救災，彌補掉政府的無能，讓資訊得以快速流通的的「政治事件」。</p>
+<h3 id="洪仲秋被虐死引發-25-萬人上凱達格蘭大道"><a href="#洪仲秋被虐死引發-25-萬人上凱達格蘭大道">洪仲秋被虐死引發 25 萬人上凱達格蘭大道</a></h3>
+<p>然後，在 2013 年，我們看到了一次「重要的網路政治事件」，那就是最近因「<a href="http://zh.wikipedia.org/zh-tw/%E6%B4%AA%E4%BB%B2%E4%B8%98%E6%9E%89%E6%AD%BB%E4%BA%8B%E4%BB%B6">洪仲秋被虐死一案</a>」，透過 <a href="http://zh.wikipedia.org/wiki/%E5%85%AC%E6%B0%911985%E8%A1%8C%E5%8B%95%E8%81%AF%E7%9B%9F">公民 1985 行動聯盟</a> 這個網路組織的協調，引發了 2013/8/3 日 25 萬人上凱達格蘭大道包圍總統府，卻又盡可能排除政黨介入的情況下，仍然表現出高度的組織能力，以及保持了良好秩序的事件。</p>
+<p>以下的空拍圖片為這個事件留下了一個重要的見證，這是「鍵盤革命」的重要里程碑，也是台灣「網路世代」開始參與政治運動的一個明證。</p>
+<div class="figure">
+<img src="../img/SilverCross.jpg" alt="圖、photo by Jack0000" /><p class="caption">圖、photo by Jack0000</p>
+</div>
+<ul>
+<li>圖片來源：親愛的芭樂人類學家專欄, 25萬人上街抗議真的有用嗎？, 2013/08/05 公民運動 政治 洪仲丘 社會運動
+<ul>
+<li><a href="http://guavanthropology.tw/article/5006">http://guavanthropology.tw/article/5006</a></li>
+</ul></li>
+</ul>
+<h3 id="結語"><a href="#結語">結語</a></h3>
+<p>雖然政治令人覺得很黑暗，也讓很多人討厭，但是如果透過「程式專業」與「網路社群」，有機會能讓這個世界變得更好的話， 我相信還是有許多程式人願意付出時間來讓世界變得更美好的！</p>
+<h3 id="參考文獻-1"><a href="#參考文獻-1">參考文獻</a></h3>
+<ul>
+<li><a href="http://www.inside.com.tw/2013/08/05/coscup-2013-coders-keyboard-revolution">工程師的鍵盤革命：拆政府，原地重建</a>, inside 網站。</li>
+<li><a href="http://www.ptt.cc/man/Emergency/D8B1/M.1252037298.A.654.html">PTT 精華區 - 閱讀文章 (Emergency)</a></li>
+<li>維基百科：<a href="http://zh.wikipedia.org/zh-tw/%E9%A2%B1%E9%A2%A8%E8%8E%AB%E6%8B%89%E5%85%8B_(2009%E5%B9%B4)">中度颱風莫拉克</a></li>
+<li>維基百科：<a href="http://zh.wikipedia.org/wiki/%E5%85%AB%E5%85%AB%E6%B0%B4%E7%81%BD">八八水災</a></li>
+</ul>
+<p>【本文由陳鍾誠取材並修改自維基百科，原本寫得很長，但是後來決定簡化，若您想看那個長的版本，我們也有留著，請點選 <a href="https://dl.dropboxusercontent.com/u/101584453/pmag/201309/htm/message1long.html">這裏</a>】</p>
+<h2 id="資訊政治海盜黨簡介"><a href="#資訊政治海盜黨簡介">資訊政治：海盜黨簡介</a></h2>
+<p>海盜黨是近年來在政治領域上異軍突起的一個政治團體，而德國海盜黨則是各國海盜黨當中發展得最好的一個，以下是海盜黨的一些相關資料，請讀者參考：</p>
+<ul>
+<li>維基百科, <a href="http://zh.wikipedia.org/zh-tw/%E6%B5%B7%E7%9B%9C%E9%BB%A8%E5%9C%8B%E9%9A%9B">海盜黨國際</a></li>
+<li>維基百科, <a href="http://zh.wikipedia.org/zh-tw/%E5%BE%B7%E5%9C%8B%E6%B5%B7%E7%9B%9C%E9%BB%A8">德國海盜黨</a></li>
+<li>Wikipedia:<a href="http://en.wikipedia.org/wiki/Pirate_Party_Germany">Pirate_Party_Germany</a></li>
+<li><a href="http://hatetyping.blogspot.de/2013/08/blog-post_24.html">「遙控民主」新實驗，讓百年大黨取經的七歲駭客政黨 - 專訪海盜黨主席（上）</a></li>
+</ul>
+<p>第一個海盜黨是由 李卡德·法克明炎於2006年1月1日成立於瑞典的組織，稱為 Piratpartiet。該組織認為現時的版權制度已經過時，危害到人們傳播知識的權力。 2006年海盜黨成為了瑞典無議會席位政黨之中最大的一個，後來奧地利、丹麥、芬蘭、德國、愛爾蘭、荷蘭、波蘭和西班牙也先後成立了海盜黨。</p>
+<p>海盜黨的主張主要有三個：一是改革版權法，二是廢除專利，三是尊重私隱。他們認為現在的版權制度已經過時，很多企業利用版權限制知識發放， 侷限了很多創造性工作。所以於網路上分享電影、音樂等等行為不應該被視為違法。</p>
+<p>2009年 4月 17 日，4名 海盜灣經營者被瑞典法庭判處 1 年有期徒刑之後，盜版黨黨員人數暴增到 2萬8千多人，躍身為瑞典第三大黨，並於2009年歐洲議會 選舉中在瑞典獲得了 7.1% 的選票，在歐洲議會中將擁有1個席位。</p>
+<p>2011 年，德國海盜黨針對柏林州議會選舉推出 15 位候選人，全上。其後幾次其他的州議會選舉，德國海盜黨也獲得 7-8% 的得票率，取得席次。</p>
+<p>海盜黨的一些網路民主的實施方法可以參考以下的文章：</p>
+<ul>
+<li><a href="http://charlesc.ilovemeow.net/blog/20130110/1202">德國海盜黨的流動式民主</a></li>
+</ul>
+<p>我們將上述文章的重點摘要如下：</p>
+<ul>
+<li>海盜黨的多數的決策都是先在網路上經過許多人的討論，例如用 <a href="http://www.piratenpad.de/">PiratePad</a>、聊天室、wiki 和郵件論壇來協作。</li>
+<li>投票時，每人一票。但是，因為並非大家都能夠詳閱政策內容，所以系統允許成員可以委託他人代為投票。委託範圍可以是所有提案、某個主題的提案、或是某特定提案。而被委派投票的成員，還可以把這些票、包括自己的一票，再度委託給他人投票！</li>
+<li>Liquid Feedback 這種以信任為基礎的模式，類似信譽系統（reputation system），只不過成員的參與所換到的不是點數，而是選票。理論上，這種投票鏈可能會把票集中到人緣好的菁英或獨裁者身上，但好在有個防錯機制，可以在任何時候取消委託投票，有野心的海盜也得認真才能成事。Bormuth 說，我們讓有戰鬥力的人可以成事，但也讓大家有權控制這些人。</li>
+</ul>
+<p>雖然海盜黨在很多國家都成立了，但是在台灣卻被政府禁止成立，請參考以下新聞。</p>
+<ul>
+<li><a href="http://tw.news.yahoo.com/%E5%AD%B8%E8%80%85%E7%B1%8C%E7%B5%84%E6%B5%B7%E7%9B%9C%E9%BB%A8-%E5%85%A7%E6%94%BF%E9%83%A8%E4%B8%8D%E5%87%86-033713002.html">學者籌組海盜黨 內政部不准中央社中央社</a> – 2012年2月26日 上午11:37</li>
+</ul>
+<p>不過還是有人在網路上成立了這樣的社團，像是 Google Plus 上就有下列社團：</p>
+<ul>
+<li>[台灣海盜黨(推廣處)] -- <a href="https://plus.google.com/103500053191876104832/posts">https://plus.google.com/103500053191876104832/posts</a></li>
+</ul>
+<h3 id="結語-1"><a href="#結語-1">結語</a></h3>
+<p>雖然德國的國情與台灣不同，不過在網路時代，各國的做法都可以很透明的被大家所參考模仿，然後經過嘗試後找到一個比較適合自己國家的實施方式， 運用網路來改變政治結構啊！</p>
+<p>【本文由陳鍾誠取材並修改自維基百科】</p>
+<h2 id="資訊政治g0v-政府零時差組織"><a href="#資訊政治g0v-政府零時差組織">資訊政治：g0v 政府零時差組織</a></h2>
+<p>高嘉良所發起的 g0v 組織，是一個企圖用程式改變政治的組織，有興趣的人可以參考一下他們的網站。</p>
+<ul>
+<li>零時政府 -- <a href="http://g0v.tw/">http://g0v.tw/</a></li>
+</ul>
+<p>g0v 做了很多有趣的「政治性」程式，以下是 g0v 的專案列表：</p>
+<ul>
+<li>g0v 專案列表 -- <a href="http://hack.g0v.tw/project">http://hack.g0v.tw/project</a></li>
+</ul>
+<p>您可以看到其中有琳瑯滿目的專案，大部分是與資訊揭露有關的，像是：</p>
+<ul>
+<li>社會運動資訊平台 -- <a href="http://www.movement-itw.com/">http://www.movement-itw.com/</a></li>
+<li>公務員出國考察追蹤網 -- <a href="http://hack.g0v.tw/abroadplay/nOWhTpJPKx7">http://hack.g0v.tw/abroadplay/nOWhTpJPKx7</a></li>
+<li>中央政府總預算 -- <a href="http://budget.g0v.tw/">http://budget.g0v.tw/</a></li>
+<li>律師幫幫我 -- <a href="http://i64885.tw/">http://i64885.tw/</a></li>
+<li>鄉民關心你 -- <a href="http://hack.g0v.tw/kuansim/nvw5cFwVmab">http://hack.g0v.tw/kuansim/nvw5cFwVmab</a></li>
+<li>台灣法規的API -- <a href="http://laweasyread.herokuapp.com/">http://laweasyread.herokuapp.com/</a></li>
+<li>福利請聽 -- <a href="http://listening.g0v.tw/">http://listening.g0v.tw/</a></li>
+<li>新聞小幫手 -- <a href="http://newshelper.g0v.tw">http://newshelper.g0v.tw</a></li>
+<li>政誌 -- <a href="http://fact.g0v.tw/">http://fact.g0v.tw/</a></li>
+<li>政府公開通訊錄 -- <a href="https://github.com/g0v/addressbook">https://github.com/g0v/addressbook</a></li>
+</ul>
+<p>最近我與 g0v 創辦人高嘉良連絡時，發現他們正在關注「柏林海盜黨」所釋出的一個實驗性開放原始碼軟體 liquidfeedback，網址如下：</p>
+<ul>
+<li><a href="http://liquidfeedback.org/">http://liquidfeedback.org/</a></li>
+</ul>
+<p>而且他們正在進行一個工作，就是將 liquidfeedback 修改為中文版，並且嘗試用這種方式改變台灣的政治環境，您可以從 github 上下載這個專案。</p>
+<ul>
+<li><a href="https://github.com/g0v/liquid_feedback_frontend">https://github.com/g0v/liquid_feedback_frontend</a></li>
+</ul>
+<p>當然、並不是只有 g0v 在進行「用程式改造社會」的活動，另外像 Code for Tomorrow 也是一個具有類似想法的台灣程式團體。</p>
+<ul>
+<li>Code for Tomorrow -- <a href="http://codefortomorrow.org/">http://codefortomorrow.org/</a></li>
+</ul>
+<p>而在美國也有像 Code for America 這樣的組織，企圖用程式讓美國社會變得更好。</p>
+<ul>
+<li>Code for America -- <a href="http://codeforamerica.org/">http://codeforamerica.org/</a></li>
+</ul>
+<p>筆者覺得、如果真的能用「程式讓世界變得更美好」，那真的是一件非常有意義的事情啊！希望 g0v 能夠有更多好的想法， 並發展出更多改善社會的程式，讓我們的社會能夠變得更美好啊！</p>
+<p>【本文由陳鍾誠取材撰寫】</p>
+<h1 id="程式人頻道"><a href="#程式人頻道">程式人頻道</a></h1>
+<h2 id="看影片瞭解鍵盤革命的資訊政治學"><a href="#看影片瞭解鍵盤革命的資訊政治學">看影片瞭解「鍵盤革命」的「資訊政治學」</a></h2>
+<p>現在、讓我們透過影片來看看，台灣與國際上對鍵盤革命的一些看法與想法，以便讓大家能夠進一步的思考：「資訊技術對政治領域，會產生甚麼樣的影響呢」？</p>
+<p>國際上的鍵盤革命</p>
+<ul>
+<li><a href="http://www.ted.com/talks/clay_shirky_how_the_internet_will_one_day_transform_government.html">TED 影片 - Clay Shirky：網際網路（將來）如何改變政府</a>
+<ul>
+<li>從 git 版本管理系統看政治文化改變的可能性。</li>
+</ul></li>
+<li><a href="http://www.ted.com/talks/larry_lessig_says_the_law_is_strangling_creativity.html">TED 影片 - Lessig 談法律如何箝制創造力</a>
+<ul>
+<li>Lessig 是 Creative Commons 創作共用的創造者。</li>
+</ul></li>
+<li><a href="http://www.ted.com/talks/julian_assange_why_the_world_needs_wikileaks.html">TED 影片 - Julian Assange：維基解密存在的必要性</a>
+<ul>
+<li>Julian Assange 是維基解密的主要人物。</li>
+</ul></li>
+<li><a href="http://www.ted.com/talks/rick_falkvinge_i_am_a_pirate.html">TED 影片 - Rick Falkvinge: I am a pirate</a>
+<ul>
+<li>Rick Falkvinge 是海盜黨的核心人物。</li>
+</ul></li>
+<li><a href="https://www.youtube.com/watch?v=3izOJ7zX5I0">YouTube - Aaron Swartz: The Documentary - Teaser</a>
+<ul>
+<li>紀念為鍵盤革命而死的 -- Aaron Swartz (RSS 與 Markdown 的創造者)</li>
+</ul></li>
+</ul>
+<p>台灣的鍵盤革命</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=Wmgqc4oiFZI">YouTube -- 2013/08/03 公民1985 公民覺醒 最後演說(完整)</a>
+<ul>
+<li>2013 年 8 月 3 日因為洪仲秋被軍方虐死一案，引發 25 萬人上凱達格蘭大道抗議，會場中令人動容的演說。</li>
+</ul></li>
+<li><a href="http://www.youtube.com/watch?v=CCxQzSatN-w">YouTube -- g0v 黑客松 - 寫程式改造社會 / clkao (Taiwan WebConf)</a>
+<ul>
+<li>高嘉良創立政府零時差組織 g0v 的原因，可以參考這個影片。</li>
+</ul></li>
+<li><a href="http://www.youtube.com/watch?v=rRrMDkCZeMo">YouTube -- Hack Everything, Including Society - 雨蒼</a>
+<ul>
+<li>雨蒼在 COSCUP 2013 對於如何用網路改變社會的演講。</li>
+</ul></li>
+<li><a href="http://www.youtube.com/watch?v=7NDM6kDVPl4">YouTube -- 蒐證雲/evi.tw - 翟本喬 和沛科技總經</a>
+<ul>
+<li>翟本喬在 COSCUP 2013 的演講，因洪仲秋案讓他們想到要用 APP 錄音蒐證。</li>
+</ul></li>
+</ul>
+<h3 id="參考文獻-2"><a href="#參考文獻-2">參考文獻</a></h3>
+<ul>
+<li>工程師的鍵盤革命：拆政府，原地重建 <a href="http://www.inside.com.tw/2013/08/05/coscup-2013-coders-keyboard-revolution">http://www.inside.com.tw/2013/08/05/coscup-2013-coders-keyboard-revolution</a></li>
+</ul>
+<p>【本文由陳鍾誠撰寫】</p>
+<h1 id="程式人討論區"><a href="#程式人討論區">程式人討論區</a></h1>
+<h2 id="網路與政治網友們可以形成一個虛擬國家嗎"><a href="#網路與政治網友們可以形成一個虛擬國家嗎">網路與政治：網友們可以形成一個「虛擬國家」嗎？</a></h2>
+<p>受到 2013/8/3 時 25 萬人上凱達格蘭大道這件事的激勵，讓我想到能否號召網友們，形成一個沒有實體領土，只有虛擬領土的「網路國家」呢？</p>
+<p>透過這個國家，我們可以制定法律、提出政策、甚至發動資訊戰。</p>
+<p>而且、這些網民仍然是某些實體國家（例如台灣）的國民，因此仍然具有該國的投票權，所以就可以透過「網路公投」決定政策後， 要求政黨或立委認養這些政策並簽下契約，以換取將這些網民的票投給他們的「交易」。</p>
+<p>我認為這種方式或許能讓網民可以有效的影響政府，並且跨過「公投法門檻過高」的問題。</p>
+<p>於是我發了以下的訊息在「程式人雜誌的討論區」以及自己的 facebook 上，並引發了一些討論：</p>
+<ul>
+<li>問題：我想我又瘋了，今年初我辦了一本新的雜誌，現在居然想成立一個新的國家
+<ul>
+<li>網址： <a href="https://www.facebook.com/groups/programmerMagazine/permalink/690675390949180/">https://www.facebook.com/groups/programmerMagazine/permalink/690675390949180/</a></li>
+</ul></li>
+</ul>
+<p>我之所以會認為應該用「虛擬國家」的概念，而非採用像「海盜黨」這樣的「黨」的慨念，或許原因之一是「黨」這個中文字 其實隱含了非常糟糕的負面意義，但是在英文中的 Party 卻沒有這種意思。</p>
+<p>還有一個原因是，我想法中的這種網路組織，其實更像是一個國家，因為這個組織可以擁有「人民、土地、政府、主權」這四種形成國家的要素，只不過其領土 乃是在網路上的虛擬領土，而非真實世界的領土而已，有興趣的讀者可以參考以下兩篇文章。</p>
+<ul>
+<li><a href="https://dl.dropboxusercontent.com/u/101584453/pmag/201309/htm/netcountry.html">網路世代所需要的制度與法律 -- 虛擬國家的慨念</a></li>
+<li><a href="https://dl.dropboxusercontent.com/u/101584453/pmag/201309/htm/netconstitution.html">網路公民國 -- 一個虛擬國家的憲法，需要您一起來制定</a></li>
+</ul>
+<p>那麼、虛擬國家的憲法應該是什麼樣的呢？以下是一個我構思中的範例：</p>
+<ol style="list-style-type: decimal">
+<li>任何人都可以經由明文宣誓的方式，成為網路公民國 (以下簡稱本國) 的公民 (以下簡稱網民)。</li>
+<li>網民除了本國之外，還可以自由參加任何組織或實體國家，本國並無任何禁止「雙重國籍」的規定。</li>
+<li>網民有上網之自由，任何組礙或限制網民上網的行為，都違反本憲法之精神。</li>
+<li>網民有集會結社之基本權利，任何損害此一權利的組織，都將視為本國之敵人，本國有封鎖該組織的權利。</li>
+<li>網民的任何作品，只要不附加「著作權宣告」，就被預設視為「公共領域」之作品，任何網民都擁有合法修改、複製、散布之權利。</li>
+<li>網民可以下載任何未被身分認證機制所保護的內容，而不被控以侵犯著作權之自由。 ....</li>
+</ol>
+<p>這樣的法律其實意在保障網民們的自由，並且同時尊重創作者的權力，但是將著作權的預設值反轉過來，從 CopyRight 「版權所有」的 All Rights Reserved 轉化為「版權所無」的 No Rights Reserved 的情況，這讓網路自由可以得到法律基礎。</p>
+<p>這種手法與 GNU 的 GPL 有些不同，GPL 是透過法律來挑戰法律，但「網路虛擬國家」則直接透過「建國」與「制憲」挑戰傳統的政治結構。</p>
+<p>「虛擬國家」或許不會擁有土地，但是卻擁有「網路空間上的領土」，可以透過「封鎖」、「不提供資訊」與實體國家進行對抗，網民們 也有可能透過像「鍵盤戰」的方式，進行某種形式的「虛擬戰爭」。</p>
+<p>更重要的是，「虛擬國家」沒有禁止「雙重國籍」的規定，網民們在實體世界的國家裏，還是有投票權的。因此、「虛擬國家」可以透過 「公投」制定政策，試圖影響某個實體國家的政策，讓這些國家的政治可以更好。</p>
+<p>舉例而言，如果台灣的「網民」們聯合起來，形成一個「虛擬國家」，例如叫做「網路公民國」(簡稱網國)，就可以先在網路上制定政策 並且透過「公投」表決，決定建議國民將選票投給「認養」這個政策的「立委」或「政黨」，然後告訴「國民黨」與「民進黨」這個遊戲規則， 用「虛擬國家」的政策影響甚至左右「實體國家」的政策。</p>
+<p>於是、這個虛擬國家成了一個「國中之國」，而且可以發揮強大的政治影響力，這就是我對「虛擬國家」運作方式的初步想法。</p>
+<p>後記：我們甚至連國歌都寫好了，直接採用悲慘世界的革命之歌，配上自己填的歌詞，有興趣的朋友可以點選下列網址。</p>
+<ul>
+<li><a href="https://dl.dropboxusercontent.com/u/101584453/pmag/201309/htm/netsong.html">網路公民國之歌</a></li>
+</ul>
+<p>不過可惜的是，由於這個理想尚未得到真實國家的認同，筆者怕因為將自己唱國歌的錄音上網而被告，所以現在這首國歌只能私下唱， 因為這首歌的商業權還在華納公司的手上啊！請參考下列文章。</p>
+<ul>
+<li><a href="http://www.appledaily.com.tw/appledaily/article/headline/20130817/35226971">《你敢有聽著咱的歌》是誰的（江雅綺）</a></li>
+</ul>
+<p>這也正是我們為何在上述憲法中要加入那些 CopyLeft 版權條款的原因啊！</p>
+<p>當然、您也可以直接宣誓加入這個虛擬國家，只要在 facebook 上按一下加入就行了。</p>
+<ul>
+<li>「網路公民國」 -- <a href="https://www.facebook.com/groups/netcountry/">https://www.facebook.com/groups/netcountry/</a></li>
+</ul>
+<p>【本文由陳鍾誠撰寫】</p>
+<h1 id="程式人文集"><a href="#程式人文集">程式人文集</a></h1>
+<h2 id="arduino入門教學9-在-2x16-lcd-上顯示-hello-world-訊息-作者cooper-maa"><a href="#arduino入門教學9-在-2x16-lcd-上顯示-hello-world-訊息-作者cooper-maa">Arduino入門教學(9) – 在 2x16 LCD 上顯示 &quot;Hello World&quot; 訊息 (作者：Cooper Maa)</a></h2>
+<h3 id="實驗目的"><a href="#實驗目的">實驗目的</a></h3>
+<p>練習使用 HD44780 相容的文字型 LCD(Liquid crystal display)，在 2x16 LCD 上顯示 &quot;Hello World” 訊息。</p>
+<h3 id="x16-lcd-簡介"><a href="#x16-lcd-簡介">2x16 LCD 簡介</a></h3>
+<div class="figure">
+<img src="../img/Arduino_LCD_device1.png" alt="圖片來源: arduino.cc" /><p class="caption">圖片來源: arduino.cc</p>
+</div>
+<p>HD44780 相容的 2x16 LCD 可以顯示兩行訊息，每行 16 個字元，它可以顯示英文字母、希臘字母、標點符號以及數學符號，除了顯示訊息外，它還有其它功能，包括訊息捲動(往左和往右捲動)、顯示游標和 LED背光等。</p>
+<div class="figure">
+<img src="../img/Arduino_LCD_device2.png" alt="圖片來源: LCD 101" /><p class="caption">圖片來源: LCD 101</p>
+</div>
+<p>LCD 總共有 14 支接腳，如果內建背光的話是 16 支，這些腳位的功能整理於下表:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">腳位編號</th>
+<th align="left">名稱</th>
+<th align="left">說明</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">1</td>
+<td align="left">Vss</td>
+<td align="left">接地 (0V)</td>
+</tr>
+<tr class="even">
+<td align="left">2</td>
+<td align="left">Vdd</td>
+<td align="left">電源 (+5V)</td>
+</tr>
+<tr class="odd">
+<td align="left">3</td>
+<td align="left">Vo 或稱 Vee</td>
+<td align="left">對比(0-5V), 可接一顆 1k 電阻，或利可變電阻調整適當的對比</td>
+</tr>
+<tr class="even">
+<td align="left">4</td>
+<td align="left">RS</td>
+<td align="left">Register Select: 1: D0 – D7 當作資料解釋 0: D0 – D7 當作指令解釋</td>
+</tr>
+<tr class="odd">
+<td align="left">5</td>
+<td align="left">R/W</td>
+<td align="left">Read/Write mode: 1: 從 LCD 讀取資料 0: 寫資料到 LCD, 因為很少從 LCD 這端讀取資料，可將此腳位接地以節省 I/O 腳位。</td>
+</tr>
+<tr class="even">
+<td align="left">6</td>
+<td align="left">E</td>
+<td align="left">Enable</td>
+</tr>
+<tr class="odd">
+<td align="left">7</td>
+<td align="left">D0</td>
+<td align="left">Bit 0 LSB</td>
+</tr>
+<tr class="even">
+<td align="left">8</td>
+<td align="left">D1</td>
+<td align="left">Bit 1</td>
+</tr>
+<tr class="odd">
+<td align="left">9</td>
+<td align="left">D2</td>
+<td align="left">Bit 2</td>
+</tr>
+<tr class="even">
+<td align="left">10</td>
+<td align="left">D3</td>
+<td align="left">Bit 3</td>
+</tr>
+<tr class="odd">
+<td align="left">11</td>
+<td align="left">D4</td>
+<td align="left">Bit 4</td>
+</tr>
+<tr class="even">
+<td align="left">12</td>
+<td align="left">D5</td>
+<td align="left">Bit 5</td>
+</tr>
+<tr class="odd">
+<td align="left">13</td>
+<td align="left">D6</td>
+<td align="left">Bit 6</td>
+</tr>
+<tr class="even">
+<td align="left">14</td>
+<td align="left">D7</td>
+<td align="left">Bit 7 MSB</td>
+</tr>
+<tr class="odd">
+<td align="left">15</td>
+<td align="left">A+</td>
+<td align="left">背光(串接 330R 電阻到電源)</td>
+</tr>
+<tr class="even">
+<td align="left">16</td>
+<td align="left">K-</td>
+<td align="left">背光(GND)</td>
+</tr>
+</tbody>
+</table>
+<p>日立 HD44780 相容的 LCD 有 4-bit 和 8-bit 兩種使用模式，使用 4-bit 模式主要的好處是節省 I/O 腳位，通訊的時候只會用到 4 個高位元 (D4-D7)，D0-D3 這四支腳位可以不用接。每個送到 LCD 的資料會被分成兩次傳送 – 先送 4 個高位元，然後才送 4 個低位元。</p>
+<h3 id="材料"><a href="#材料">材料</a></h3>
+<ul>
+<li>麵包板 x 1</li>
+<li>Arduino 主板 x 1</li>
+<li>HD44780 相容 LCD x 1 (本文所用的為 14 pin 無背光 LCD)</li>
+<li>旋轉式可變電阻 x 1</li>
+<li>單心線 x N</li>
+</ul>
+<h3 id="接線"><a href="#接線">接線</a></h3>
+<ul>
+<li>將 LCD 的 RS, Enable, D4, D5, D6, D7 依序接到 12, 11, 5, 4, 3, 2 等腳位上</li>
+<li>將 LCD 的 Vss 及 R/W 接到 GND，Vdd 接到 +5V</li>
+<li>可變電阻中間腳位接到 LCD 的 Vo，剩下的兩支腳位，一支接到 5V，另外一支接到 GND (註：也可以不使用可變電阻，只要在 LCD 的 Vo 上串接一顆 1k ohm 電阻連到 GND 即可)</li>
+</ul>
+<div class="figure">
+<img src="../img/Arduino_LCD_board1.png" />
+</div>
+<h3 id="電路圖"><a href="#電路圖">電路圖</a></h3>
+<div class="figure">
+<img src="../img/Arduino_LCD_circuit1.png" />
+</div>
+<h3 id="程式碼"><a href="#程式碼">程式碼</a></h3>
+<p>要在 LCD 上顯示訊息，會涉及初始化 LCD 、下指令以及傳送資料給 LCD 等工作，Arduino LiquidCrystal Library 已經把這些工作簡化了，所以你不需要知道這些低階的指令。底下的程式在 2x16 LCD 上第一行顯示 &quot;hello, world!” 訊息，並在第二行不斷更新 Arduino 重開之後經過的秒數，使用的是 4-bit 模式(HelloWorld.pde):</p>
+<pre class="sourceCode CPP"><code class="sourceCode cpp">
+<span class="co">/* Lab9 - 在 2x16 LCD 上顯示 &quot;Hello World&quot; 訊息  </span>
+<span class="co">  The circuit:</span>
+<span class="co"> * LCD RS pin to digital pin 12</span>
+<span class="co"> * LCD Enable pin to digital pin 11</span>
+<span class="co"> * LCD D4 pin to digital pin 5</span>
+<span class="co"> * LCD D5 pin to digital pin 4</span>
+<span class="co"> * LCD D6 pin to digital pin 3</span>
+<span class="co"> * LCD D7 pin to digital pin 2</span>
+<span class="co"> * 10K Potentiometer:</span>
+<span class="co"> * ends to +5V and ground</span>
+<span class="co"> * wiper to LCD VO pin (pin 3)</span>
+<span class="co"> </span>
+<span class="co"> This example code is in the public domain.</span>
+<span class="co"> http://www.arduino.cc/en/Tutorial/LiquidCrystal</span>
+<span class="co"> */</span>
+
+<span class="co">// 引用 LiquidCrystal Library</span>
+<span class="ot">#include &lt;LiquidCrystal.h&gt;</span>
+
+<span class="co">// 建立 LiquidCrystal 的變數 lcd</span>
+<span class="co">//                 LCD 接腳:  rs, enable, d4, d5, d6, d7  </span>
+<span class="co">//      對應到 Arduino 接腳:  12,     11,  5,  4,  3,  2</span>
+LiquidCrystal lcd(<span class="dv">12</span>, <span class="dv">11</span>, <span class="dv">5</span>, <span class="dv">4</span>, <span class="dv">3</span>, <span class="dv">2</span>);
+
+<span class="dt">void</span> setup() {
+  <span class="co">// 設定 LCD 的行列數目 (2 x 16)</span>
+  lcd.begin(<span class="dv">16</span>, <span class="dv">2</span>);
+
+  <span class="co">// 列印 &quot;Hello World&quot; 訊息到 LCD 上</span>
+  lcd.print(<span class="st">&quot;hello, world!&quot;</span>);
+}
+
+<span class="dt">void</span> loop() {
+  <span class="co">// 將游標設到 column 0, line 1</span>
+  <span class="co">// (注意: line 1 是第二行(row)&amp;#65292;因為是從 0 開始數起):</span>
+  lcd.setCursor(<span class="dv">0</span>, <span class="dv">1</span>);
+
+  <span class="co">// 列印 Arduino 重開之後經過的秒數</span>
+  lcd.print(millis()/<span class="dv">1000</span>);
+}</code></pre>
+<p>如果訊息沒有顯示在螢幕上，或者是模糊朦朧的，首先應該做的事是檢查可變電阻以調整對比。</p>
+<p>註：這支是 Arduino 內建的範例程式，點選 File &gt; Examples &gt; LiquidCrystal &gt; HelloWorld 就可以找到。</p>
+<h3 id="範例照片影片"><a href="#範例照片影片">範例照片／影片</a></h3>
+<ul>
+<li>Arduino 筆記 -- Lab9 在 2x16 LCD 上顯示 &quot;Hello World&quot; 訊息 -- <a href="http://youtu.be/jUbNR54mfgM">http://youtu.be/jUbNR54mfgM</a></li>
+</ul>
+<h3 id="動動腦"><a href="#動動腦">動動腦</a></h3>
+<ol style="list-style-type: decimal">
+<li>接一顆光敏電阻或可變電阻，然後寫一支程式讀取光敏電阻或可變電阻的讀值，並將讀到的數值顯示在 LCD 上。</li>
+<li>寫一支 SerialLCD 程式，程式的邏輯是： 接受來自 Serial Port 的資料(從 PC 或筆電端送出)，然後把資料顯示在 LCD 上。</li>
+<li>承上題，把 SerialLCD 變成一個網路型的 LCD，讓電腦透過網路就可以把資料丟到 LCD 上顯示。</li>
+</ol>
+<h3 id="延伸閱讀"><a href="#延伸閱讀">延伸閱讀</a></h3>
+<ul>
+<li><a href="http://home.iae.nl/users/pouweha/lcd/lcd.shtml">How to control a HD44780-based Character LCD</a></li>
+<li><a href="http://www.ladyada.net/learn/lcd/charlcd.html">ladyada – Wiring up a character LCD to Arduino</a></li>
+<li><a href="http://www.spikenzielabs.com/SpikenzieLabs/LCD_How_To.html">LCD 101</a></li>
+<li><a href="http://arduino.cc/en/Tutorial/LiquidCrystalScroll">Scroll</a> : scroll text left and right.</li>
+<li><a href="http://arduino.cc/en/Tutorial/LiquidCrystalAutoscroll">Autoscroll</a> : shift text right and left.</li>
+</ul>
+<p>【本文作者為馬萬圳，原文網址為： <a href="http://coopermaa2nd.blogspot.tw/2010/12/arduino-lab9-2x16-lcd-world.html">http://coopermaa2nd.blogspot.tw/2010/12/arduino-lab9-2x16-lcd-world.html</a> ，由陳鍾誠編輯後納入本雜誌】</p>
+<h2 id="javascript-9-google-的語音合成-api-之使用-作者陳鍾誠"><a href="#javascript-9-google-的語音合成-api-之使用-作者陳鍾誠">JavaScript (9) – Google 的語音合成 API 之使用 (作者：陳鍾誠)</a></h2>
+<h3 id="簡介"><a href="#簡介">簡介</a></h3>
+<p>我還記得在 1996 年時，我到中研院許老師的實驗室當助理，做了兩年自然語言處理的相關程式， 學習到其中主要較成熟的技術像是「注音轉國字」(對應產品為自然輸入法)，然後這兩年整個實驗室 還試圖去研究一些較不成熟，但卻具有挑戰性的技術，特別是「自然語言理解」領域的一些嘗試，例如 有位同事就發展出了一個有趣的程式，當您輸入小學課本中的數學問題時，該程式可以輸出該問題的解答。</p>
+<p>自然語言技術一直是筆者相當關心的領域，雖然筆者的關注比較偏向「文字」部分，在去年於金門大學 教授「計算語言學」這門課時，我就將這些相關的技術寫成了一本書，放在筆者的 github 當中，您可以 從以下的網址找到這本書。</p>
+<ul>
+<li>陳鍾誠的教科書 -- <a href="http://ccckmit.github.io/home/">http://ccckmit.github.io/home/</a></li>
+<li>語言處理技術 -- <a href="http://ccckmit.github.io/BookLanguageProcessing/">http://ccckmit.github.io/BookLanguageProcessing/</a></li>
+</ul>
+<p>但是，自然語言處理可以說是一門既深奧又困難的領域，雖然研究了很久，但筆者一直還沒有去觸碰 「語音合成」與「語音辨識」這兩個領域的主題，對這種「語音領域」的東西可以說是既期待又怕受傷害啊！</p>
+<p>不過、現在由於「微軟」與 Google 等軟體大廠，都已經投入了非常多的資源在研究這些先進的領域， 並且製作出了足以商品化的功能，因此我們只要善用他們所釋出的 API，就可以輕鬆的應用這些功能了。</p>
+<p>在本文中，我們將介紹如何使用 HTML+JavaScript 技術，去使用 Google 所提供的「語音辨識與合成」的服務。</p>
+<h3 id="語音合成的-google-服務"><a href="#語音合成的-google-服務">語音合成的 Google 服務</a></h3>
+<p>Google 的語音合成服務非常容易使用，因為您只要利用 Google 翻譯中的 TTS (Text to Speech) 功能，將 文字放到以下網址中的 {query} 欄位中，然後設定正確的語言欄 {lang}，就可以取得這句話的語音檔了。</p>
+<blockquote>
+<p>http://translate.google.com/translate_tts?ie=utf-8&amp;tl={lang}&amp;q={query}</p>
+</blockquote>
+<p>舉例而言，假如您想讓瀏覽器說出 Text to speech 這句英文，只要將 {lang} 設為 en，然後將 {query} 設為 Text to speech 即可，您可以點選下列網址聽到 Google 所合成的語音。</p>
+<ul>
+<li><a href="http://translate.google.com/translate_tts?ie=utf-8&amp;tl=en&amp;q=Text%20to%20speech">http://translate.google.com/translate_tts?ie=utf-8&amp;tl=en&amp;q=Text to speech</a></li>
+</ul>
+<p>如果您想讓瀏覽器說中文，那麼 {lang} 欄位就必須要設定為 zh，例如您可以點選下列網址廳到「語音合成」這句話。</p>
+<ul>
+<li><a href="http://translate.google.com/translate_tts?ie=utf-8&amp;tl=zh&amp;q=語音合成">http://translate.google.com/translate_tts?ie=utf-8&amp;tl=zh&amp;q=語音合成</a></li>
+</ul>
+<p>一但瞭解了 Google TTS 功能的使用方式之後，您就可以很容易的在網頁中嵌入這樣的「功能元件」了。</p>
+<p>在 HTML 5.0 當中有個特殊的標記， 可以在網頁中嵌入語音，那就是 <code>&lt;audio src=&quot;...&quot;&gt;</code> 標記，您只要在 src 欄位中 填入正確的語音檔網址，該標記就可以用來控制語音的播放，如果您在 <code>&lt;audio&gt;</code> 當中加上 controls 這個屬性，那麼 畫面上就會出現一個像錄音機的控制面版，讓你自行操控語音的「播放與暫停」等功能。</p>
+<p>舉例而言，以下是一個很簡單的程式，其中有兩個「語音控制項」，一個按下後可以播放「你好、這是谷歌的語音合成測試！」 這句中文，另一個按下後可以播放「Hi! This is the text to speech function of Google.」這句英文。</p>
+<div class="figure">
+<img src="../img/textToSpeech1.png" alt="圖、簡單的語音合成範例" /><p class="caption">圖、簡單的語音合成範例</p>
+</div>
+<p>您可以透過這樣的控制項，控制「播放、暫停、調整音量」等等功能，上述畫面的 HTML 原始程式碼如下：</p>
+<p>檔案：textToSpeech1.html 網址：<a href="https://dl.dropboxusercontent.com/u/101584453/pmag/201309/code/textToSpeech1.html">https://dl.dropboxusercontent.com/u/101584453/pmag/201309/code/textToSpeech1.html</a></p>
+<pre class="sourceCode HTML"><code class="sourceCode html"><span class="kw">&lt;html&gt;</span>
+<span class="kw">&lt;head&gt;&lt;meta</span><span class="ot"> charset=</span><span class="st">&quot;utf-8&quot;</span> <span class="kw">/&gt;&lt;/head&gt;</span>
+<span class="kw">&lt;body&gt;</span>
+  <span class="kw">&lt;audio</span><span class="ot"> controls src=</span><span class="st">&quot;http://translate.google.com/translate_tts?ie=utf-8</span><span class="er">&amp;</span><span class="st">tl=zh</span><span class="er">&amp;</span><span class="st">q=你好、這是谷歌的語音合成測試！&quot;</span><span class="kw">&gt;</span>
+  <span class="kw">&lt;/audio&gt;</span> 
+  中文 (zh): 你好、這是谷歌的語音合成測試！<span class="kw">&lt;BR/&gt;</span>
+  <span class="kw">&lt;audio</span><span class="ot"> controls src=</span><span class="st">&quot;http://translate.google.com/translate_tts?ie=utf-8</span><span class="er">&amp;</span><span class="st">tl=en</span><span class="er">&amp;</span><span class="st">q=Hi! This is the text to speech function of Google.&quot;</span><span class="kw">&gt;</span>
+  <span class="kw">&lt;/audio&gt;</span> 
+  英文 (en): Hi! This is the text to speech function of Google. <span class="kw">&lt;BR/&gt;</span>
+<span class="kw">&lt;/body&gt;</span>
+<span class="kw">&lt;/html&gt;</span></code></pre>
+<p>說明：必須注意的一點是，目前並非每種瀏覽器都有支援 <code>&lt;audio&gt;</code> 標記，而且下節當中所使用的 JavaScript 程式也不見得都能正常運作， 像是在 IE 9.0 當中就似乎不支援 audio 標記，但是在 Firefox 22.0 與 Google Chrome 28.0 當中就支援了 audio 標記，而且 以下程式均能正常運作。</p>
+<h3 id="使用-javascript-控制-audio-元件"><a href="#使用-javascript-控制-audio-元件">使用 JavaScript 控制 audio 元件</a></h3>
+<p>有時，我們不希望出現預設的語音控制項，但是卻又希望在某些按鈕被按下時能夠合成語音，這時候我們就需要撰寫一些 JavaScript 程式來控制 audio 元件的播放行為，這時我們可以呼叫 audio 元件的 play() 函數，以進行播放動作。舉例而言，以下程式就改用了按鈕控制</p>
+<div class="figure">
+<img src="../img/textToSpeech2.png" alt="圖、按鈕按下後會播放合成的語音" /><p class="caption">圖、按鈕按下後會播放合成的語音</p>
+</div>
+<p>檔案：textToSpeech2.html 網址：<a href="https://dl.dropboxusercontent.com/u/101584453/pmag/201309/code/textToSpeech2.html">https://dl.dropboxusercontent.com/u/101584453/pmag/201309/code/textToSpeech2.html</a></p>
+<pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;html&gt;</span>
+<span class="kw">&lt;head&gt;&lt;meta</span><span class="ot"> charset=</span><span class="st">&quot;utf-8&quot;</span> <span class="kw">/&gt;&lt;/head&gt;</span>
+<span class="kw">&lt;body&gt;</span>
+  <span class="kw">&lt;audio</span><span class="ot"> id=</span><span class="st">&quot;audio1&quot;</span><span class="ot"> src=</span><span class="st">&quot;http://translate.google.com/translate_tts?ie=utf-8</span><span class="er">&amp;</span><span class="st">tl=zh</span><span class="er">&amp;</span><span class="st">q=你好、這是谷歌的語音合成測試！&quot;</span><span class="kw">&gt;</span>
+  <span class="kw">&lt;/audio&gt;</span> 
+  中文 (zh): 你好、這是谷歌的語音合成測試！
+  <span class="kw">&lt;button</span><span class="ot"> onclick=</span><span class="st">&quot;document.getElementById(&#39;audio1&#39;).play();&quot;</span><span class="kw">&gt;</span>播放<span class="kw">&lt;/button&gt;</span>
+<span class="kw">&lt;/body&gt;</span>
+<span class="kw">&lt;/html&gt;</span></code></pre>
+<p>當然、上述的程式用途不大，因為播放的語句是固定的，如果我們想讓網頁能播放使用者輸入的內容，就必須要動態的在 audio 元件的 src 欄位當中，塞入使用者所輸入的文字，以下程式示範了這樣的功能。</p>
+<p>檔案：textToSpeech3.html 網址：<a href="https://dl.dropboxusercontent.com/u/101584453/pmag/201309/code/textToSpeech3.html">https://dl.dropboxusercontent.com/u/101584453/pmag/201309/code/textToSpeech3.html</a></p>
+<pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;html&gt;</span>
+<span class="kw">&lt;head&gt;&lt;meta</span><span class="ot"> charset=</span><span class="st">&quot;utf-8&quot;</span> <span class="kw">/&gt;&lt;/head&gt;</span>
+<span class="kw">&lt;body&gt;</span>
+<span class="kw">&lt;script&gt;</span>
+<span class="er">  function playAudio(id, lang, text) {</span>
+<span class="er">    var audio = document.getElementById(id); // 取得 audio 控制項</span>
+    <span class="ot">audio</span>.<span class="fu">src</span> = <span class="st">&quot;http://translate.google.com/translate_tts?ie=utf-8&amp;tl=&quot;</span>+lang+<span class="st">&quot;&amp;q=&quot;</span>+text; <span class="co">// 設定語音為 google TTS。</span>
+<span class="er">    audio.addEventListener(&#39;ended&#39;, function(){ this.currentTime = 0; }, false); // 當播放完畢，強制回到開頭。</span>
+<span class="er">    audio.play(); // 播放語音。</span>
+  }
+<span class="kw">&lt;/script&gt;</span>
+  <span class="kw">&lt;audio</span><span class="ot"> id=</span><span class="st">&quot;audio1&quot;</span><span class="kw">&gt;&lt;/audio&gt;</span> 
+  <span class="kw">&lt;textarea</span><span class="ot"> id=</span><span class="st">&quot;text&quot;</span><span class="ot"> rows=</span><span class="st">10</span><span class="ot"> cols=</span><span class="st">60</span><span class="kw">&gt;</span>
+  你好、這是谷歌的語音合成測試！
+  我們呼叫谷歌翻譯的 TTS API 去合成語音。
+  <span class="kw">&lt;/textarea&gt;&lt;BR/&gt;</span>
+  <span class="kw">&lt;button</span><span class="ot"> onclick=</span><span class="st">&quot;playAudio(&#39;audio1&#39;, &#39;zh&#39;, document.getElementById(&#39;text&#39;).value);&quot;</span><span class="kw">&gt;</span>播放<span class="kw">&lt;/button&gt;</span>
+<span class="kw">&lt;/body&gt;</span>
+<span class="kw">&lt;/html&gt;</span></code></pre>
+<p>在上面的程式中，我們在 button 「播放」按鈕按下時，會呼叫下列指令去播放 text 這個 textarea 中的文字。</p>
+<pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="fu">playAudio</span>(<span class="st">&#39;audio1&#39;</span>, <span class="st">&#39;zh&#39;</span>, <span class="ot">document</span>.<span class="fu">getElementById</span>(<span class="st">&#39;text&#39;</span>).<span class="fu">value</span>);</code></pre>
+<p>而在 playAudio() 函數中，我們用下列指令設定 audio 控制項的語音網址為 Google TTS 的網址，然後播放，如下程式碼所示：</p>
+<pre class="sourceCode javascript"><code class="sourceCode javascript">    <span class="kw">var</span> audio = <span class="ot">document</span>.<span class="fu">getElementById</span>(id); <span class="co">// 取得 audio 控制項</span>
+    <span class="ot">audio</span>.<span class="fu">src</span> = <span class="st">&quot;http://translate.google.com/translate_tts?ie=utf-8&amp;tl=&quot;</span>+lang+<span class="st">&quot;&amp;q=&quot;</span>+text; <span class="co">// 設定語音為 google TTS。</span>
+    <span class="ot">audio</span>.<span class="fu">play</span>(); <span class="co">// 播放語音。</span></code></pre>
+<p>原本其實只要上述三行就夠了，但是由於在 Chrome 當中，audio 控制項在呼叫完 play() 之後，似乎並不會自動回到開頭， 導致第二次的無法播放聲音 (因為已經在最後了)，因此才需要加入下列這行，強制 play() 函數在播放完成之後回到開頭， 以便在下一次播放時能聽得到聲音。</p>
+<pre class="sourceCode javascript"><code class="sourceCode javascript">    <span class="ot">audio</span>.<span class="fu">addEventListener</span>(<span class="st">&#39;ended&#39;</span>, <span class="kw">function</span>(){ <span class="kw">this</span>.<span class="fu">currentTime</span> = <span class="dv">0</span>; }, <span class="kw">false</span>); <span class="co">// 當播放完畢，強制回到開頭。</span></code></pre>
+<h3 id="結語-2"><a href="#結語-2">結語</a></h3>
+<p>現在、我們已經講解完整個 Google 語音合成 API 的使用方式了，筆者覺得 Google 的這種設計方式其實很棒，讓我們可以 很容易的在任何網頁中加入 Text to Speech 的功能，而且不需要安裝任何的軟體。</p>
+<p>不過、筆者發現目前的Google 語音合成服務還有幾個小問題，例如在中文的模式下，如果夾雜英文的時候，Google TTS 會用 逐字的方式念初英文。舉例而言，假如我們想讓 Google TTS 念初下列文章。</p>
+<blockquote>
+<p>Hello, 你好！</p>
+</blockquote>
+<p>則 Google TTS 所念出的語句，將會變成下列情況：</p>
+<blockquote>
+<p>H. e. l. l. o, 你好！</p>
+</blockquote>
+<p>這聽起來很怪！但可惜的是，筆者還不知道有沒有甚麼方法可以讓 Google TTS 平順的念出中文中所夾雜的英文，如果有人知道 也請告訴我！</p>
+<p>不過如果將 {lang} 欄位設定為 en (英文模式)，那麼 Google TTS 就可以平順的念出英文，而且品質還不錯。所以目前如果要 做中英夾雜的發音，可能要用 JavaScript 自行將中英文切割，然後利用類似下列方法，自行切換 {lang} 欄位，以便能順利的念出 中英夾雜的句子，只是這樣真的很不方便就是了。</p>
+<pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="ot">audio</span>.<span class="fu">addEventListener</span>(<span class="st">&#39;ended&#39;</span>, <span class="kw">function</span>() { .....} );</code></pre>
+<p>在下期當中，我們將會繼續探討有關 Google 語音服務的主題，不過不再是「語音合成」 (Text to Speech) 了，而是「語音辨識」 (Speech to Text)。</p>
+<p>這是一個在技術上更困難的主題，不過幸運的是，Google 已經幫我們完成了這些程式，我們只要懂得如何用 JavaScript 呼叫就行了。</p>
+<h3 id="參考文獻-3"><a href="#參考文獻-3">參考文獻</a></h3>
+<ul>
+<li><a href="http://weston.ruter.net/2009/12/12/google-tts/">Google Text-To-Speech (TTS)</a></li>
+<li><a href="http://techcrunch.com/2009/12/14/the-unofficial-google-text-to-speech-api/">The Unofficial Google Text-To-Speech API</a></li>
+</ul>
+<h2 id="r-統計軟體6-迴歸分析-作者陳鍾誠"><a href="#r-統計軟體6-迴歸分析-作者陳鍾誠">R 統計軟體(6) – 迴歸分析 (作者：陳鍾誠)</a></h2>
+<h3 id="簡介-1"><a href="#簡介-1">簡介</a></h3>
+<p>在本系列文章的前兩篇當中，我們說明了如何用 R 軟體來進行估計與檢定，特別是有關平均值的估計與檢定。</p>
+<ul>
+<li><a href="https://dl.dropboxusercontent.com/u/101584453/pmag/201306/htm/article3.html">R 統計軟體(4) – 平均值的估計與檢定</a></li>
+<li><a href="http://programmermagazine.github.io/201307/htm/article3.html">R 統計軟體(5) – 再探檢定</a></li>
+</ul>
+<p>這種估計通常是對於某個算式結果的「點估計」與「區間估計」，被估計的對象是一個點。</p>
+<p>但是、如果我們想要找尋的是，兩個以上變數之間的「運算式」關係，那麼就不能只用「估計」了，而必須採用「迴歸分析」的方法。</p>
+<p>迴歸分析是在尋找這些變數之間的關係，通常是尋找「線性關係」，舉例而言，假如我們認為 y 與 x 之間具有線性關係，也就是 y 是 x 的線性函數，那麼我們可以將兩者之間的關係寫成 y= a + b * x ，其中 a 與 b 都是某個未知的常數。</p>
+<p>當我們取得了很多組 (x,y) 的樣本 (x1, y1) (x2, y2) ..... (xk, yk) 時，我們就可以透過迴歸分析來尋找出這些未知的常數， 進而建立變數之間的線性方程關係式。</p>
+<h3 id="r-軟體中的-lm-函數"><a href="#r-軟體中的-lm-函數">R 軟體中的 lm() 函數</a></h3>
+<p>在 R 軟體當中，用來做迴歸分析的是 lm() 函數，其函數原型如下：</p>
+<ul>
+<li>lm(formula, data, subset, weights, na.action, method = &quot;qr&quot;, model = TRUE, x = FALSE, y = FALSE, qr = TRUE, singular.ok = TRUE, contrasts = NULL, offset, ...)</li>
+</ul>
+<p>通常，我們只要用到 formula 與 data 兩個參數就可以進行迴歸運算了，舉例而言，假如我們有 25 個樣本 xy = (x1, y1) (x2, y2) .... (x25, y25)，那麼我們就 可以用下列 lm 函數找出 x, y 之間的線性關係式。</p>
+<ul>
+<li>lm(y~x, xy)</li>
+</ul>
+<p>當然、如果自變數不只一個，例如我們想尋找的是 y = a + b1 * x1 + b2 * x2 的話，那麼就可以用下列函數去計算出 a, b1, b2 等係數，以建立迴歸模型。</p>
+<ul>
+<li>lm(y~x1+x2, xy)</li>
+</ul>
+<h3 id="單一自變數的迴歸分析完全線性無誤差值"><a href="#單一自變數的迴歸分析完全線性無誤差值">單一自變數的迴歸分析：完全線性，無誤差值</a></h3>
+<p>現在、就讓我們用 R 軟體來示範「迴歸分析」的做法，</p>
+<pre class="sourceCode R"><code class="sourceCode r">&gt;<span class="st"> </span>x =<span class="st"> </span><span class="kw">sample</span>(<span class="dv">1</span>:<span class="dv">10</span>, <span class="dv">25</span>, <span class="dt">replace=</span><span class="ot">TRUE</span>) <span class="co"># 從 1 到 10 之中可重複的隨機抽出 25 個樣本</span>
+&gt;<span class="st"> </span>x
+ [<span class="dv">1</span>]  <span class="dv">5</span>  <span class="dv">7</span>  <span class="dv">8</span>  <span class="dv">4</span>  <span class="dv">3</span>  <span class="dv">2</span>  <span class="dv">3</span>  <span class="dv">4</span>  <span class="dv">5</span>  <span class="dv">4</span>  <span class="dv">7</span>  <span class="dv">7</span>  <span class="dv">2</span>  <span class="dv">4</span>  <span class="dv">2</span> <span class="dv">10</span>  <span class="dv">7</span>  <span class="dv">3</span>  <span class="dv">3</span>  <span class="dv">2</span>  <span class="dv">7</span>  <span class="dv">5</span> <span class="dv">10</span>  <span class="dv">7</span>
+[<span class="dv">25</span>] <span class="dv">10</span>
+&gt;<span class="st"> </span>y =<span class="st"> </span><span class="dv">1+3</span>*x　 <span class="co"># 用這些 x 樣本透過線性關係式產生 y 樣本，這是完美的線性關係，完全沒有誤差。</span>
+&gt;<span class="st"> </span>y
+ [<span class="dv">1</span>] <span class="dv">16</span> <span class="dv">22</span> <span class="dv">25</span> <span class="dv">13</span> <span class="dv">10</span>  <span class="dv">7</span> <span class="dv">10</span> <span class="dv">13</span> <span class="dv">16</span> <span class="dv">13</span> <span class="dv">22</span> <span class="dv">22</span>  <span class="dv">7</span> <span class="dv">13</span>  <span class="dv">7</span> <span class="dv">31</span> <span class="dv">22</span> <span class="dv">10</span> <span class="dv">10</span>  <span class="dv">7</span> <span class="dv">22</span> <span class="dv">16</span> <span class="dv">31</span> <span class="dv">22</span>
+[<span class="dv">25</span>] <span class="dv">31</span>
+&gt;<span class="st"> </span><span class="kw">plot</span>(x,y)　<span class="co"># 畫出 (x,y) 的圖形，您會發現所有點都分布在一條斜率為 3 的斜線上</span>
+&gt;<span class="st"> </span>xy =<span class="st"> </span><span class="kw">data.frame</span>(x, y)　<span class="co"># 讓 (x,y) 的配對形成 frame 變數，這樣才能做為 lm(formula, data) 中的 data 參數。</span>
+&gt;<span class="st"> </span>xy　<span class="co"># 印出 xy  frame 變數</span>
+    x  y
+<span class="dv">1</span>   <span class="dv">5</span> <span class="dv">16</span>
+<span class="dv">2</span>   <span class="dv">7</span> <span class="dv">22</span>
+<span class="dv">3</span>   <span class="dv">8</span> <span class="dv">25</span>
+<span class="dv">4</span>   <span class="dv">4</span> <span class="dv">13</span>
+<span class="dv">5</span>   <span class="dv">3</span> <span class="dv">10</span>
+<span class="dv">6</span>   <span class="dv">2</span>  <span class="dv">7</span>
+<span class="dv">7</span>   <span class="dv">3</span> <span class="dv">10</span>
+<span class="dv">8</span>   <span class="dv">4</span> <span class="dv">13</span>
+<span class="dv">9</span>   <span class="dv">5</span> <span class="dv">16</span>
+<span class="dv">10</span>  <span class="dv">4</span> <span class="dv">13</span>
+<span class="dv">11</span>  <span class="dv">7</span> <span class="dv">22</span>
+<span class="dv">12</span>  <span class="dv">7</span> <span class="dv">22</span>
+<span class="dv">13</span>  <span class="dv">2</span>  <span class="dv">7</span>
+<span class="dv">14</span>  <span class="dv">4</span> <span class="dv">13</span>
+<span class="dv">15</span>  <span class="dv">2</span>  <span class="dv">7</span>
+<span class="dv">16</span> <span class="dv">10</span> <span class="dv">31</span>
+<span class="dv">17</span>  <span class="dv">7</span> <span class="dv">22</span>
+<span class="dv">18</span>  <span class="dv">3</span> <span class="dv">10</span>
+<span class="dv">19</span>  <span class="dv">3</span> <span class="dv">10</span>
+<span class="dv">20</span>  <span class="dv">2</span>  <span class="dv">7</span>
+<span class="dv">21</span>  <span class="dv">7</span> <span class="dv">22</span>
+<span class="dv">22</span>  <span class="dv">5</span> <span class="dv">16</span>
+<span class="dv">23</span> <span class="dv">10</span> <span class="dv">31</span>
+<span class="dv">24</span>  <span class="dv">7</span> <span class="dv">22</span>
+<span class="dv">25</span> <span class="dv">10</span> <span class="dv">31</span>
+&gt;<span class="st"> </span>
+<span class="er">&gt;</span><span class="st"> </span>model =<span class="st"> </span><span class="kw">lm</span>(y~x, <span class="dt">data=</span>xy) <span class="co"># 開始作線性迴歸分析</span>
+&gt;<span class="st"> </span>model　 <span class="co"># 顯示分析結果，發現 截距 intercept 為　1, 且 x 的係數為 3，也就是 y=1+3*x，正確找出我們產生資料用的算式。</span>
+
+Call:
+<span class="kw">lm</span>(<span class="dt">formula =</span> y ~<span class="st"> </span>x, <span class="dt">data =</span> xy)
+
+Coefficients:
+(Intercept)            x  
+          <span class="dv">1</span>            <span class="dv">3</span>  </code></pre>
+<h3 id="單一自變數的迴歸分析有誤差值"><a href="#單一自變數的迴歸分析有誤差值">單一自變數的迴歸分析：有誤差值</a></h3>
+<p>上述的範例雖然很完美，但是卻很不真實，因為在機率統計的世界中，通常有很多難以捕捉的「隨機性誤差」，反應在樣本上面。</p>
+<p>現在、就讓我們再度進行一次迴歸分析，只不過這次我們將加入一些常態分布的誤差值進去。</p>
+<pre class="sourceCode R"><code class="sourceCode r">&gt;<span class="st"> </span>x =<span class="st"> </span><span class="kw">sample</span>(<span class="dv">1</span>:<span class="dv">10</span>, <span class="dv">25</span>, <span class="dt">replace=</span><span class="ot">TRUE</span>)  <span class="co"># 從 1 到 10 之中可重複的隨機抽出 25 個樣本</span>
+&gt;<span class="st"> </span>x
+ [<span class="dv">1</span>]  <span class="dv">5</span>  <span class="dv">7</span>  <span class="dv">8</span>  <span class="dv">4</span>  <span class="dv">3</span>  <span class="dv">2</span>  <span class="dv">3</span>  <span class="dv">4</span>  <span class="dv">5</span>  <span class="dv">4</span>  <span class="dv">7</span>  <span class="dv">7</span>  <span class="dv">2</span>  <span class="dv">4</span>  <span class="dv">2</span> <span class="dv">10</span>  <span class="dv">7</span>  <span class="dv">3</span>  <span class="dv">3</span>  <span class="dv">2</span>  <span class="dv">7</span>  <span class="dv">5</span> <span class="dv">10</span>  <span class="dv">7</span>
+[<span class="dv">25</span>] <span class="dv">10</span>
+&gt;<span class="st"> </span>y =<span class="st"> </span><span class="dv">1</span> +<span class="st"> </span><span class="dv">3</span>*x +<span class="st"> </span><span class="kw">rnorm</span>(<span class="dv">25</span>, <span class="dt">mean=</span><span class="dv">0</span>, <span class="dt">sd=</span><span class="dv">1</span>) <span class="co"># 用這些 x 樣本透過線性關係式產生 y 樣本，其中的誤差是用 rnorm() 產生的。</span>
+&gt;<span class="st"> </span>xy =<span class="st"> </span><span class="kw">data.frame</span>(x,y)　<span class="co"># 讓 (x,y) 的配對形成 frame 變數，這樣才能做為 lm(formula, data) 中的 data 參數。</span>
+&gt;<span class="st"> </span>xy
+    x         y
+<span class="dv">1</span>   <span class="dv">5</span> <span class="fl">15.936440</span>
+<span class="dv">2</span>   <span class="dv">7</span> <span class="fl">22.382565</span>
+<span class="dv">3</span>   <span class="dv">8</span> <span class="fl">25.872976</span>
+<span class="dv">4</span>   <span class="dv">4</span> <span class="fl">11.879862</span>
+<span class="dv">5</span>   <span class="dv">3</span> <span class="fl">10.283478</span>
+<span class="dv">6</span>   <span class="dv">2</span>  <span class="fl">7.259466</span>
+<span class="dv">7</span>   <span class="dv">3</span> <span class="fl">10.487880</span>
+<span class="dv">8</span>   <span class="dv">4</span> <span class="fl">12.330273</span>
+<span class="dv">9</span>   <span class="dv">5</span> <span class="fl">15.735540</span>
+<span class="dv">10</span>  <span class="dv">4</span> <span class="fl">11.933706</span>
+<span class="dv">11</span>  <span class="dv">7</span> <span class="fl">23.185950</span>
+<span class="dv">12</span>  <span class="dv">7</span> <span class="fl">20.830941</span>
+<span class="dv">13</span>  <span class="dv">2</span>  <span class="fl">7.162297</span>
+<span class="dv">14</span>  <span class="dv">4</span> <span class="fl">13.798160</span>
+<span class="dv">15</span>  <span class="dv">2</span>  <span class="fl">6.868275</span>
+<span class="dv">16</span> <span class="dv">10</span> <span class="fl">33.310490</span>
+<span class="dv">17</span>  <span class="dv">7</span> <span class="fl">22.403416</span>
+<span class="dv">18</span>  <span class="dv">3</span> <span class="fl">10.481201</span>
+<span class="dv">19</span>  <span class="dv">3</span> <span class="fl">11.122462</span>
+<span class="dv">20</span>  <span class="dv">2</span>  <span class="fl">7.646084</span>
+<span class="dv">21</span>  <span class="dv">7</span> <span class="fl">22.467235</span>
+<span class="dv">22</span>  <span class="dv">5</span> <span class="fl">14.943285</span>
+<span class="dv">23</span> <span class="dv">10</span> <span class="fl">32.170245</span>
+<span class="dv">24</span>  <span class="dv">7</span> <span class="fl">22.300601</span>
+<span class="dv">25</span> <span class="dv">10</span> <span class="fl">32.522192</span>
+&gt;<span class="st"> </span>model2 =<span class="st"> </span><span class="kw">lm</span>(y~x, xy, <span class="dt">x=</span>T) <span class="co"># 開始作線性迴歸分析</span>
+&gt;<span class="st"> </span>model2 <span class="co"># 顯示分析結果，發現 截距 intercept 為　0.5345, 且 x 的係數為 3.1447，也就是 y=0.5345+3.1447*x，這與原產生式「y = 1 + 3*x + 誤差」有些差異，但還不錯。</span>
+
+Call:
+<span class="kw">lm</span>(<span class="dt">formula =</span> y ~<span class="st"> </span>x, <span class="dt">data =</span> xy, <span class="dt">x =</span> T)
+
+Coefficients:
+(Intercept)            x  
+     <span class="fl">0.5345</span>       <span class="fl">3.1447</span>  
+
+&gt;<span class="st"> </span>model2$x
+   (Intercept)  x
+<span class="dv">1</span>            <span class="dv">1</span>  <span class="dv">5</span>
+<span class="dv">2</span>            <span class="dv">1</span>  <span class="dv">7</span>
+<span class="dv">3</span>            <span class="dv">1</span>  <span class="dv">8</span>
+<span class="dv">4</span>            <span class="dv">1</span>  <span class="dv">4</span>
+<span class="dv">5</span>            <span class="dv">1</span>  <span class="dv">3</span>
+<span class="dv">6</span>            <span class="dv">1</span>  <span class="dv">2</span>
+<span class="dv">7</span>            <span class="dv">1</span>  <span class="dv">3</span>
+<span class="dv">8</span>            <span class="dv">1</span>  <span class="dv">4</span>
+<span class="dv">9</span>            <span class="dv">1</span>  <span class="dv">5</span>
+<span class="dv">10</span>           <span class="dv">1</span>  <span class="dv">4</span>
+<span class="dv">11</span>           <span class="dv">1</span>  <span class="dv">7</span>
+<span class="dv">12</span>           <span class="dv">1</span>  <span class="dv">7</span>
+<span class="dv">13</span>           <span class="dv">1</span>  <span class="dv">2</span>
+<span class="dv">14</span>           <span class="dv">1</span>  <span class="dv">4</span>
+<span class="dv">15</span>           <span class="dv">1</span>  <span class="dv">2</span>
+<span class="dv">16</span>           <span class="dv">1</span> <span class="dv">10</span>
+<span class="dv">17</span>           <span class="dv">1</span>  <span class="dv">7</span>
+<span class="dv">18</span>           <span class="dv">1</span>  <span class="dv">3</span>
+<span class="dv">19</span>           <span class="dv">1</span>  <span class="dv">3</span>
+<span class="dv">20</span>           <span class="dv">1</span>  <span class="dv">2</span>
+<span class="dv">21</span>           <span class="dv">1</span>  <span class="dv">7</span>
+<span class="dv">22</span>           <span class="dv">1</span>  <span class="dv">5</span>
+<span class="dv">23</span>           <span class="dv">1</span> <span class="dv">10</span>
+<span class="dv">24</span>           <span class="dv">1</span>  <span class="dv">7</span>
+<span class="dv">25</span>           <span class="dv">1</span> <span class="dv">10</span>
+<span class="kw">attr</span>(,<span class="st">&quot;assign&quot;</span>)
+[<span class="dv">1</span>] <span class="dv">0</span> <span class="dv">1</span>
+&gt;<span class="st"> </span></code></pre>
+<h3 id="兩組自變數的迴歸分析完全線性無誤差值"><a href="#兩組自變數的迴歸分析完全線性無誤差值">兩組自變數的迴歸分析：完全線性，無誤差值</a></h3>
+<p>當然、我們不只可以做單一自變數的迴歸，也可以做多組自變數的迴歸，以下讓我們用 R 軟體來示範 <code>y=a + b1 * x1 + b2 * x2</code> 迴歸式的分析。</p>
+<pre class="sourceCode R"><code class="sourceCode r">&gt;<span class="st"> </span>x1 =<span class="st"> </span><span class="kw">sample</span>(<span class="dv">1</span>:<span class="dv">10</span>, <span class="dv">25</span>, <span class="dt">replace=</span><span class="ot">TRUE</span>) <span class="co"># 產生第一個自變數的 25 個樣本值</span>
+&gt;<span class="st"> </span>x2 =<span class="st"> </span><span class="kw">sample</span>(<span class="dv">1</span>:<span class="dv">8</span>, <span class="dv">25</span>, <span class="dt">replace=</span><span class="ot">TRUE</span>) <span class="co"># 產生第二個自變數的 25 個樣本值</span>
+&gt;<span class="st"> </span>y =<span class="st"> </span><span class="dv">5</span> +<span class="st"> </span><span class="dv">3</span> *<span class="st"> </span>x1 -<span class="st"> </span><span class="dv">2</span> *<span class="st"> </span>x2 <span class="co"># 用這些 (x1, x2) 樣本透過線性關係式產生 y 樣本，這是完美的線性關係，完全沒有誤差。</span>
+&gt;<span class="st"> </span>x1
+ [<span class="dv">1</span>]  <span class="dv">8</span>  <span class="dv">8</span>  <span class="dv">8</span>  <span class="dv">2</span>  <span class="dv">6</span>  <span class="dv">3</span>  <span class="dv">4</span>  <span class="dv">1</span>  <span class="dv">5</span>  <span class="dv">4</span>  <span class="dv">2</span>  <span class="dv">1</span>  <span class="dv">6</span>  <span class="dv">4</span>  <span class="dv">2</span>  <span class="dv">4</span>  <span class="dv">1</span>  <span class="dv">5</span>  <span class="dv">7</span>  <span class="dv">2</span>  <span class="dv">9</span>  <span class="dv">2</span> <span class="dv">10</span>  <span class="dv">4</span>
+[<span class="dv">25</span>]  <span class="dv">5</span>
+&gt;<span class="st"> </span>x2
+ [<span class="dv">1</span>] <span class="dv">7</span> <span class="dv">7</span> <span class="dv">1</span> <span class="dv">8</span> <span class="dv">5</span> <span class="dv">5</span> <span class="dv">5</span> <span class="dv">2</span> <span class="dv">6</span> <span class="dv">8</span> <span class="dv">5</span> <span class="dv">7</span> <span class="dv">4</span> <span class="dv">6</span> <span class="dv">8</span> <span class="dv">5</span> <span class="dv">6</span> <span class="dv">8</span> <span class="dv">2</span> <span class="dv">5</span> <span class="dv">7</span> <span class="dv">2</span> <span class="dv">7</span> <span class="dv">6</span> <span class="dv">5</span>
+&gt;<span class="st"> </span>y
+ [<span class="dv">1</span>] <span class="dv">15</span> <span class="dv">15</span> <span class="dv">27</span> -<span class="dv">5</span> <span class="dv">13</span>  <span class="dv">4</span>  <span class="dv">7</span>  <span class="dv">4</span>  <span class="dv">8</span>  <span class="dv">1</span>  <span class="dv">1</span> -<span class="dv">6</span> <span class="dv">15</span>  <span class="dv">5</span> -<span class="dv">5</span>  <span class="dv">7</span> -<span class="dv">4</span>  <span class="dv">4</span> <span class="dv">22</span>  <span class="dv">1</span> <span class="dv">18</span>  <span class="dv">7</span> <span class="dv">21</span>  <span class="dv">5</span>
+[<span class="dv">25</span>] <span class="dv">10</span>
+&gt;<span class="st"> </span>yx12 =<span class="st"> </span><span class="kw">data.frame</span>(y, x1, x2)　<span class="co"># 讓 (y, x1, x2) 的配對形成 frame 變數，這樣才能做為 lm(formula, data) 中的 data 參數。</span>
+&gt;<span class="st"> </span>yx12.model =<span class="st"> </span><span class="kw">lm</span>(y~x1+x2, yx12) <span class="co"># 開始作線性迴歸分析</span>
+&gt;<span class="st"> </span>yx12.model <span class="co"># 顯示分析結果，發現 截距 intercept 為　5, 且 x1 的係數為 3，x2 的係數為 -2 也就是 y=5+3*x1-2*x2，正確找出我們產生資料用的算式。</span>
+
+Call:
+<span class="kw">lm</span>(<span class="dt">formula =</span> y ~<span class="st"> </span>x1 +<span class="st"> </span>x2, <span class="dt">data =</span> yx12)
+
+Coefficients:
+(Intercept)           x1           x2  
+          <span class="dv">5</span>            <span class="dv">3</span>           -<span class="dv">2</span>  
+
+&gt;<span class="st"> </span></code></pre>
+<h3 id="兩組自變數的迴歸分析有誤差值"><a href="#兩組自變數的迴歸分析有誤差值">兩組自變數的迴歸分析：有誤差值</a></h3>
+<p>同樣的，對於兩組或多組自變數的情況，我們也可以加入「隨機誤差值」，來讓整個資料集更有真實感，以下是我們的「資料產生」與「迴歸分析」的過程。</p>
+<pre class="sourceCode R"><code class="sourceCode r">&gt;<span class="st"> </span>x1 =<span class="st"> </span><span class="kw">sample</span>(<span class="dv">1</span>:<span class="dv">10</span>, <span class="dv">25</span>, <span class="dt">replace=</span><span class="ot">TRUE</span>) <span class="co"># 產生第一個自變數的 25 個樣本值</span>
+&gt;<span class="st"> </span>x2 =<span class="st"> </span><span class="kw">sample</span>(<span class="dv">1</span>:<span class="dv">8</span>, <span class="dv">25</span>, <span class="dt">replace=</span><span class="ot">TRUE</span>) <span class="co"># 產生第二個自變數的 25 個樣本值</span>
+&gt;<span class="st"> </span>y2 =<span class="st"> </span><span class="dv">5</span> +<span class="st"> </span><span class="dv">3</span>*x1<span class="dv">-2</span>*x2 +<span class="st"> </span><span class="kw">rnorm</span>(<span class="dv">25</span>, <span class="dt">mean=</span><span class="dv">0</span>, <span class="dt">sd=</span><span class="dv">5</span>)
+&gt;<span class="st"> </span>y2x12 =<span class="st"> </span><span class="kw">data.frame</span>(y2, x1, x2)　<span class="co"># 讓 (y, x1, x2) 的配對形成 frame 變數，這樣才能做為 lm(formula, data) 中的 data 參數。</span>
+&gt;<span class="st"> </span>y2x12
+           y2 x1 x2
+<span class="dv">1</span>  <span class="fl">10.2069412</span>  <span class="dv">8</span>  <span class="dv">7</span>
+<span class="dv">2</span>  <span class="fl">11.5760467</span>  <span class="dv">8</span>  <span class="dv">7</span>
+<span class="dv">3</span>  <span class="fl">24.8724883</span>  <span class="dv">8</span>  <span class="dv">1</span>
+<span class="dv">4</span>  -<span class="fl">3.4406110</span>  <span class="dv">2</span>  <span class="dv">8</span>
+<span class="dv">5</span>   <span class="fl">9.0650415</span>  <span class="dv">6</span>  <span class="dv">5</span>
+<span class="dv">6</span>   <span class="fl">8.2621227</span>  <span class="dv">3</span>  <span class="dv">5</span>
+<span class="dv">7</span>  <span class="fl">18.7755635</span>  <span class="dv">4</span>  <span class="dv">5</span>
+<span class="dv">8</span>  -<span class="fl">5.1753518</span>  <span class="dv">1</span>  <span class="dv">2</span>
+<span class="dv">9</span>  <span class="fl">14.1795708</span>  <span class="dv">5</span>  <span class="dv">6</span>
+<span class="dv">10</span> -<span class="fl">2.9588236</span>  <span class="dv">4</span>  <span class="dv">8</span>
+<span class="dv">11</span>  <span class="fl">4.4931402</span>  <span class="dv">2</span>  <span class="dv">5</span>
+<span class="dv">12</span> -<span class="fl">9.1706740</span>  <span class="dv">1</span>  <span class="dv">7</span>
+<span class="dv">13</span> <span class="fl">15.7826413</span>  <span class="dv">6</span>  <span class="dv">4</span>
+<span class="dv">14</span> <span class="fl">11.1684672</span>  <span class="dv">4</span>  <span class="dv">6</span>
+<span class="dv">15</span> -<span class="fl">4.2108325</span>  <span class="dv">2</span>  <span class="dv">8</span>
+<span class="dv">16</span> <span class="fl">14.0557877</span>  <span class="dv">4</span>  <span class="dv">5</span>
+<span class="dv">17</span>  <span class="fl">2.9787818</span>  <span class="dv">1</span>  <span class="dv">6</span>
+<span class="dv">18</span>  <span class="fl">0.2277253</span>  <span class="dv">5</span>  <span class="dv">8</span>
+<span class="dv">19</span> <span class="fl">31.3466157</span>  <span class="dv">7</span>  <span class="dv">2</span>
+<span class="dv">20</span> <span class="fl">11.2311146</span>  <span class="dv">2</span>  <span class="dv">5</span>
+<span class="dv">21</span> <span class="fl">17.9397316</span>  <span class="dv">9</span>  <span class="dv">7</span>
+<span class="dv">22</span>  <span class="fl">6.1773147</span>  <span class="dv">2</span>  <span class="dv">2</span>
+<span class="dv">23</span> <span class="fl">17.5177323</span> <span class="dv">10</span>  <span class="dv">7</span>
+<span class="dv">24</span>  <span class="fl">1.1189083</span>  <span class="dv">4</span>  <span class="dv">6</span>
+<span class="dv">25</span> <span class="fl">15.5696626</span>  <span class="dv">5</span>  <span class="dv">5</span>
+&gt;<span class="st"> </span>y2x12.model =<span class="st"> </span><span class="kw">lm</span>(y~<span class="st"> </span>x1+x2, y2x12) <span class="co"># 開始作線性迴歸分析</span>
+&gt;<span class="st"> </span>y2x12.model <span class="co"># 顯示分析結果，發現 截距 intercept 為　5.315, 且 x1 的係數為 2.886，x2 的係數為 -1.997，也就是 y=5.315+2.886*x1-1.997x2，這與原產生式 「y = 5 + 3*x1-2*x2+誤差」有些差異，但還不錯。</span>
+
+Call:
+<span class="kw">lm</span>(<span class="dt">formula =</span> y ~<span class="st"> </span>x1 +<span class="st"> </span>x2, <span class="dt">data =</span> y2x12)
+
+Coefficients:
+(Intercept)           x1           x2  
+      <span class="fl">5.315</span>        <span class="fl">2.886</span>       -<span class="fl">1.997</span>  
+
+&gt;<span class="st"> </span></code></pre>
+<h3 id="結語-3"><a href="#結語-3">結語</a></h3>
+<p>透過上述的實驗，我們可以發現在沒有誤差的情況下，線性迴歸函數 lm() 都可以找出正確的模型，得到正確的「截距」與「係數值」， 而在有隨機誤差的情況下，線性迴歸函數 lm() 雖然沒有辦法完全環原正確的模型，但是也找到還算不錯的結果，這正是「迴歸分析」 這個工具的威力之所在阿！</p>
+<h3 id="參考文獻-4"><a href="#參考文獻-4">參考文獻</a></h3>
+<ul>
+<li><a href="https://dl.dropboxusercontent.com/u/101584453/pmag/201306/htm/article3.html">R 統計軟體(4) – 平均值的估計與檢定</a></li>
+<li><a href="http://programmermagazine.github.io/201307/htm/article3.html">R 統計軟體(5) – 再探檢定</a></li>
+<li>陳鍾誠的網站/免費電子書/R 統計軟體 -- <a href="http://ccckmit.wikidot.com/r:main">http://ccckmit.wikidot.com/r:main</a></li>
+<li>陳鍾誠的網站/免費電子書/機率與統計 (使用 R 軟體) -- <a href="http://ccckmit.wikidot.com/st:main">http://ccckmit.wikidot.com/st:main</a></li>
+</ul>
+<h2 id="verilog-3-組合邏輯電路-作者陳鍾誠"><a href="#verilog-3-組合邏輯電路-作者陳鍾誠">Verilog (3) – 組合邏輯電路 (作者：陳鍾誠)</a></h2>
+<p>在數位電路當中，邏輯電路通常被分為兩類，一類是沒有「回饋線路」(No feedback) 的組合邏輯電路 (Combinatorial Logic)， 另一類是有「回饋線路」的循序邏輯電路 (Sequential Logic)。</p>
+<p>組合邏輯的線路只是將輸入訊號轉換成輸出訊號，像是加法器、多工器等都是組合邏輯電路的範例，由於中間不會暫存，因此無法記憶位元。 而循序邏輯由於有回饋線路，所以可以製作出像 Flip-Flop，Latch 等記憶單元，可以記憶位元。</p>
+<p>在本文中，我們將先專注在組合邏輯上，看看如何用基本的閘級寫法，寫出像多工器、加法器、減法器等組成 CPU 的基礎 電路元件。</p>
+<h3 id="多工器"><a href="#多工器">多工器</a></h3>
+<p>如果您曾經用硬接線的方式設計過 CPU，那就會發現「控制單元」主要就是一堆多工器的連接。多工器可以從很多組輸入資料中 選擇一組輸出，以下是一個四選一多工器的方塊圖。</p>
+<div class="figure">
+<img src="../img/mux.png" alt="圖、4 選 1 多工器" /><p class="caption">圖、4 選 1 多工器</p>
+</div>
+<p>4 選 1 多工器的內部電路結構如下：</p>
+<div class="figure">
+<img src="../img/mux4to1.png" alt="圖、4 選 1 多工器的內部電路" /><p class="caption">圖、4 選 1 多工器的內部電路</p>
+</div>
+<p>接著、就讓我們來看一個完整的 Verilog 的 4 選 1 的多工器程式，由於 Verilog 支援像 Case 這樣的高階語法，因此在實作時 可以不需要採用細部的接線方式，只要使用 case 語句就可以輕易完成多工器的設計。</p>
+<p>檔案：<a href="https://dl.dropboxusercontent.com/u/101584453/pmag/201309/code/mux.v">mux4.v</a></p>
+<pre class="sourceCode Verilog"><code class="sourceCode verilog"><span class="kw">module</span> mux4(<span class="dt">input</span>[<span class="dv">1</span>:<span class="dv">0</span>]  select, <span class="dt">input</span>[<span class="dv">3</span>:<span class="dv">0</span>] d, <span class="dt">output</span> <span class="dt">reg</span> q );
+<span class="kw">always</span> @( select <span class="dt">or</span> d )
+<span class="kw">begin</span>
+   <span class="kw">case</span>( select )
+       <span class="dv">0</span> : q = d[<span class="dv">0</span>];
+       <span class="dv">1</span> : q = d[<span class="dv">1</span>];
+       <span class="dv">2</span> : q = d[<span class="dv">2</span>];
+       <span class="dv">3</span> : q = d[<span class="dv">3</span>];
+   <span class="kw">endcase</span>
+<span class="kw">end</span>
+<span class="kw">endmodule</span>
+
+<span class="kw">module</span> main;
+<span class="dt">reg</span> [<span class="dv">3</span>:<span class="dv">0</span>] d;
+<span class="dt">reg</span> [<span class="dv">1</span>:<span class="dv">0</span>] s;
+<span class="dt">wire</span> q;
+
+mux4 DUT (s, d, q);
+
+<span class="kw">initial</span>
+<span class="kw">begin</span>
+  s = <span class="dv">0</span>;
+  d = <span class="bn">4&#39;b0110</span>;
+<span class="kw">end</span>
+
+<span class="kw">always</span> <span class="bn">#50</span> <span class="kw">begin</span>
+  s=s<span class="dv">+1</span>;
+  <span class="dt">$monitor</span>(<span class="st">&quot;%4dns monitor: s=%d d=%d q=%d&quot;</span>, <span class="dt">$stime</span>, s, d, q);
+<span class="kw">end</span>
+
+<span class="kw">initial</span> <span class="bn">#1000</span> <span class="dt">$finish</span>;
+
+<span class="kw">endmodule</span></code></pre>
+<p>執行結果</p>
+<pre><code>D:\ccc101\icarus&gt;iverilog mux4.v -o mux4
+
+D:\ccc101\icarus&gt;vvp mux4
+  50ns monitor: s=1 d= 6 q=1
+ 100ns monitor: s=2 d= 6 q=1
+ 150ns monitor: s=3 d= 6 q=0
+ 200ns monitor: s=0 d= 6 q=0
+ 250ns monitor: s=1 d= 6 q=1
+ 300ns monitor: s=2 d= 6 q=1
+ 350ns monitor: s=3 d= 6 q=0
+ 400ns monitor: s=0 d= 6 q=0
+ 450ns monitor: s=1 d= 6 q=1
+ 500ns monitor: s=2 d= 6 q=1
+ 550ns monitor: s=3 d= 6 q=0
+ 600ns monitor: s=0 d= 6 q=0
+ 650ns monitor: s=1 d= 6 q=1
+ 700ns monitor: s=2 d= 6 q=1
+ 750ns monitor: s=3 d= 6 q=0
+ 800ns monitor: s=0 d= 6 q=0
+ 850ns monitor: s=1 d= 6 q=1
+ 900ns monitor: s=2 d= 6 q=1
+ 950ns monitor: s=3 d= 6 q=0
+1000ns monitor: s=0 d= 6 q=0</code></pre>
+<p>您可以看到在上述範例中，輸入資料 6 的二進位是 0110，如下所示：</p>
+<pre><code>       位置 s  3 2 1 0
+       位元 d  0 1 1 0</code></pre>
+<p>因此當 s=0 時會輸出 0, s=1 時會輸出 1, s=2 時會輸出 1, s=3 時會輸出 0，這就是上述輸出結果的意義。</p>
+<h3 id="加法器"><a href="#加法器">加法器</a></h3>
+<p>接著、讓我們用先前已經示範過的全加器範例，一個一個連接成四位元的加法器，電路圖如下所示</p>
+<div class="figure">
+<img src="../img/adder4.png" alt="圖、用 4 個全加器組成 4 位元加法器" /><p class="caption">圖、用 4 個全加器組成 4 位元加法器</p>
+</div>
+<p>上圖寫成 Verilog 就變成以下 adder4 模組的程式內容。</p>
+<pre class="sourceCode Verilog"><code class="sourceCode verilog"><span class="kw">module</span> adder4(<span class="dt">input</span> <span class="dt">signed</span> [<span class="dv">3</span>:<span class="dv">0</span>] a, <span class="dt">input</span> <span class="dt">signed</span> [<span class="dv">3</span>:<span class="dv">0</span>] b, <span class="dt">input</span> c_in, <span class="dt">output</span> <span class="dt">signed</span> [<span class="dv">3</span>:<span class="dv">0</span>] sum, <span class="dt">output</span> c_out);
+<span class="dt">wire</span> [<span class="dv">3</span>:<span class="dv">0</span>] c;
+
+fulladder fa1(a[<span class="dv">0</span>],b[<span class="dv">0</span>], c_in, sum[<span class="dv">0</span>], c[<span class="dv">1</span>]) ;
+fulladder fa2(a[<span class="dv">1</span>],b[<span class="dv">1</span>], c[<span class="dv">1</span>], sum[<span class="dv">1</span>], c[<span class="dv">2</span>]) ;
+fulladder fa3(a[<span class="dv">2</span>],b[<span class="dv">2</span>], c[<span class="dv">2</span>], sum[<span class="dv">2</span>], c[<span class="dv">3</span>]) ;
+fulladder fa4(a[<span class="dv">3</span>],b[<span class="dv">3</span>], c[<span class="dv">3</span>], sum[<span class="dv">3</span>], c_out) ;
+
+<span class="kw">endmodule</span></code></pre>
+<p>以下是完整的 4 位元加法器之 Verilog 程式。</p>
+<p>檔案：<a href="https://dl.dropboxusercontent.com/u/101584453/pmag/201309/code/adder4.v">adder4.v</a></p>
+<pre class="sourceCode Verilog"><code class="sourceCode verilog"><span class="kw">module</span> fulladder (<span class="dt">input</span> a, b, c_in, <span class="dt">output</span> sum, c_out);
+<span class="dt">wire</span> s1, c1, c2;
+
+<span class="dt">xor</span> g1(s1, a, b);
+<span class="dt">xor</span> g2(sum, s1, c_in);
+<span class="dt">and</span> g3(c1, a,b);
+<span class="dt">and</span> g4(c2, s1, c_in) ;
+<span class="dt">xor</span> g5(c_out, c2, c1) ;
+
+<span class="kw">endmodule</span>
+
+<span class="kw">module</span> adder4(<span class="dt">input</span> <span class="dt">signed</span> [<span class="dv">3</span>:<span class="dv">0</span>] a, <span class="dt">input</span> <span class="dt">signed</span> [<span class="dv">3</span>:<span class="dv">0</span>] b, <span class="dt">input</span> c_in, <span class="dt">output</span> <span class="dt">signed</span> [<span class="dv">3</span>:<span class="dv">0</span>] sum, <span class="dt">output</span> c_out);
+<span class="dt">wire</span> [<span class="dv">3</span>:<span class="dv">0</span>] c;
+
+fulladder fa1(a[<span class="dv">0</span>],b[<span class="dv">0</span>], c_in, sum[<span class="dv">0</span>], c[<span class="dv">1</span>]) ;
+fulladder fa2(a[<span class="dv">1</span>],b[<span class="dv">1</span>], c[<span class="dv">1</span>], sum[<span class="dv">1</span>], c[<span class="dv">2</span>]) ;
+fulladder fa3(a[<span class="dv">2</span>],b[<span class="dv">2</span>], c[<span class="dv">2</span>], sum[<span class="dv">2</span>], c[<span class="dv">3</span>]) ;
+fulladder fa4(a[<span class="dv">3</span>],b[<span class="dv">3</span>], c[<span class="dv">3</span>], sum[<span class="dv">3</span>], c_out) ;
+
+<span class="kw">endmodule</span>
+
+<span class="kw">module</span> main;
+<span class="dt">reg</span> <span class="dt">signed</span> [<span class="dv">3</span>:<span class="dv">0</span>] a;
+<span class="dt">reg</span> <span class="dt">signed</span> [<span class="dv">3</span>:<span class="dv">0</span>] b;
+<span class="dt">wire</span> <span class="dt">signed</span> [<span class="dv">3</span>:<span class="dv">0</span>] sum;
+<span class="dt">wire</span> c_out;
+
+adder4 DUT (a, b, <span class="bn">1&#39;b0</span>, sum, c_out);
+
+<span class="kw">initial</span>
+<span class="kw">begin</span>
+  a = <span class="bn">4&#39;b0101</span>;
+  b = <span class="bn">4&#39;b0000</span>;
+<span class="kw">end</span>
+
+<span class="kw">always</span> <span class="bn">#50</span> <span class="kw">begin</span>
+  b=b<span class="dv">+1</span>;
+  <span class="dt">$monitor</span>(<span class="st">&quot;%dns monitor: a=%d b=%d sum=%d&quot;</span>, <span class="dt">$stime</span>, a, b, sum);
+<span class="kw">end</span>
+
+<span class="kw">initial</span> <span class="bn">#2000</span> <span class="dt">$finish</span>;
+
+<span class="kw">endmodule</span></code></pre>
+<p>執行結果</p>
+<pre><code>D:\ccc101\icarus\ccc&gt;iverilog -o sadd4 sadd4.v
+
+D:\ccc101\icarus\ccc&gt;vvp sadd4
+        50ns monitor: a= 5 b= 1 sum= 6
+       100ns monitor: a= 5 b= 2 sum= 7
+       150ns monitor: a= 5 b= 3 sum=-8
+       200ns monitor: a= 5 b= 4 sum=-7
+       250ns monitor: a= 5 b= 5 sum=-6
+       300ns monitor: a= 5 b= 6 sum=-5
+       350ns monitor: a= 5 b= 7 sum=-4
+       400ns monitor: a= 5 b=-8 sum=-3
+       450ns monitor: a= 5 b=-7 sum=-2
+       500ns monitor: a= 5 b=-6 sum=-1
+       550ns monitor: a= 5 b=-5 sum= 0
+       600ns monitor: a= 5 b=-4 sum= 1
+       650ns monitor: a= 5 b=-3 sum= 2
+       700ns monitor: a= 5 b=-2 sum= 3
+       750ns monitor: a= 5 b=-1 sum= 4
+       800ns monitor: a= 5 b= 0 sum= 5
+       850ns monitor: a= 5 b= 1 sum= 6
+       900ns monitor: a= 5 b= 2 sum= 7
+       950ns monitor: a= 5 b= 3 sum=-8
+      1000ns monitor: a= 5 b= 4 sum=-7
+      1050ns monitor: a= 5 b= 5 sum=-6
+      1100ns monitor: a= 5 b= 6 sum=-5
+      1150ns monitor: a= 5 b= 7 sum=-4
+      1200ns monitor: a= 5 b=-8 sum=-3
+      1250ns monitor: a= 5 b=-7 sum=-2
+      1300ns monitor: a= 5 b=-6 sum=-1
+      1350ns monitor: a= 5 b=-5 sum= 0
+      1400ns monitor: a= 5 b=-4 sum= 1
+      1450ns monitor: a= 5 b=-3 sum= 2
+      1500ns monitor: a= 5 b=-2 sum= 3
+      1550ns monitor: a= 5 b=-1 sum= 4
+      1600ns monitor: a= 5 b= 0 sum= 5
+      1650ns monitor: a= 5 b= 1 sum= 6
+      1700ns monitor: a= 5 b= 2 sum= 7
+      1750ns monitor: a= 5 b= 3 sum=-8
+      1800ns monitor: a= 5 b= 4 sum=-7
+      1850ns monitor: a= 5 b= 5 sum=-6
+      1900ns monitor: a= 5 b= 6 sum=-5
+      1950ns monitor: a= 5 b= 7 sum=-4
+      2000ns monitor: a= 5 b=-8 sum=-3</code></pre>
+<p>在上述執行結果中，您可以看到在沒有溢位的情況下，sum = a+b，但是一但加總值超過 7 之後，那就會變成負值，這也正是有號二補數表示法 溢位時會產生的結果。</p>
+<h3 id="加減器"><a href="#加減器">加減器</a></h3>
+<p>接著、我們只要把上面的加法器，加上一組控制的互斥或閘，並控制輸入進位與否，就可以成為加減器了，這是因為我們採用了二補數的關係。</p>
+<p>二補數讓我們可以很容易的延伸加法器電路就能做出減法器。我們可以在運算元 B 之前加上 2 選 1 多工器或 XOR 閘來控制 B 是否應該取補數，並且 運用 OP 控制線路來進行控制，以下是採用 2 選 1 多工器的電路做法圖。</p>
+<div class="figure">
+<img src="../img/addsub4-mux.png" alt="圖、採用 2 選 1 多工器控制的加減器電路" /><p class="caption">圖、採用 2 選 1 多工器控制的加減器電路</p>
+</div>
+<p>另一種更簡單的做法是採用 XOR 閘去控制 B 是否要取補數，如下圖所示：</p>
+<div class="figure">
+<img src="../img/addsub4-xor.png" alt="圖、採用 XOR 控制的加減器電路" /><p class="caption">圖、採用 XOR 控制的加減器電路</p>
+</div>
+<p>清楚了電路圖的布局之後，讓我們來看看如何用 Verilog 實做加減器吧！關鍵部分的程式如下所示，這個模組就對應到上述的 「採用 XOR 控制的加減器電路」之圖形。</p>
+<pre class="sourceCode Verilog"><code class="sourceCode verilog"><span class="kw">module</span> addSub4(<span class="dt">input</span> op, <span class="dt">input</span> <span class="dt">signed</span> [<span class="dv">3</span>:<span class="dv">0</span>] a, <span class="dt">input</span> <span class="dt">signed</span> [<span class="dv">3</span>:<span class="dv">0</span>] b, 
+               <span class="dt">output</span> <span class="dt">signed</span> [<span class="dv">3</span>:<span class="dv">0</span>] sum, <span class="dt">output</span> c_out);
+
+<span class="dt">wire</span> [<span class="dv">3</span>:<span class="dv">0</span>] bop;
+
+xor4 x1(b, {op,op,op,op}, bop);
+adder4 a1(a, bop, op, sum, c_out);
+
+<span class="kw">endmodule</span></code></pre>
+<p>接著讓我們來看看完整的加減器程式與測試結果。</p>
+<p>檔案：<a href="https://dl.dropboxusercontent.com/u/101584453/pmag/201309/code/addsub4.v">addsub4.v</a></p>
+<pre class="sourceCode Verilog"><code class="sourceCode verilog"><span class="kw">module</span> fulladder (<span class="dt">input</span> a, b, c_in, <span class="dt">output</span> sum, c_out);
+<span class="dt">wire</span> s1, c1, c2;
+
+<span class="dt">xor</span> g1(s1, a, b);
+<span class="dt">xor</span> g2(sum, s1, c_in);
+<span class="dt">and</span> g3(c1, a,b);
+<span class="dt">and</span> g4(c2, s1, c_in) ;
+<span class="dt">xor</span> g5(c_out, c2, c1) ;
+
+<span class="kw">endmodule</span>
+
+<span class="kw">module</span> adder4(<span class="dt">input</span> <span class="dt">signed</span> [<span class="dv">3</span>:<span class="dv">0</span>] a, <span class="dt">input</span> <span class="dt">signed</span> [<span class="dv">3</span>:<span class="dv">0</span>] b, <span class="dt">input</span> c_in, 
+              <span class="dt">output</span> <span class="dt">signed</span> [<span class="dv">3</span>:<span class="dv">0</span>] sum, <span class="dt">output</span> c_out);
+<span class="dt">wire</span> [<span class="dv">3</span>:<span class="dv">0</span>] c;
+
+fulladder fa1(a[<span class="dv">0</span>],b[<span class="dv">0</span>], c_in, sum[<span class="dv">0</span>], c[<span class="dv">1</span>]) ;
+fulladder fa2(a[<span class="dv">1</span>],b[<span class="dv">1</span>], c[<span class="dv">1</span>], sum[<span class="dv">1</span>], c[<span class="dv">2</span>]) ;
+fulladder fa3(a[<span class="dv">2</span>],b[<span class="dv">2</span>], c[<span class="dv">2</span>], sum[<span class="dv">2</span>], c[<span class="dv">3</span>]) ;
+fulladder fa4(a[<span class="dv">3</span>],b[<span class="dv">3</span>], c[<span class="dv">3</span>], sum[<span class="dv">3</span>], c_out) ;
+
+<span class="kw">endmodule</span>
+
+<span class="kw">module</span> xor4(<span class="dt">input</span> [<span class="dv">3</span>:<span class="dv">0</span>] a, <span class="dt">input</span> [<span class="dv">3</span>:<span class="dv">0</span>] b, <span class="dt">output</span> [<span class="dv">3</span>:<span class="dv">0</span>] y);
+  <span class="kw">assign</span> y = a ^ b;
+<span class="kw">endmodule</span>
+
+<span class="kw">module</span> addSub4(<span class="dt">input</span> op, <span class="dt">input</span> <span class="dt">signed</span> [<span class="dv">3</span>:<span class="dv">0</span>] a, <span class="dt">input</span> <span class="dt">signed</span> [<span class="dv">3</span>:<span class="dv">0</span>] b, 
+               <span class="dt">output</span> <span class="dt">signed</span> [<span class="dv">3</span>:<span class="dv">0</span>] sum, <span class="dt">output</span> c_out);
+
+<span class="dt">wire</span> [<span class="dv">3</span>:<span class="dv">0</span>] bop;
+
+xor4 x1(b, {op,op,op,op}, bop);
+adder4 a1(a, bop, op, sum, c_out);
+
+<span class="kw">endmodule</span>
+
+<span class="kw">module</span> main;
+<span class="dt">reg</span> <span class="dt">signed</span> [<span class="dv">3</span>:<span class="dv">0</span>] a;
+<span class="dt">reg</span> <span class="dt">signed</span> [<span class="dv">3</span>:<span class="dv">0</span>] b;
+<span class="dt">wire</span> <span class="dt">signed</span> [<span class="dv">3</span>:<span class="dv">0</span>] sum;
+<span class="dt">reg</span> op;
+<span class="dt">wire</span> c_out;
+
+addSub4 DUT (op, a, b, sum, c_out);
+
+<span class="kw">initial</span>
+<span class="kw">begin</span>
+  a = <span class="bn">4&#39;b0101</span>;
+  b = <span class="bn">4&#39;b0000</span>;
+  op = <span class="bn">1&#39;b0</span>;
+<span class="kw">end</span>
+
+<span class="kw">always</span> <span class="bn">#50</span> <span class="kw">begin</span>
+  op=op<span class="dv">+1</span>;
+  <span class="dt">$monitor</span>(<span class="st">&quot;%dns monitor: op=%d a=%d b=%d sum=%d&quot;</span>, <span class="dt">$stime</span>, op, a, b, sum);
+<span class="kw">end</span>
+
+<span class="kw">always</span> <span class="bn">#100</span> <span class="kw">begin</span>
+  b=b<span class="dv">+1</span>;
+<span class="kw">end</span>
+
+<span class="kw">initial</span> <span class="bn">#2000</span> <span class="dt">$finish</span>;
+
+<span class="kw">endmodule</span></code></pre>
+<p>執行結果：</p>
+<pre><code>D:\ccc101\icarus\ccc&gt;iverilog -o addSub4 addSub4.v
+
+D:\ccc101\icarus\ccc&gt;vvp addSub4
+        50ns monitor: op=1 a= 5 b= 0 sum= 5
+       100ns monitor: op=0 a= 5 b= 1 sum= 6
+       150ns monitor: op=1 a= 5 b= 1 sum= 4
+       200ns monitor: op=0 a= 5 b= 2 sum= 7
+       250ns monitor: op=1 a= 5 b= 2 sum= 3
+       300ns monitor: op=0 a= 5 b= 3 sum=-8
+       350ns monitor: op=1 a= 5 b= 3 sum= 2
+       400ns monitor: op=0 a= 5 b= 4 sum=-7
+       450ns monitor: op=1 a= 5 b= 4 sum= 1
+       500ns monitor: op=0 a= 5 b= 5 sum=-6
+       550ns monitor: op=1 a= 5 b= 5 sum= 0
+       600ns monitor: op=0 a= 5 b= 6 sum=-5
+       650ns monitor: op=1 a= 5 b= 6 sum=-1
+       700ns monitor: op=0 a= 5 b= 7 sum=-4
+       750ns monitor: op=1 a= 5 b= 7 sum=-2
+       800ns monitor: op=0 a= 5 b=-8 sum=-3
+       850ns monitor: op=1 a= 5 b=-8 sum=-3
+       900ns monitor: op=0 a= 5 b=-7 sum=-2
+       950ns monitor: op=1 a= 5 b=-7 sum=-4
+      1000ns monitor: op=0 a= 5 b=-6 sum=-1
+      1050ns monitor: op=1 a= 5 b=-6 sum=-5
+      1100ns monitor: op=0 a= 5 b=-5 sum= 0
+      1150ns monitor: op=1 a= 5 b=-5 sum=-6
+      1200ns monitor: op=0 a= 5 b=-4 sum= 1
+      1250ns monitor: op=1 a= 5 b=-4 sum=-7
+      1300ns monitor: op=0 a= 5 b=-3 sum= 2
+      1350ns monitor: op=1 a= 5 b=-3 sum=-8
+      1400ns monitor: op=0 a= 5 b=-2 sum= 3
+      1450ns monitor: op=1 a= 5 b=-2 sum= 7
+      1500ns monitor: op=0 a= 5 b=-1 sum= 4
+      1550ns monitor: op=1 a= 5 b=-1 sum= 6
+      1600ns monitor: op=0 a= 5 b= 0 sum= 5
+      1650ns monitor: op=1 a= 5 b= 0 sum= 5
+      1700ns monitor: op=0 a= 5 b= 1 sum= 6
+      1750ns monitor: op=1 a= 5 b= 1 sum= 4
+      1800ns monitor: op=0 a= 5 b= 2 sum= 7
+      1850ns monitor: op=1 a= 5 b= 2 sum= 3
+      1900ns monitor: op=0 a= 5 b= 3 sum=-8
+      1950ns monitor: op=1 a= 5 b= 3 sum= 2
+      2000ns monitor: op=0 a= 5 b= 4 sum=-7</code></pre>
+<p>在上述結果中，您可以看到當 op=0 時，電路所作的是加法運算，例如：200ns monitor: op=0 a= 5 b= 2 sum= 7。而當 op=1 時， 電路所做的是減法運算，例如：250ns monitor: op=1 a= 5 b= 2 sum= 3。</p>
+<h3 id="結語-4"><a href="#結語-4">結語</a></h3>
+<p>在本文中，我們大致將 CPU 設計當中最重要的組合邏輯電路，也就是「多工器、加法器與減法器」的設計原理說明完畢了，希望透過 Verilog 的實作方式， 能讓讀者更瞭解數位電路的設計原理，並且為接下來所要介紹的「開放電腦計畫」進行鋪路的工作，以便讓讀者能夠具備用 Verilog 設計 CPU 的基礎， 這樣在後續幾期的開放電腦計畫文章中，讀者才比較容易讀懂 CPU 的 Verilog 程式之設計原理。</p>
+<h3 id="參考文獻-5"><a href="#參考文獻-5">參考文獻</a></h3>
+<ul>
+<li><a href="http://ccckmit.wikidot.com/ve:mux">陳鍾誠的網站：Verilog 電路設計 -- 多工器</a></li>
+<li><a href="http://ccckmit.wikidot.com/ve:adder4">陳鍾誠的網站：Verilog 電路設計 -- 4 位元加法器</a></li>
+<li><a href="http://ccckmit.wikidot.com/ve:addsub4">陳鍾誠的網站：Verilog 電路設計 -- 加減器</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Adder_(electronics)">Wikipedia:Adder</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Adder%E2%80%93subtractor">Wikipedia:Adder–subtractor</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Multiplexer">Wikipedia:Multiplexer</a></li>
+</ul>
+<p>【本文由陳鍾誠取材 (主要為圖片) 並修改自維基百科】</p>
+<h2 id="開放電腦計畫-3-vm0-虛擬機使用-javascriptnode.js-實作-作者陳鍾誠"><a href="#開放電腦計畫-3-vm0-虛擬機使用-javascriptnode.js-實作-作者陳鍾誠">開放電腦計畫 (3) – VM0 虛擬機：使用 JavaScript+Node.js 實作 (作者：陳鍾誠)</a></h2>
+<p>在前幾期中，我們介紹了 CPU0 處理器的指令集，以及組譯器的實作方式，文章網址如下：</p>
+<ul>
+<li><a href="https://dl.dropboxusercontent.com/u/101584453/pmag/201306/htm/article5.html">開放電腦計畫 (1) – 整體架構與 CPU0 處理器</a></li>
+<li><a href="http://programmermagazine.github.io/201307/htm/article5.html">開放電腦計畫 (2) – AS0 組譯器：使用 JavaScript+Node.js 實作</a></li>
+</ul>
+<p>在本文中，我們將接續前兩篇的內容，然後將焦點放在虛擬機 VM0 的實作上，說明一個最簡易的虛擬機是如何設計出來的。</p>
+<h3 id="組譯範例"><a href="#組譯範例">組譯範例</a></h3>
+<p>首先、讓讀者回顧一下，在上一篇文章中，我們設計了一個組譯器，可以組譯像以下的組合語言程式。</p>
+<p>組合語言：<a href="https://dl.dropboxusercontent.com/u/101584453/pmag/201309/code/oc/sum.as0">sum.as0</a></p>
+<pre><code>        LD     R1, sum      ; R1 = sum = 0
+        LD     R2, i        ; R2 = i = 1
+        LDI    R3, 10       ; R3 = 10
+FOR:    CMP    R2, R3       ; if (R2 &gt; R3)
+        JGT    EXIT         ;   goto EXIT
+        ADD    R1, R1, R2   ; R1 = R1 + R2 (sum = sum + i)
+        ADDI   R2, R2, 1    ; R2 = R2 + 1  ( i  = i + 1)
+        JMP    FOR          ; goto FOR
+EXIT:   ST     R1, sum      ; sum = R1
+        ST     R2, i        ; i = R2
+        LD     R9, msgptr   ; R9= pointer(msg) = &amp;msg
+        SWI    3            ; SWI 3 : 印出 R9 (=&amp;msg) 中的字串
+        MOV    R9, R1       ; R9 = R1 = sum
+        SWI    4            ; SWI 2 : 印出 R9 (=R1=sum) 中的整數
+        RET                 ; return 返回上一層呼叫函數
+i:      RESW   1            ; int i
+sum:    WORD   0            ; int sum=0
+msg:    BYTE   &quot;1+...+10=&quot;, 0   ; char *msg = &quot;sum=&quot;
+msgptr: WORD   msg          ; char &amp;msgptr = &amp;msg</code></pre>
+<p>我們可以用 AS0 組譯器對這樣的 CPU0 組合語言進行組譯，以下是組譯過程與結果，會輸出機器碼到目的檔中。</p>
+<pre><code>D:\Dropbox\Public\oc\code&gt;node as0 sum.as0 sum.ob0
+...
+...
+=================SAVE OBJ FILE================
+
+00 :  001F003C 002F0034 0830000A 10230000
+10 :  2300000C 13112000 1B220001 26FFFFEC
+20 :  011F001C 012F0014 009F001D 2A000003
+30 :  12910000 2A000002 2C000000 00000000
+40 :  00000000 73756D3D 00000000 44</code></pre>
+<p>接著、我們就可以用虛擬機 VM0 來執行這個目的檔，我們可以選擇用預設不傾印的方式，得到以下的簡要執行結果。</p>
+<p>虛擬機執行過程 (不傾印)</p>
+<pre><code>D:\oc\code&gt;node vm0 sum.ob0
+1+...+10=55</code></pre>
+<p>也可以用加上 -d 參數的方式，傾印每一個指令的執行過程，如下所示：</p>
+<p>虛擬機執行過程 (詳細傾印)</p>
+<pre><code>D:\oc\code&gt;node vm0 sum.ob0 -d
+
+00 :  001F003C 002F0034 0830000A 10230000
+10 :  2300000C 13112000 1B220001 26FFFFEC
+20 :  011F001C 012F0014 009F0022 2A000003
+30 :  12910000 2A000004 2C000000 00000000
+40 :  00000000 312B2E2E 2E2B3130 3D000000
+50 :  0044
+PC=0000 IR=001F003C SW=00000000 R[01]=0x00000000=0
+PC=0004 IR=002F0034 SW=00000000 R[02]=0x00000000=0
+PC=0008 IR=0830000A SW=00000000 R[03]=0x0000000A=10
+PC=000C IR=10230000 SW=80000000 R[0C]=0x80000000=-2147483648
+PC=0010 IR=2300000C SW=80000000 R[00]=0x00000000=0
+PC=0014 IR=13112000 SW=80000000 R[01]=0x00000000=0
+PC=0018 IR=1B220001 SW=80000000 R[02]=0x00000001=1
+PC=001C IR=26FFFFEC SW=80000000 R[0F]=0x0000000C=12
+PC=000C IR=10230000 SW=80000000 R[0C]=0x80000000=-2147483648
+PC=0010 IR=2300000C SW=80000000 R[00]=0x00000000=0
+PC=0014 IR=13112000 SW=80000000 R[01]=0x00000001=1
+PC=0018 IR=1B220001 SW=80000000 R[02]=0x00000002=2
+PC=001C IR=26FFFFEC SW=80000000 R[0F]=0x0000000C=12
+PC=000C IR=10230000 SW=80000000 R[0C]=0x80000000=-2147483648
+PC=0010 IR=2300000C SW=80000000 R[00]=0x00000000=0
+PC=0014 IR=13112000 SW=80000000 R[01]=0x00000003=3
+PC=0018 IR=1B220001 SW=80000000 R[02]=0x00000003=3
+PC=001C IR=26FFFFEC SW=80000000 R[0F]=0x0000000C=12
+PC=000C IR=10230000 SW=80000000 R[0C]=0x80000000=-2147483648
+PC=0010 IR=2300000C SW=80000000 R[00]=0x00000000=0
+PC=0014 IR=13112000 SW=80000000 R[01]=0x00000006=6
+PC=0018 IR=1B220001 SW=80000000 R[02]=0x00000004=4
+PC=001C IR=26FFFFEC SW=80000000 R[0F]=0x0000000C=12
+PC=000C IR=10230000 SW=80000000 R[0C]=0x80000000=-2147483648
+PC=0010 IR=2300000C SW=80000000 R[00]=0x00000000=0
+PC=0014 IR=13112000 SW=80000000 R[01]=0x0000000A=10
+PC=0018 IR=1B220001 SW=80000000 R[02]=0x00000005=5
+PC=001C IR=26FFFFEC SW=80000000 R[0F]=0x0000000C=12
+PC=000C IR=10230000 SW=80000000 R[0C]=0x80000000=-2147483648
+PC=0010 IR=2300000C SW=80000000 R[00]=0x00000000=0
+PC=0014 IR=13112000 SW=80000000 R[01]=0x0000000F=15
+PC=0018 IR=1B220001 SW=80000000 R[02]=0x00000006=6
+PC=001C IR=26FFFFEC SW=80000000 R[0F]=0x0000000C=12
+PC=000C IR=10230000 SW=80000000 R[0C]=0x80000000=-2147483648
+PC=0010 IR=2300000C SW=80000000 R[00]=0x00000000=0
+PC=0014 IR=13112000 SW=80000000 R[01]=0x00000015=21
+PC=0018 IR=1B220001 SW=80000000 R[02]=0x00000007=7
+PC=001C IR=26FFFFEC SW=80000000 R[0F]=0x0000000C=12
+PC=000C IR=10230000 SW=80000000 R[0C]=0x80000000=-2147483648
+PC=0010 IR=2300000C SW=80000000 R[00]=0x00000000=0
+PC=0014 IR=13112000 SW=80000000 R[01]=0x0000001C=28
+PC=0018 IR=1B220001 SW=80000000 R[02]=0x00000008=8
+PC=001C IR=26FFFFEC SW=80000000 R[0F]=0x0000000C=12
+PC=000C IR=10230000 SW=80000000 R[0C]=0x80000000=-2147483648
+PC=0010 IR=2300000C SW=80000000 R[00]=0x00000000=0
+PC=0014 IR=13112000 SW=80000000 R[01]=0x00000024=36
+PC=0018 IR=1B220001 SW=80000000 R[02]=0x00000009=9
+PC=001C IR=26FFFFEC SW=80000000 R[0F]=0x0000000C=12
+PC=000C IR=10230000 SW=80000000 R[0C]=0x80000000=-2147483648
+PC=0010 IR=2300000C SW=80000000 R[00]=0x00000000=0
+PC=0014 IR=13112000 SW=80000000 R[01]=0x0000002D=45
+PC=0018 IR=1B220001 SW=80000000 R[02]=0x0000000A=10
+PC=001C IR=26FFFFEC SW=80000000 R[0F]=0x0000000C=12
+PC=000C IR=10230000 SW=40000000 R[0C]=0x40000000=1073741824
+PC=0010 IR=2300000C SW=40000000 R[00]=0x00000000=0
+PC=0014 IR=13112000 SW=40000000 R[01]=0x00000037=55
+PC=0018 IR=1B220001 SW=40000000 R[02]=0x0000000B=11
+PC=001C IR=26FFFFEC SW=40000000 R[0F]=0x0000000C=12
+PC=000C IR=10230000 SW=00000000 R[0C]=0x00000000=0
+PC=0010 IR=2300000C SW=00000000 R[00]=0x00000000=0
+m[0040]=55
+PC=0020 IR=011F001C SW=00000000 R[01]=0x00000037=55
+m[003C]=11
+PC=0024 IR=012F0014 SW=00000000 R[02]=0x0000000B=11
+PC=0028 IR=009F0022 SW=00000000 R[09]=0x00000044=68
+1+...+10=PC=002C IR=2A000003 SW=00000000 R[00]=0x00000000=0
+PC=0030 IR=12910000 SW=00000000 R[09]=0x00000037=55
+55PC=0034 IR=2A000004 SW=00000000 R[00]=0x00000000=0
+PC=0038 IR=2C000000 SW=00000000 R[00]=0x00000000=0
+</code></pre>
+<p>如果您詳細追蹤上述過程，就能更清楚的看出每個指令執行時，所造成的暫存器變化，舉例而言，您可以看到程式 在 PC=000C 到 PC=001C 之間循環了很多次，最後一次的循環印出下列內容。</p>
+<pre><code>PC=000C IR=10230000 SW=40000000 R[0C]=0x40000000=1073741824
+PC=0010 IR=2300000C SW=40000000 R[00]=0x00000000=0
+PC=0014 IR=13112000 SW=40000000 R[01]=0x00000037=55
+PC=0018 IR=1B220001 SW=40000000 R[02]=0x0000000B=11
+PC=001C IR=26FFFFEC SW=40000000 R[0F]=0x0000000C=12
+PC=000C IR=10230000 SW=00000000 R[0C]=0x00000000=0
+PC=0010 IR=2300000C SW=00000000 R[00]=0x00000000=0
+m[0040]=55</code></pre>
+<p>其中得到 R[01]=0x00000037=55 的計算結果，正是整個程式計算 1+2+...+10=55 的結果。</p>
+<h3 id="vm0-虛擬機設計"><a href="#vm0-虛擬機設計">VM0 虛擬機設計</a></h3>
+<p>接著、我們要來看看虛擬機 VM0 是如何設計的，但是在這之前，先讓我們看看虛擬機當中一個重要的資料結構， OpTable 指令表這個物件，其程式碼如下：</p>
+<p>檔案：<a href="https://dl.dropboxusercontent.com/u/101584453/pmag/201309/code/oc/opTable.js">opTable.js</a></p>
+<pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="kw">var</span> c = <span class="fu">require</span>(<span class="st">&quot;./ccc&quot;</span>);
+
+<span class="kw">var</span> Op = <span class="kw">function</span>(line) {
+    <span class="kw">var</span> tokens = <span class="ot">line</span>.<span class="fu">split</span>(<span class="ot">/</span><span class="bn">\s</span><span class="fl">+</span><span class="ot">/</span>);
+    <span class="kw">this</span>.<span class="fu">name</span> = tokens[<span class="dv">0</span>];
+    <span class="kw">this</span>.<span class="fu">id</span>   = <span class="fu">parseInt</span>(tokens[<span class="dv">1</span>], <span class="dv">16</span>);
+    <span class="kw">this</span>.<span class="fu">type</span> = tokens[<span class="dv">2</span>];
+}
+
+<span class="kw">var</span> opTable = <span class="kw">function</span>(opList) {
+  <span class="kw">for</span> (i <span class="kw">in</span>  opList) {
+    <span class="kw">var</span> op = <span class="kw">new</span> <span class="fu">Op</span>(opList[i]);
+    <span class="kw">this</span>[<span class="ot">op</span>.<span class="fu">name</span>] = op;
+  }  
+}
+
+<span class="ot">opTable</span>.<span class="ot">prototype</span>.<span class="fu">ID</span> = <span class="kw">function</span>(op) { 
+  <span class="kw">return</span> <span class="kw">this</span>[op].<span class="fu">id</span>; 
+}
+
+<span class="ot">opTable</span>.<span class="ot">prototype</span>.<span class="fu">dump</span>=<span class="kw">function</span>() {
+    <span class="kw">for</span> (key <span class="kw">in</span> <span class="kw">this</span>) {
+      <span class="kw">var</span> op = <span class="kw">this</span>[key];
+      <span class="kw">if</span> (<span class="kw">typeof</span>(op)!=<span class="st">&quot;function&quot;</span>)
+        <span class="ot">c</span>.<span class="fu">log</span>(<span class="st">&quot;%s %s %s&quot;</span>, <span class="ot">c</span>.<span class="fu">fill</span>(<span class="st">&#39; &#39;</span>, <span class="ot">op</span>.<span class="fu">name</span>, <span class="dv">8</span>), <span class="ot">c</span>.<span class="fu">hex</span>(<span class="ot">op</span>.<span class="fu">id</span>, <span class="dv">2</span>), <span class="ot">op</span>.<span class="fu">type</span>);
+    }
+}
+
+<span class="ot">module</span>.<span class="fu">exports</span> = opTable;</code></pre>
+<p>然後、我們利用上述的 OpTable 模組，加入了 CPU0 的指令集之後，建出了 CPU0 這個代表處理器的模組， 程式碼如下。</p>
+<p>檔案：<a href="https://dl.dropboxusercontent.com/u/101584453/pmag/201309/code/oc/cpu0.js">cpu0.js</a></p>
+<pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="kw">var</span> opTable = <span class="fu">require</span>(<span class="st">&quot;./optable&quot;</span>);
+<span class="kw">var</span> opList = [ <span class="st">&quot;LD 00 L&quot;</span>, <span class="st">&quot;ST  01 L&quot;</span>, <span class="st">&quot;LDB 02 L&quot;</span>,  <span class="st">&quot;STB 03 L&quot;</span>, <span class="st">&quot;LDR 04 L&quot;</span>, 
+<span class="st">&quot;STR 05 L&quot;</span>, <span class="st">&quot;LBR 06 L&quot;</span>,  <span class="st">&quot;SBR 07 L&quot;</span>,  <span class="st">&quot;LDI 08 L&quot;</span>, <span class="st">&quot;CMP 10 A&quot;</span>, <span class="st">&quot;MOV 12 A&quot;</span>, 
+<span class="st">&quot;ADD 13 A&quot;</span>,  <span class="st">&quot;SUB 14 A&quot;</span>,  <span class="st">&quot;MUL 15 A&quot;</span>, <span class="st">&quot;DIV 16 A&quot;</span>,  <span class="st">&quot;AND 18 A&quot;</span>, <span class="st">&quot;OR  19 A&quot;</span>,  <span class="st">&quot;XOR 1A A&quot;</span>,  
+<span class="st">&quot;ADDI 1B A&quot;</span>, <span class="st">&quot;ROL 1C A&quot;</span>,  <span class="st">&quot;ROR 1D A&quot;</span>, <span class="st">&quot;SHL 1E A&quot;</span>, <span class="st">&quot;SHR 1F A&quot;</span>,  
+<span class="st">&quot;JEQ 20 J&quot;</span>, <span class="st">&quot;JNE 21 J&quot;</span>,  <span class="st">&quot;JLT 22 J&quot;</span>, <span class="st">&quot;JGT 23 J&quot;</span>, <span class="st">&quot;JLE 24 J&quot;</span>,  <span class="st">&quot;JGE 25 J&quot;</span>, <span class="st">&quot;JMP 26 J&quot;</span>, 
+<span class="st">&quot;SWI 2A J&quot;</span>, <span class="st">&quot;JSUB 2B J&quot;</span>,<span class="st">&quot;RET 2C J&quot;</span>, <span class="st">&quot;PUSH 30 J&quot;</span>, <span class="st">&quot;POP 31 J&quot;</span>,  <span class="st">&quot;PUSHB 32 J&quot;</span>, 
+<span class="st">&quot;POPB 33 J&quot;</span>, <span class="st">&quot;RESW F0 D&quot;</span>, <span class="st">&quot;RESB F1 D&quot;</span>, <span class="st">&quot;WORD F2 D&quot;</span>, <span class="st">&quot;BYTE F3 D&quot;</span>];
+
+<span class="kw">var</span> cpu = { <span class="st">&quot;opTable&quot;</span> : <span class="kw">new</span> <span class="fu">opTable</span>(opList) };
+
+<span class="kw">if</span> (<span class="ot">process</span>.<span class="fu">argv</span>[<span class="dv">2</span>] == <span class="st">&quot;-d&quot;</span>)
+    <span class="ot">cpu</span>.<span class="ot">opTable</span>.<span class="fu">dump</span>();
+
+<span class="ot">module</span>.<span class="fu">exports</span> = cpu;</code></pre>
+<p>有了上述的兩個模組作為基礎，我們就可以開始撰寫虛擬機 VM0 了，以下是其原始程式碼。</p>
+<p>檔案：<a href="https://dl.dropboxusercontent.com/u/101584453/pmag/201309/code/oc/vm0.js">vm0.js</a></p>
+<pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="kw">var</span> c = <span class="fu">require</span>(<span class="st">&quot;./ccc&quot;</span>);
+<span class="kw">var</span> cpu1 = <span class="fu">require</span>(<span class="st">&quot;./cpu0&quot;</span>);
+<span class="kw">var</span> Memory = <span class="fu">require</span>(<span class="st">&quot;./memory&quot;</span>);
+
+<span class="kw">var</span> isDump = <span class="ot">process</span>.<span class="fu">argv</span>[<span class="dv">3</span>] == <span class="st">&quot;-d&quot;</span>;
+
+<span class="kw">var</span> IR = <span class="dv">16</span>, PC = <span class="dv">15</span>, LR = <span class="dv">14</span>, SP = <span class="dv">13</span>, SW = <span class="dv">12</span>;
+<span class="kw">var</span> ID = <span class="kw">function</span>(op) { <span class="kw">return</span> <span class="ot">cpu1</span>.<span class="fu">opTable</span>[op].<span class="fu">id</span>; }
+
+<span class="kw">var</span> run = <span class="kw">function</span>(objFile) {
+    R = [<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>, <span class="dv">10</span>, <span class="dv">11</span>, <span class="dv">0</span>, <span class="dv">13</span>, -<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">16</span>];
+    m = <span class="kw">new</span> <span class="fu">Memory</span>(<span class="dv">1</span>);
+    <span class="ot">m</span>.<span class="fu">load</span>(objFile);
+    <span class="kw">if</span> (isDump) <span class="ot">m</span>.<span class="fu">dump</span>();
+    <span class="kw">var</span> stop = <span class="kw">false</span>;
+    <span class="kw">while</span> (!stop) {                                          <span class="co">// 如果尚未結束</span>
+      <span class="kw">var</span> tpc = R[PC];
+      R[<span class="dv">0</span>] = <span class="dv">0</span>;                                              <span class="co">// R[0] 永遠為 0</span>
+      R[IR] = <span class="ot">m</span>.<span class="fu">geti</span>(R[PC]);                                 <span class="co">// 指令擷取，IR=[PC..PC+3]</span>
+      R[PC] += <span class="dv">4</span>;                                            <span class="co">// 擷取完將 PC 加 4，指向下一個指令</span>
+      <span class="kw">var</span> op = <span class="ot">c</span>.<span class="fu">bits</span>(R[IR], <span class="dv">24</span>, <span class="dv">31</span>);                        <span class="co">// 取得 op 欄位，IR[24..31]</span>
+      <span class="kw">var</span> ra = <span class="ot">c</span>.<span class="fu">bits</span>(R[IR], <span class="dv">20</span>, <span class="dv">23</span>);                        <span class="co">// 取得 ra 欄位，IR[20..23]</span>
+      <span class="kw">var</span> rb = <span class="ot">c</span>.<span class="fu">bits</span>(R[IR], <span class="dv">16</span>, <span class="dv">19</span>);                        <span class="co">// 取得 rb 欄位，IR[16..19]</span>
+      <span class="kw">var</span> rc = <span class="ot">c</span>.<span class="fu">bits</span>(R[IR], <span class="dv">12</span>, <span class="dv">15</span>);                        <span class="co">// 取得 rc 欄位，IR[12..15]</span>
+      <span class="kw">var</span> c24= <span class="ot">c</span>.<span class="fu">signbits</span>(R[IR], <span class="dv">0</span>,  <span class="dv">23</span>);                    <span class="co">// 取得 24 位元的 cx</span>
+      <span class="kw">var</span> c16= <span class="ot">c</span>.<span class="fu">signbits</span>(R[IR], <span class="dv">0</span>,  <span class="dv">15</span>);                    <span class="co">// 取得 16 位元的 cx</span>
+      <span class="kw">var</span> c5 = <span class="ot">c</span>.<span class="fu">bits</span>(R[IR], <span class="dv">0</span>,   <span class="dv">4</span>);                        <span class="co">// 取得 16 位元的 cx</span>
+      <span class="kw">var</span> addr  = R[rb]+c16;
+      <span class="kw">var</span> raddr = R[rb]+R[rc];                               <span class="co">// 取得位址[Rb+Rc]                          </span>
+      <span class="kw">var</span> N  = <span class="ot">c</span>.<span class="fu">bits</span>(R[SW], <span class="dv">31</span>, <span class="dv">31</span>);
+      <span class="kw">var</span> Z  = <span class="ot">c</span>.<span class="fu">bits</span>(R[SW], <span class="dv">30</span>, <span class="dv">30</span>);
+<span class="co">//      c.log(&quot;IR=%s ra=%d rb=%d rc=%d c24=%s c16=%s addr=%s&quot;, c.hex(R[IR], 8), ra, rb, rc, c.hex(c24, 6), c.hex(c16, 4), c.hex(addr, 8))</span>
+      <span class="kw">switch</span> (op) {                                          <span class="co">// 根據op執行動作</span>
+        <span class="kw">case</span> <span class="fu">ID</span>(<span class="st">&quot;LD&quot;</span>) : R[ra] = <span class="ot">m</span>.<span class="fu">geti</span>(addr); <span class="kw">break</span>;         <span class="co">// 處理 LD 指令</span>
+        <span class="kw">case</span> <span class="fu">ID</span>(<span class="st">&quot;ST&quot;</span>) :                                      <span class="co">// 處理 ST 指令</span>
+          <span class="ot">m</span>.<span class="fu">seti</span>(addr, R[ra]); 
+          <span class="kw">if</span> (isDump) <span class="ot">c</span>.<span class="fu">log</span>(<span class="st">&quot;m[%s]=%s&quot;</span>, <span class="ot">c</span>.<span class="fu">hex</span>(addr,<span class="dv">4</span>), <span class="ot">m</span>.<span class="fu">geti</span>(addr)); 
+          <span class="kw">break</span>;
+        <span class="kw">case</span> <span class="fu">ID</span>(<span class="st">&quot;LDB&quot;</span>): R[ra] = <span class="ot">m</span>.<span class="fu">getb</span>(addr); <span class="kw">break</span>;         <span class="co">// 處理 LDB 指令</span>
+        <span class="kw">case</span> <span class="fu">ID</span>(<span class="st">&quot;STB&quot;</span>): <span class="ot">m</span>.<span class="fu">setb</span>(addr, R[ra]); <span class="kw">break</span>;          <span class="co">// 處理 STB 指令</span>
+        <span class="kw">case</span> <span class="fu">ID</span>(<span class="st">&quot;LDR&quot;</span>): R[ra] = <span class="ot">m</span>.<span class="fu">geti</span>(raddr); <span class="kw">break</span>;        <span class="co">// 處理 LDR 指令</span>
+        <span class="kw">case</span> <span class="fu">ID</span>(<span class="st">&quot;STR&quot;</span>): <span class="ot">m</span>.<span class="fu">seti</span>(raddr, R[ra]); <span class="kw">break</span>;         <span class="co">// 處理 STR 指令</span>
+        <span class="kw">case</span> <span class="fu">ID</span>(<span class="st">&quot;LBR&quot;</span>): R[ra] = <span class="ot">m</span>.<span class="fu">getb</span>(raddr); <span class="kw">break</span>;        <span class="co">// 處理 LBR 指令</span>
+        <span class="kw">case</span> <span class="fu">ID</span>(<span class="st">&quot;SBR&quot;</span>): <span class="ot">m</span>.<span class="fu">setb</span>(raddr, R[ra]); <span class="kw">break</span>;         <span class="co">// 處理 SBR 指令</span>
+        <span class="kw">case</span> <span class="fu">ID</span>(<span class="st">&quot;LDI&quot;</span>): R[ra] = c16; <span class="kw">break</span>;                  <span class="co">// 處理 LDI 指令</span>
+        <span class="kw">case</span> <span class="fu">ID</span>(<span class="st">&quot;CMP&quot;</span>): {                                    <span class="co">// 處理 CMP指令，根據比較結果，設定 N,Z 旗標 </span>
+          <span class="kw">if</span> (R[ra] &gt; R[rb]) {                               <span class="co">// &gt; : SW(N=0, Z=0)</span>
+            R[SW] &amp;= <span class="bn">0x3FFFFFFF</span>;                             <span class="co">// N=0, Z=0</span>
+          } <span class="kw">else</span> <span class="kw">if</span> (R[ra] &lt; R[rb]) {                        <span class="co">// &lt; : SW(N=1, Z=0, ....)                                                </span>
+            R[SW] |= <span class="bn">0x80000000</span>;                             <span class="co">// N=1;</span>
+            R[SW] &amp;= <span class="bn">0xBFFFFFFF</span>;                             <span class="co">// Z=0;</span>
+          } <span class="kw">else</span> {                                           <span class="co">// = : SW(N=0, Z=1)                      </span>
+            R[SW] &amp;= <span class="bn">0x7FFFFFFF</span>;                             <span class="co">// N=0;</span>
+            R[SW] |= <span class="bn">0x40000000</span>;                             <span class="co">// Z=1;</span>
+          }
+          ra = <span class="dv">12</span>;
+          <span class="kw">break</span>;                                                                                        
+        }
+        <span class="kw">case</span> <span class="fu">ID</span>(<span class="st">&quot;MOV&quot;</span>): R[ra] = R[rb]; <span class="kw">break</span>;                <span class="co">// 處理MOV指令</span>
+        <span class="kw">case</span> <span class="fu">ID</span>(<span class="st">&quot;ADD&quot;</span>): R[ra] = R[rb]+R[rc]; <span class="kw">break</span>;          <span class="co">// 處理ADD指令</span>
+        <span class="kw">case</span> <span class="fu">ID</span>(<span class="st">&quot;SUB&quot;</span>): R[ra] = R[rb]-R[rc]; <span class="kw">break</span>;          <span class="co">// 處理SUB指令</span>
+        <span class="kw">case</span> <span class="fu">ID</span>(<span class="st">&quot;MUL&quot;</span>): R[ra] = R[rb]*R[rc]; <span class="kw">break</span>;          <span class="co">// 處理MUL指令</span>
+        <span class="kw">case</span> <span class="fu">ID</span>(<span class="st">&quot;DIV&quot;</span>): R[ra] = R[rb]/R[rc]; <span class="kw">break</span>;          <span class="co">// 處理DIV指令</span>
+        <span class="kw">case</span> <span class="fu">ID</span>(<span class="st">&quot;AND&quot;</span>): R[ra] = R[rb]&amp;R[rc]; <span class="kw">break</span>;          <span class="co">// 處理AND指令</span>
+        <span class="kw">case</span> <span class="fu">ID</span>(<span class="st">&quot;OR&quot;</span>) : R[ra] = R[rb]|R[rc]; <span class="kw">break</span>;          <span class="co">// 處理OR指令</span>
+        <span class="kw">case</span> <span class="fu">ID</span>(<span class="st">&quot;XOR&quot;</span>): R[ra] = R[rb]^R[rc]; <span class="kw">break</span>;          <span class="co">// 處理XOR指令</span>
+        <span class="kw">case</span> <span class="fu">ID</span>(<span class="st">&quot;SHL&quot;</span>): R[ra] = R[rb]&lt;&lt;c5; <span class="kw">break</span>;            <span class="co">// 處理SHL指令</span>
+        <span class="kw">case</span> <span class="fu">ID</span>(<span class="st">&quot;SHR&quot;</span>): R[ra] = R[rb]&gt;&gt;c5; <span class="kw">break</span>;            <span class="co">// 處理SHR指令</span>
+        <span class="kw">case</span> <span class="fu">ID</span>(<span class="st">&quot;ADDI&quot;</span>):R[ra] = R[rb] + c16; <span class="kw">break</span>;          <span class="co">// 處理 ADDI 指令</span>
+        <span class="kw">case</span> <span class="fu">ID</span>(<span class="st">&quot;JEQ&quot;</span>): <span class="kw">if</span> (Z==<span class="dv">1</span>) R[PC] += c24; <span class="kw">break</span>;       <span class="co">// 處理JEQ指令 Z=1</span>
+        <span class="kw">case</span> <span class="fu">ID</span>(<span class="st">&quot;JNE&quot;</span>): <span class="kw">if</span> (Z==<span class="dv">0</span>) R[PC] += c24; <span class="kw">break</span>;       <span class="co">// 處理JNE指令 Z=0 </span>
+        <span class="kw">case</span> <span class="fu">ID</span>(<span class="st">&quot;JLT&quot;</span>): <span class="kw">if</span> (N==<span class="dv">1</span>&amp;&amp;Z==<span class="dv">0</span>) R[PC] += c24; <span class="kw">break</span>; <span class="co">// 處理JLT指令 NZ=10 </span>
+        <span class="kw">case</span> <span class="fu">ID</span>(<span class="st">&quot;JGT&quot;</span>): <span class="kw">if</span> (N==<span class="dv">0</span>&amp;&amp;Z==<span class="dv">0</span>) R[PC] += c24; <span class="kw">break</span>; <span class="co">// 處理JGT指令 NZ=00</span>
+        <span class="kw">case</span> <span class="fu">ID</span>(<span class="st">&quot;JLE&quot;</span>): <span class="kw">if</span> ((N==<span class="dv">1</span>&amp;&amp;Z==<span class="dv">0</span>)||(N==<span class="dv">0</span>&amp;&amp;Z==<span class="dv">1</span>)) R[PC]+=c24; <span class="kw">break</span>; <span class="co">// 處理JLE指令 NZ=10 or 01</span>
+        <span class="kw">case</span> <span class="fu">ID</span>(<span class="st">&quot;JGE&quot;</span>): <span class="kw">if</span> ((N==<span class="dv">0</span>&amp;&amp;Z==<span class="dv">0</span>)||(N==<span class="dv">0</span>&amp;&amp;Z==<span class="dv">1</span>)) R[PC]+=c24; <span class="kw">break</span>; <span class="co">// 處理JGE指令 NZ=00 or 01</span>
+        <span class="kw">case</span> <span class="fu">ID</span>(<span class="st">&quot;JMP&quot;</span>): R[PC]+=c24; <span class="kw">break</span>;                   <span class="co">// 處理JMP指令                             </span>
+        <span class="kw">case</span> <span class="fu">ID</span>(<span class="st">&quot;SWI&quot;</span>):                                      <span class="co">// 處理SWI指令</span>
+            <span class="kw">switch</span> (c24) {
+                <span class="kw">case</span> <span class="dv">3</span>: <span class="ot">c</span>.<span class="fu">printf</span>(<span class="st">&quot;%s&quot;</span>, <span class="ot">m</span>.<span class="fu">getstr</span>(R[<span class="dv">9</span>])); <span class="kw">break</span>;
+                <span class="kw">case</span> <span class="dv">4</span>: <span class="ot">c</span>.<span class="fu">printf</span>(<span class="st">&quot;%d&quot;</span>, R[<span class="dv">9</span>]); <span class="kw">break</span>;
+                <span class="kw">default</span>: 
+                    <span class="kw">var</span> emsg = <span class="ot">c</span>.<span class="fu">format</span>(<span class="st">&quot;SWI cx=%d not found!&quot;</span>, c24); 
+                    <span class="ot">c</span>.<span class="fu">error</span>(emsg, <span class="kw">null</span>); 
+                    <span class="kw">break</span>;
+            }
+            <span class="kw">break</span>;
+        <span class="kw">case</span> <span class="fu">ID</span>(<span class="st">&quot;JSUB&quot;</span>):R[LR] = R[PC]; R[PC]+=c24; <span class="kw">break</span>;    <span class="co">// 處理JSUB指令</span>
+        <span class="kw">case</span> <span class="fu">ID</span>(<span class="st">&quot;RET&quot;</span>): <span class="kw">if</span> (R[LR]&lt;<span class="dv">0</span>) stop=<span class="kw">true</span>; <span class="kw">else</span> R[PC]=LR; <span class="kw">break</span>; <span class="co">// 處理RET指令</span>
+        <span class="kw">case</span> <span class="fu">ID</span>(<span class="st">&quot;PUSH&quot;</span>):R[SP]-=<span class="dv">4</span>; R[ra]=<span class="ot">m</span>.<span class="fu">geti</span>(addr); <span class="ot">m</span>.<span class="fu">seti</span>(R[SP], R[ra]); <span class="kw">break</span>; <span class="co">// 處理PUSH指令</span>
+        <span class="kw">case</span> <span class="fu">ID</span>(<span class="st">&quot;POP&quot;</span>): R[ra] = <span class="ot">m</span>.<span class="fu">geti</span>(R[SP]); R[SP]+=<span class="dv">4</span>; <span class="kw">break</span>;     <span class="co">// 處理POP指令</span>
+        <span class="kw">case</span> <span class="fu">ID</span>(<span class="st">&quot;PUSHB&quot;</span>):R[SP]--; R[ra]=<span class="ot">m</span>.<span class="fu">getb</span>(addr); <span class="ot">m</span>.<span class="fu">setb</span>(R[SP], R[ra]); <span class="kw">break</span>; <span class="co">// 處理PUSH指令</span>
+        <span class="kw">case</span> <span class="fu">ID</span>(<span class="st">&quot;POPB&quot;</span>):R[ra] = <span class="ot">m</span>.<span class="fu">getb</span>(R[SP]); R[SP]++; <span class="kw">break</span>;      <span class="co">// 處理POPB指令</span>
+        <span class="kw">default</span>: <span class="ot">c</span>.<span class="fu">error</span>(<span class="st">&quot;OP not found!&quot;</span>, <span class="kw">null</span>);
+      } <span class="co">// switch</span>
+      <span class="kw">if</span> (isDump) 
+        <span class="ot">c</span>.<span class="fu">log</span>(<span class="st">&quot;PC=%s IR=%s SW=%s R[%s]=0x%s=%d&quot;</span>, <span class="co">// 印出 PC, IR, R[ra]暫存器的值，以利觀察</span>
+              <span class="ot">c</span>.<span class="fu">hex</span>(tpc,<span class="dv">4</span>), <span class="ot">c</span>.<span class="fu">hex</span>(R[IR],<span class="dv">8</span>), <span class="ot">c</span>.<span class="fu">hex</span>(R[SW],<span class="dv">8</span>), <span class="ot">c</span>.<span class="fu">hex</span>(ra,<span class="dv">2</span>), <span class="ot">c</span>.<span class="fu">hex</span>(R[ra], <span class="dv">8</span>), R[ra]);
+    } <span class="co">// while</span>
+}
+
+<span class="fu">run</span>(<span class="ot">process</span>.<span class="fu">argv</span>[<span class="dv">2</span>]);</code></pre>
+<p>從上面的 VM0 虛擬機當中，您可以看到，假如不考慮執行速度的問題，那麼要撰寫一個虛擬機是非常容易的事情。 我們只要去忠實的模擬每一個指令所應該做的動作，就可以完成虛擬機的設計了。</p>
+<p>讓我們稍微解釋一下上述 VM0 虛擬機的程式原理，請讀者將焦點先放在以下的程式片段中。</p>
+<pre class="sourceCode javascript"><code class="sourceCode javascript">    ...
+    <span class="fu">m</span> = <span class="kw">new</span> <span class="fu">Memory</span>(<span class="dv">1</span>);
+    <span class="ot">m</span>.<span class="fu">load</span>(objFile);
+    <span class="kw">var</span> stop = <span class="kw">false</span>;
+    <span class="kw">while</span> (!stop) {                                          <span class="co">// 如果尚未結束</span>
+      ...
+      <span class="fu">R</span>[IR] = <span class="ot">m</span>.<span class="fu">geti</span>(R[PC]);                                 <span class="co">// 指令擷取，IR=[PC..PC+3]</span>
+      R[PC] += <span class="dv">4</span>;                                            <span class="co">// 擷取完將 PC 加 4，指向下一個指令</span>
+      <span class="kw">var</span> op = <span class="ot">c</span>.<span class="fu">bits</span>(R[IR], <span class="dv">24</span>, <span class="dv">31</span>);                        <span class="co">// 取得 op 欄位，IR[24..31]</span>
+      <span class="kw">var</span> ra = <span class="ot">c</span>.<span class="fu">bits</span>(R[IR], <span class="dv">20</span>, <span class="dv">23</span>);                        <span class="co">// 取得 ra 欄位，IR[20..23]</span>
+      <span class="kw">var</span> rb = <span class="ot">c</span>.<span class="fu">bits</span>(R[IR], <span class="dv">16</span>, <span class="dv">19</span>);                        <span class="co">// 取得 rb 欄位，IR[16..19]</span>
+      <span class="kw">var</span> rc = <span class="ot">c</span>.<span class="fu">bits</span>(R[IR], <span class="dv">12</span>, <span class="dv">15</span>);                        <span class="co">// 取得 rc 欄位，IR[12..15]</span>
+      <span class="kw">var</span> c24= <span class="ot">c</span>.<span class="fu">signbits</span>(R[IR], <span class="dv">0</span>,  <span class="dv">23</span>);                    <span class="co">// 取得 24 位元的 cx</span>
+      <span class="kw">var</span> c16= <span class="ot">c</span>.<span class="fu">signbits</span>(R[IR], <span class="dv">0</span>,  <span class="dv">15</span>);                    <span class="co">// 取得 16 位元的 cx</span>
+      <span class="kw">var</span> c5 = <span class="ot">c</span>.<span class="fu">bits</span>(R[IR], <span class="dv">0</span>,   <span class="dv">4</span>);                        <span class="co">// 取得 16 位元的 cx</span>
+      <span class="kw">var</span> addr  = R[rb]+c16;
+      <span class="kw">var</span> raddr = R[rb]+R[rc];                               <span class="co">// 取得位址[Rb+Rc]                          </span>
+      <span class="kw">var</span> N  = <span class="ot">c</span>.<span class="fu">bits</span>(R[SW], <span class="dv">31</span>, <span class="dv">31</span>);
+      <span class="kw">var</span> Z  = <span class="ot">c</span>.<span class="fu">bits</span>(R[SW], <span class="dv">30</span>, <span class="dv">30</span>);
+      <span class="kw">switch</span> (op) {                                          <span class="co">// 根據op執行動作</span>
+        <span class="kw">case</span> <span class="fu">ID</span>(<span class="st">&quot;LD&quot;</span>) : R[ra] = <span class="ot">m</span>.<span class="fu">geti</span>(addr); <span class="kw">break</span>;         <span class="co">// 處理 LD 指令</span>
+        ...
+        <span class="fu">case</span> <span class="fu">ID</span>(<span class="st">&quot;JMP&quot;</span>): R[PC]+=c24; <span class="kw">break</span>;                   <span class="co">// 處理JMP指令                             </span>
+        ...
+        <span class="fu">case</span> <span class="fu">ID</span>(<span class="st">&quot;JSUB&quot;</span>):R[LR] = R[PC]; R[PC]+=c24; <span class="kw">break</span>;    <span class="co">// 處理JSUB指令</span>
+        ...
+        <span class="fu">case</span> <span class="fu">ID</span>(<span class="st">&quot;RET&quot;</span>): <span class="kw">if</span> (R[LR]&lt;<span class="dv">0</span>) stop=<span class="kw">true</span>; <span class="kw">else</span> R[PC]=LR; <span class="kw">break</span>; <span class="co">// 處理RET指令</span>
+        ...        </code></pre>
+<p>首先我們用 m = new Memory(1) 建立一個空的記憶體，然後再用 m.load(objFile) 載入目的檔到記憶體中， 接著就開始進入 while (!stop) 起頭的指令解譯迴圈了，然後接著用 R[IR] = m.geti(R[PC]) 這個指令取出 程式計數暫存器 PC 所指到的記憶體內容 m[PC]，然後放到指令暫存器 IR 當中，接著就可以取出指令暫存器 IR 當中的欄位，像是指令碼 op、暫存器 ra, rb, rc 與常數部分 c24, c16, c5 等欄位。</p>
+<p>然後就能對每個指令所應做的動作進行模擬，例如 LD 指令的功能是將記憶體位址 addr = R[rb]+c16 的內容 取出，放到編號 ra 的暫存器當中，因此只要用 R[ra] = m.geti(addr) 這樣一個函數呼叫，就可以完成模擬的動作了。</p>
+<p>當然、有些模擬動作很簡單，可以用一兩個指令做完，像是 LD, ST, JMP 等都是如此，但有些動作就比較複雜， 像是 JSUB, RET, PUSH, POP 等就要好幾個指令，最複雜的大概是 CMP 與 SWI 這兩個指令了，CMP 由於牽涉到比較動作 且需要設定 N, Z 等旗標，所以程式碼較長如下：</p>
+<pre class="sourceCode javascript"><code class="sourceCode javascript">...
+        <span class="fu">case</span> <span class="fu">ID</span>(<span class="st">&quot;CMP&quot;</span>): {                                    <span class="co">// 處理 CMP指令，根據比較結果，設定 N,Z 旗標 </span>
+          <span class="kw">if</span> (R[ra] &gt; R[rb]) {                               <span class="co">// &gt; : SW(N=0, Z=0)</span>
+            R[SW] &amp;= <span class="bn">0x3FFFFFFF</span>;                             <span class="co">// N=0, Z=0</span>
+          } <span class="kw">else</span> <span class="kw">if</span> (R[ra] &lt; R[rb]) {                        <span class="co">// &lt; : SW(N=1, Z=0, ....)                                                </span>
+            R[SW] |= <span class="bn">0x80000000</span>;                             <span class="co">// N=1;</span>
+            R[SW] &amp;= <span class="bn">0xBFFFFFFF</span>;                             <span class="co">// Z=0;</span>
+          } <span class="kw">else</span> {                                           <span class="co">// = : SW(N=0, Z=1)                      </span>
+            R[SW] &amp;= <span class="bn">0x7FFFFFFF</span>;                             <span class="co">// N=0;</span>
+            R[SW] |= <span class="bn">0x40000000</span>;                             <span class="co">// Z=1;</span>
+          }
+          ra = <span class="dv">12</span>;
+          <span class="kw">break</span>;                                                                                        
+        }
+...</code></pre>
+<p>而 SWI 則是軟體中斷，這個部分也可以不做任何事，不過如果要支援某些中斷函數的話，就可以在這個指令中進行模擬， 目前 SWI 指令處理的原始碼如下：</p>
+<pre class="sourceCode javascript"><code class="sourceCode javascript">        <span class="kw">case</span> <span class="fu">ID</span>(<span class="st">&quot;SWI&quot;</span>):                                      <span class="co">// 處理SWI指令</span>
+            <span class="kw">switch</span> (c24) {
+                <span class="kw">case</span> <span class="dv">3</span>: <span class="ot">c</span>.<span class="fu">printf</span>(<span class="st">&quot;%s&quot;</span>, <span class="ot">m</span>.<span class="fu">getstr</span>(R[<span class="dv">9</span>])); <span class="kw">break</span>;
+                <span class="kw">case</span> <span class="dv">4</span>: <span class="ot">c</span>.<span class="fu">printf</span>(<span class="st">&quot;%d&quot;</span>, R[<span class="dv">9</span>]); <span class="kw">break</span>;
+                <span class="kw">default</span>: 
+                    <span class="kw">var</span> emsg = <span class="ot">c</span>.<span class="fu">format</span>(<span class="st">&quot;SWI cx=%d not found!&quot;</span>, c24); 
+                    <span class="ot">c</span>.<span class="fu">error</span>(emsg, <span class="kw">null</span>); 
+                    <span class="kw">break</span>;
+            }
+            <span class="kw">break</span>;</code></pre>
+<p>目前我們支援兩個中斷處理呼叫，也就是 SWI 3 與 SWI 4。</p>
+<p>其中的 SWI 4 會在螢幕上印出一個儲存在暫存器 R[9] 當中的整數，而 SWI 3 會在螢幕上印出一個記憶體當中的字串， 這個字串的起始位址也是儲存在暫存器 R[9] 當中的。</p>
+<h3 id="結語-5"><a href="#結語-5">結語</a></h3>
+<p>透過 VM0，筆者希望能夠讓讀者清楚的瞭解虛擬機的設計方式，當然、VM0 是一個「跑得很慢」的虛擬機。</p>
+<p>如果要讓虛擬機跑得很快，通常要搭配「立即編譯技術」(Just in Time Compiler, JIT) ，像是 Java 虛擬機 JVM 就是利用 JIT 才能夠讓 Java 程式跑得夠快，而 QEMU 則是機器碼反編譯為 C 語言基本運算後，再度用 gcc 編譯 為機器碼，才能達到高速執行的目的。</p>
+<p>而另外、像是 VMWare、VirtualBox 等，則是在相同的 x86 架構下去執行的，因此重點變成「如何有效的繞過作業系統 的控管，讓機器碼在 CPU 上執行」的問題了。</p>
+<p>瞭解了 VM0 虛擬機之後，我們就要進入開放電腦計畫的另一個部分，CPU 的硬體設計了，這就不再是用 JavaScript 這樣 的高階語言去模擬 CPU 的行為了，而是直接用硬體描述語言 Verilog 來設計一顆 CPU。</p>
+<p>當然、我們設計的 CPU 仍然是 CPU0，不過卻是用 Verilog 設計的 CPU0，可以被燒錄到 FPGA 上去執行，成為真正的硬體。</p>
+<p>在這幾期的程式人雜誌中，我們已經開始介紹了 Verilog 語言，其目的也正是在為設計 Verilog 版的 CPU0 而鋪路， 有興趣的朋友們可以先看看這幾期的 Verilog 語言介紹，這樣就比較能在下期的「程式人雜誌」中，看懂如何用 Verilog 設計 CPU 了，以下是這幾期的 Verilog 相關文章列表。</p>
+<ul>
+<li><a href="https://dl.dropboxusercontent.com/u/101584453/pmag/201306/htm/article4.html">Verilog (1) – 以 Icarus 測試全加器</a></li>
+<li><a href="http://programmermagazine.github.io/201307/htm/article4.html">Verilog (2) – 硬體語言的基礎</a></li>
+<li><a href="https://dl.dropboxusercontent.com/u/101584453/pmag/201306/htm/article4.html">Verilog (3) – 組合邏輯電路</a></li>
+</ul>
+<p>當然、這短短幾篇文章無法完整的介紹 Verilog 的功能，另外再提供筆者先前的網誌給大家參考。</p>
+<ul>
+<li><a href="http://ccckmit.wikidot.com/ve:main">免費電子書：Verilog 電路設計</a>, 陳鍾誠的網站。</li>
+<li><a href="http://ccckmit.wikidot.com/co:main">計算機結構 -- 實務取向</a>, 陳鍾誠的網站。</li>
+</ul>
+<p>這學期，筆者也將開設一門「計算機結構」的課程，筆者最近努力為每一門課都寫一本電子書，這門課也不例外，而且 正是採用以 CPU0 為核心的寫法。雖然還沒完成，但裏面已經包含了上次開課時所做的教學錄影，或許讀者會有興趣， 在此一並提供給讀者參考。</p>
+<ul>
+<li><a href="https://dl.dropboxusercontent.com/u/101584453/oc/htm/book.html">電子書：計算機軟硬體結構</a>, 開放電腦計畫 -- 陳鍾誠。</li>
+</ul>
+<h2 id="r-講題分享-利用-r-和-shiny-製作網頁應用-作者taiwan-r-user-group"><a href="#r-講題分享-利用-r-和-shiny-製作網頁應用-作者taiwan-r-user-group">R 講題分享 – 利用 R 和 Shiny 製作網頁應用 (作者：Taiwan R User Group)</a></h2>
+<h3 id="簡介shiny"><a href="#簡介shiny">簡介Shiny</a></h3>
+<p>大家好，這篇文章要跟大家分享的是Rstudio這間公司在2012年釋出的R 套件: <strong>Shiny</strong>。</p>
+<p>Shiny的設計目標，是希望讓不懂網頁技術的R使用者，可以用最短的時間，將他們的分析結果呈現在網站上和使用者互動。而且，透過Shiny，開發者只需要懂R的語法，就可以寫網頁了！（報告學長，完全不用學HTML，完全不用學javascript）</p>
+<p>推出至今，在R社群內獲得廣大的迴響。在這篇文章中，我們將介紹近期最火紅的R套件: Shiny，並希望讀者能在閱讀後，獲得使用Shiny來建立網頁應用的能力，以更多元的方式呈現分析結果。</p>
+<h3 id="hello-shiny"><a href="#hello-shiny">Hello Shiny</a></h3>
+<p>使用的第一步，當然是先到CRAN下載Shiny來安裝，並且試著執行範例(請一定要在本機上執行，在遠端伺服器上執行會出錯):</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(shiny)
+<span class="kw">runExample</span>(<span class="st">&quot;01_hello&quot;</span>)</code></pre>
+<p>執行後會自動打開預設瀏覽器，並看到如圖一顯示的網頁。讀者可以試著拉拉看左上角的拉條(slide bar)來調整數量，右邊的圖片會隨著更新！這就是Shiny所強調的互動式網頁應用。</p>
+<div class="figure">
+<img src="../img/01_hello.png" alt="圖一" /><p class="caption">圖一</p>
+</div>
+<p>Shiny也提供網頁模版供開發者使用。圖一中使用的模版<code>pageWithSidebar</code>，將網頁切割為以下三個部份： - 標題，也就是 <em>Hello Shiny!</em> - 控制面板(輸入)，左上角的灰色區塊 - 顯示面板(輸出)，右半邊的圖片</p>
+<p><code>runExample(&quot;01_hello&quot;)</code>的效果等同於在目錄下建立以下兩個檔案:</p>
+<p>ui.R:</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(shiny)
+
+<span class="co"># Define UI for application that plots random distributions </span>
+<span class="kw">shinyUI</span>(<span class="kw">pageWithSidebar</span>(
+
+  <span class="co"># Application title</span>
+  <span class="kw">headerPanel</span>(<span class="st">&quot;Hello Shiny!&quot;</span>),
+
+  <span class="co"># Sidebar with a slider input for number of observations</span>
+  <span class="kw">sidebarPanel</span>(
+    <span class="kw">sliderInput</span>(<span class="st">&quot;obs&quot;</span>, 
+                <span class="st">&quot;Number of observations:&quot;</span>, 
+                <span class="dt">min =</span> <span class="dv">1</span>,
+                <span class="dt">max =</span> <span class="dv">1000</span>, 
+                <span class="dt">value =</span> <span class="dv">500</span>)
+  ),
+
+  <span class="co"># Show a plot of the generated distribution</span>
+  <span class="kw">mainPanel</span>(
+    <span class="kw">plotOutput</span>(<span class="st">&quot;distPlot&quot;</span>)
+  )
+))</code></pre>
+<p>server.R:</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(shiny)
+
+<span class="co"># Define server logic required to generate and plot a random distribution</span>
+<span class="kw">shinyServer</span>(function(input, output) {
+    
+    <span class="co"># Expression that generates a plot of the distribution. The expression is</span>
+    <span class="co"># wrapped in a call to renderPlot to indicate that:</span>
+    <span class="co"># </span>
+    <span class="co"># 1) It is &#39;reactive&#39; and therefore should be automatically re-executed</span>
+    <span class="co"># when inputs change 2) Its output type is a plot</span>
+    output$distPlot &lt;-<span class="st"> </span><span class="kw">renderPlot</span>({
+        
+        <span class="co"># generate an rnorm distribution and plot it</span>
+        dist &lt;-<span class="st"> </span><span class="kw">rnorm</span>(input$obs)
+        <span class="kw">hist</span>(dist)
+    })
+})</code></pre>
+<p>接著再執行:</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">runApp</span>()</code></pre>
+<p>以下本文將以「Hello Shiny!」為例介紹Shiny的架構。</p>
+<h3 id="shiny的架構"><a href="#shiny的架構">Shiny的架構</a></h3>
+<p>所有Shiny的網頁應用，都可以切割成兩個部份：</p>
+<ol style="list-style-type: decimal">
+<li>使用者在瀏覽器看到的網頁，這部份的程式碼放在ui.R。實際上網頁的呈現，以及互動式的效果，都是由瀏覽器所執行。</li>
+<li>背景執行的R，這部份的程式碼放在server.R。這裡的R 是由開發者於佈署網頁應用時就啟動的，並靜靜地等待瀏覽器傳送參數。</li>
+</ol>
+<p>瀏覽器和R 之間，則是透過網路來溝通。</p>
+<div class="figure">
+<img src="../img/follow.png" alt="圖二" /><p class="caption">圖二</p>
+</div>
+<p>當使用者打開瀏覽器，連接到Shiny應用程式時，R 會依照ui.R中的程式碼，產生出使用者看到的網頁內容，並在瀏覽器中顯示。</p>
+<p>使用者在控制面板更改參數之後，瀏覽器就會將新的參數傳遞給背景執行的R，也就是server.R 。R 就會依照參數和server.R中的程式碼， 產生對應的物件。這物件可能是圖片、報表，甚至是其他的網頁元件。最後server.R會將物件回傳到瀏覽器，以ui.R定義的方式呈現給使用者。 這就是互動式網頁背後的原理。</p>
+<h4 id="ui.r"><a href="#ui.r">ui.R</a></h4>
+<p>當使用者打開網頁之後，R 會將<code>shinyUI</code>的參數轉換成瀏覽器中的網頁元件。<code>shinyUI</code>的參數都對應到一個網頁元件，而這些物件的參數又分別對應到元件中的元件，形成一種巢狀結構。</p>
+<p>第一個元件: <code>pageWithSidebar</code>提供了預設的模版，裏面包含三個參數:</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">str</span>(pageWithSidebar)</code></pre>
+<pre><code>## function (headerPanel, sidebarPanel, mainPanel)</code></pre>
+<ul>
+<li><code>headerPanel</code>對應到上圖中標題部份的網頁元件，也就是 <em>Hello Shiny!</em></li>
+<li><code>sidebarPanel</code>對應著控制面板(輸入)部份的網頁元件，也就是左上角的灰色區塊</li>
+<li><code>mainPanel</code>對應著顯示面板(輸出)部份的網頁元件，也就是右半邊的圖片</li>
+</ul>
+<p>這裡的<code>headerPanel</code>是比較簡單的，我們只要把要當標題的字串物件傳入，就可以設定網頁的標題了。</p>
+<p><code>sidebarPenl</code>和<code>mainPanel</code>中則可以再放入其他的網頁元件。</p>
+<h5 id="sidebarpanel"><a href="#sidebarpanel"><code>sidebarPanel</code></a></h5>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">str</span>(sidebarPanel)</code></pre>
+<pre><code>## function (...)</code></pre>
+<p><code>sidebarPanel</code>函數接受任意數量的參數，而每一個參數就是顯示在網頁上控制面板的元件。</p>
+<p>Shiny提供了幾乎所有基本的網頁輸入(Input)元件。上圖中使用的<code>sliderInput</code>元件，是供使用者透過拉條(slide bar)來輸入數值參數。</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">str</span>(sliderInput)</code></pre>
+<pre><code>## function (inputId, label, min, max, value, step = NULL, round = FALSE, 
+##     format = &quot;#,##0.#####&quot;, locale = &quot;us&quot;, ticks = TRUE, animate = FALSE)</code></pre>
+<p><code>inputId</code>非常重要，是瀏覽器和server.R溝通的依據。請讀者先記得，上圖範例中的<code>sliderInput</code>元件的<code>inputId</code>叫作<code>&quot;obs&quot;</code>，之後會在server.R中看到對應的<code>input$obs</code>。</p>
+<p>其他的參數，則會依據不同的輸入元件而有不同的意義。請讀者再參閱Shiny的說明文件，在此就不一一解釋。</p>
+<h5 id="mainpanel"><a href="#mainpanel"><code>mainPanel</code></a></h5>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">str</span>(mainPanel)</code></pre>
+<pre><code>## function (...)</code></pre>
+<p><code>mainPanel</code>函數也接受任意數量的參數，而每一個參數就是在網頁上顯示面板的元件。</p>
+<p>Shiny也提供數種不同的輸出元件，從基本的文字輸出，到圖、表、HTML元件和javascript。圖一中的<code>plotOutput</code>就是輸出圖片的元件。</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">str</span>(plotOutput)</code></pre>
+<pre><code>## function (outputId, width = &quot;100%&quot;, height = &quot;400px&quot;)</code></pre>
+<p>這裡的<code>outputId</code>非常重要，也是瀏覽器和server.R溝通的依據。請讀者先記得，上圖範例中的<code>plotOutput</code>元件的<code>outputId</code>叫作<code>&quot;distPlot&quot;</code>。之後會在server.R中看到對應的<code>output$distPlot</code>。</p>
+<h4 id="server.r"><a href="#server.r">server.R</a></h4>
+<p>server.R定義了背景執行的R 如何處理瀏覽器傳遞來的參數，以及如何產生對應的R 物件。為了建立互動式的效果，server.R和一般R 的程式是不同的。</p>
+<p>server.R 是一種依照事件驅動(event driven)的架構來執行的程式。當開發者在伺服器上啟動Shiny時，R會先執行<code>shinyServer</code>之前的程式碼，再進入等待狀態。</p>
+<h5 id="事件驅動event-driven"><a href="#事件驅動event-driven">事件驅動(event driven)</a></h5>
+<p><code>shinyServer</code>中的程式碼，會等使用者打開網頁，並待瀏覽器傳送參數給R 之後，R才會依照<code>reactive</code>或是<code>renderXXX</code>等函數中定義的方式來處理這些參數，並且產生對應的物件。R 會再回傳給瀏覽器，並依照ui.R所定義的方式呈現。R 會再回到等待狀態，直到收到下一組參數。</p>
+<p>收到參數，就是一個「事件」，而所有的動作都是在收到事件後才會發生的。所以程式碼的執行是沒有一定的順序。這就是「事件驅動」架構的原理。</p>
+<h5 id="shinyserver"><a href="#shinyserver"><code>shinyServer</code></a></h5>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">str</span>(shinyServer)</code></pre>
+<pre><code>## function (func)</code></pre>
+<p><code>shinyServer</code>只有一個函數參數: <code>func</code>。它的長相必須是:</p>
+<pre class="sourceCode r"><code class="sourceCode r">function(input, output) { ... }</code></pre>
+<p><code>input</code>代表ui.R送給server.R的物件；<code>output</code>代表server.R送給ui.R的物件。</p>
+<p>Shiny幫開發者處理<code>input</code>和<code>output</code>的傳遞，所以開發者只需要專注於設計ui.R呈現的功能，和server.R處理參數以及產生回應的功能即可。</p>
+<h5 id="訊息的傳遞"><a href="#訊息的傳遞">訊息的傳遞</a></h5>
+<p><code>func</code>的參數<code>input</code>就是將ui.R傳遞回來的參數打包好的R物件，開發者只要透過<code>input$obs</code>就可以讀取使用者於控制面板中，<code>inputId</code>為<code>&quot;obs&quot;</code>的元件內的參數。</p>
+<p><code>func</code>的參數<code>output</code>則是會被送回給ui.R的物件。而<code>output$distPlot</code>這個物件，則會由<code>outputId</code>為<code>&quot;distPlot&quot;</code>的網頁元件來處理。</p>
+<h5 id="生成回傳物件應用的核心"><a href="#生成回傳物件應用的核心">生成回傳物件(應用的核心)</a></h5>
+<p>開發者利用如</p>
+<pre class="sourceCode r"><code class="sourceCode r">output$distPlot &lt;-<span class="st"> </span><span class="kw">renderPlot</span>({...})</code></pre>
+<p>的方式定義產生回傳物件的動作。以Hello Shiny!為例:</p>
+<pre class="sourceCode r"><code class="sourceCode r">output$distPlot &lt;-<span class="st"> </span><span class="kw">renderPlot</span>({
+    dist &lt;-<span class="st"> </span><span class="kw">rnorm</span>(input$obs)
+    <span class="kw">hist</span>(dist)
+})</code></pre>
+<p>當偵測到<code>input$obs</code>改變之後，server.R就會依照<code>input$obs</code>的值重新繪製長條圖，再將圖片透過<code>renderPlot</code>函數，傳遞給瀏覽器。瀏覽器再透過ui.R中的定義，使用<code>outputId</code>為<code>&quot;distPlot&quot;</code>的網頁元件呈現給使用者。在Hello Shiny!的例子中，就是<code>plotOutput(&quot;distPlot&quot;)</code>所對應的網頁元件，也就是使用者在圖一右半邊看到的長條圖。</p>
+<p>繪圖的功能置於<code>renderPlot({...})</code>是重要的，因為這樣才會在事件發生(接收到ui.R的參數)後，重新執行繪圖功能，並更新網頁上的圖。Shiny互動式的功能就是透過這個機制達成的。開發者必須要分清楚哪些程式碼是靜態的，只需要執行一次(例如固定資料的匯入)，哪些程式碼是動態的，必須要放入<code>reactive</code>或<code>renderXXX</code>之間。</p>
+<h3 id="細解hello-shiny"><a href="#細解hello-shiny">細解Hello Shiny</a></h3>
+<p>對於整個Shiny的架構有初步的理解之後，我們再仔細的講解Shiny處理<code>runExample(&quot;01_hello&quot;)</code>的流程。</p>
+<ol style="list-style-type: decimal">
+<li>執行<code>shinyUI</code>之前的程式碼</li>
+<li>將頁面區隔為三大區塊: <code>headerPanel</code>、<code>sidebarPanel</code>和<code>mainPanel</code></li>
+<li>依照各Panel的參數顯示網頁元件，這時候<code>mainPanel</code>中的<code>plotOutput(&quot;distPlot&quot;)</code>還沒有物件可以呈獻。</li>
+<li><code>sidebarPanel</code>中的<code>sliderInput</code>傳送預設參數給server.R</li>
+<li>啟動server.R，執行<code>shinyServer</code>之前的程式碼</li>
+<li><p>執行<code>renderPlot({...})</code>之間的程式碼，也就是:</p>
+<pre class="sourceCode r"><code class="sourceCode r">dist &lt;-<span class="st"> </span><span class="kw">rnorm</span>(input$obs)
+<span class="kw">hist</span>(dist)</code></pre>
+依照<code>sliderInput</code>設定的參數，產生常態分佈的樣本，並且繪製長條圖(histogram)。</li>
+<li>將產生的長條圖放入<code>output$distPlot</code>之中，回傳到瀏覽器</li>
+<li><p>瀏覽器將<code>output$distPlot</code>的物件呈現於<code>plotOutput(&quot;distPlot&quot;)</code>之中</p></li>
+</ol>
+<p>若使用者於瀏覽器更動<code>sliderInput</code>，那整個網頁應用就會從步驟4再跑一次，以實現互動式的效果。</p>
+<h3 id="網頁元件範例"><a href="#網頁元件範例">網頁元件範例</a></h3>
+<p>Shiny 中已經提供了各種基礎網頁元件。還有一個叫 <em>shinyExt</em> 的R 套件提供更多的元件。</p>
+<p>本篇文章限於篇幅，無法一一講解，這部份只能請讀者依照自己的需求再去閱讀Shiny的套件說明。</p>
+<h4 id="輸入元件範例"><a href="#輸入元件範例">輸入元件範例</a></h4>
+<ul>
+<li><img src="../img/input_01.png" /></li>
+<li><img src="../img/input_02.png" /></li>
+<li><img src="../img/input_03.png" title="fig:" /></li>
+</ul>
+<h4 id="輸出元件範例"><a href="#輸出元件範例">輸出元件範例</a></h4>
+<ul>
+<li><img src="../img/output_01.png" /></li>
+<li><img src="../img/output_02.png" /></li>
+<li><img src="../img/output_03.png" /></li>
+<li><img src="../img/output_04.png" title="fig:" /></li>
+</ul>
+<h3 id="shiny網頁應用範例"><a href="#shiny網頁應用範例">Shiny網頁應用範例</a></h3>
+<p>使用者可以到 <a href="http://www.rstudio.com/shiny/showcase/">http://www.rstudio.com/shiny/showcase/</a> 觀看其他開發者所開發的 Shiny 網頁應用。</p>
+<p>如:</p>
+<ul>
+<li><img src="../img/ex-app1.png" /></li>
+<li><img src="../img/ex-app2.png" /></li>
+<li><img src="../img/ex-app3.png" /></li>
+<li><img src="../img/ex-app4.png" /></li>
+<li><img src="../img/ex-app5.png" /></li>
+<li><img src="../img/ex-app6.png" title="fig:" /></li>
+</ul>
+<h3 id="開發建議"><a href="#開發建議">開發建議</a></h3>
+<p>讀者如果想試著開發Shiny應用，我們有以下的tips供讀者參考:</p>
+<ul>
+<li>先從 <a href="http://rstudio.github.io/shiny/tutorial/">http://rstudio.github.io/shiny/tutorial/</a> 中找到符合需求的模版</li>
+<li>把其他套件的載入，或資料源的設定，放置於<code>shinyUI</code>和<code>shinyServer</code>之前，如資料庫連線設定</li>
+<li>先從ui.R開始建立使用者介面</li>
+<li>網頁沒有回應，通常是ui.R有語法錯誤，<code>runApp</code>下方應該有錯誤訊息</li>
+<li>在server.R中插入程式的核心演算法、分析方法。請務必理解server.R的架構，並且將功能正確的分為靜態的部份和動態的部份，才能將程式碼放置在正確的位置。靜態的部份放置於<code>shinyServer</code>之前，動態的部份會放在<code>reactive</code>，或對應的<code>renderXXX</code>裡</li>
+<li>網頁有出現，但是<code>mainPanel</code>出現紅色錯誤訊息，代表server.R有錯誤</li>
+<li>在server.R中插入<code>browser()</code>後，在<code>runApp</code>之後可以在執行相關事件時暫停在<code>browser</code>，開發者可以很方便的進行除錯</li>
+</ul>
+<p>讀者如果對於基本的Shiny功能不滿意，可以在學習HTML/CSS/javascript後擴充Shiny網頁應用的功能。</p>
+<h3 id="佈署網頁應用"><a href="#佈署網頁應用">佈署網頁應用</a></h3>
+<p>通常開發者撰寫出來的Shiny網頁應用可以依照以下方法來讓其他使用者使用:</p>
+<h4 id="直接傳遞相關檔案"><a href="#直接傳遞相關檔案">直接傳遞相關檔案</a></h4>
+<p>開發者可以將撰寫好程式e-mail給使用者。</p>
+<p>當使用者拿到相關檔案之後，仍需要有安裝R和Shiny，利用<code>runApp</code>來使用。</p>
+<h4 id="利用github"><a href="#利用github">利用Github</a></h4>
+<p>開發者可以將撰寫好的ui.R和server.R放到github或gist。使用者仍需安裝R和Shiny，再利用<code>runGist</code>或<code>runGithub</code>來使用。</p>
+<h4 id="rstudio的shiny伺服器"><a href="#rstudio的shiny伺服器">Rstudio的Shiny伺服器</a></h4>
+<p>開發者可以到 <a href="https://rstudio.wufoo.com/forms/shiny-server-beta-program/">https://rstudio.wufoo.com/forms/shiny-server-beta-program/</a> 註冊，之後將撰寫好的ui.R和server.R上傳到Rstudio伺服器上。</p>
+<p>使用者不需要安裝R，只需要打開瀏覽器後，連上相關網址就可以使用。</p>
+<h4 id="自行架設shiny伺服器"><a href="#自行架設shiny伺服器">自行架設Shiny伺服器</a></h4>
+<p>請依照 <a href="https://github.com/rstudio/shiny-server">https://github.com/rstudio/shiny-server</a> 的說明建制Shiny伺服器。目前僅提供Linux版本。</p>
+<p>建制完成後，使用者不需要安裝R，只需要打開瀏覽器，連上相關網址就可以使用。</p>
+<h3 id="參考資料"><a href="#參考資料">參考資料</a></h3>
+<ul>
+<li>Rstudio-Shiny 官方網站 <a href="http://www.rstudio.com/shiny/">http://www.rstudio.com/shiny/</a></li>
+</ul>
+<h3 id="作者"><a href="#作者">作者</a></h3>
+<ol style="list-style-type: decimal">
+<li>T.C. Hsieh (<script type="text/javascript">
+<!--
+h='&#x67;&#x6d;&#x61;&#x69;&#108;&#46;&#x63;&#x6f;&#x6d;';a='&#64;';n='&#x65;&#x75;&#108;&#x65;&#114;&#x39;&#54;';e=n+a+h;
+document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'">'+e+'<\/'+'a'+'>');
+// -->
+</script><noscript>&#x65;&#x75;&#108;&#x65;&#114;&#x39;&#54;&#32;&#x61;&#116;&#32;&#x67;&#x6d;&#x61;&#x69;&#108;&#32;&#100;&#x6f;&#116;&#32;&#x63;&#x6f;&#x6d;</noscript>)</li>
+</ol>
+<ul>
+<li>清華統計所博士(2009-2013)，致力於發展沒人懂的統計方法與開發沒人用的統計軟體</li>
+<li>R 相關著作：
+<ul>
+<li>R套件，<a href="http://cran.r-project.org/web/packages/CARE1/index.html">CARE1</a>主要作者</li>
+<li>Shiny應用，<a href="http://glimmer.rstudio.com/tchsieh/inext/">iNEXT-Online</a></li>
+</ul></li>
+<li>研究領域：Statistics, ecology and genetics</li>
+</ul>
+<ol start="2" style="list-style-type: decimal">
+<li>Wush Wu (<script type="text/javascript">
+<!--
+h='&#x67;&#x6d;&#x61;&#x69;&#108;&#46;&#x63;&#x6f;&#x6d;';a='&#64;';n='&#x77;&#x75;&#x73;&#104;&#x39;&#x37;&#56;';e=n+a+h;
+document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'">'+e+'<\/'+'a'+'>');
+// -->
+</script><noscript>&#x77;&#x75;&#x73;&#104;&#x39;&#x37;&#56;&#32;&#x61;&#116;&#32;&#x67;&#x6d;&#x61;&#x69;&#108;&#32;&#100;&#x6f;&#116;&#32;&#x63;&#x6f;&#x6d;</noscript>)</li>
+</ol>
+<ul>
+<li><a href="https://www.facebook.com/Tw.R.User">Taiwan R User Group</a> Organizer</li>
+<li>R 相關著作：
+<ul>
+<li><a href="http://cran.r-project.org/web/packages/RMessenger/index.html">RMessenger</a>的作者</li>
+<li><a href="https://bitbucket.org/wush_iis/rsus">RSUS</a>，這是<a href="http://www.cs.sfu.ca/~jpei/publications/MISQ_ICDE12.pdf">On Shortest Unique Substring Query</a>的實作</li>
+</ul></li>
+<li>研究領域：Large Scale Learning，<a href="http://www.cs.sfu.ca/~jpei/publications/MISQ_ICDE12.pdf">Text Mining</a>和<a href="http://www.cs.sfu.ca/~jpei/publications/Shortest%20Unique%20Substring%20Queries%20ICDE13.pdf">Uncertain Time Series</a></li>
+</ul>
+<h1 id="雜誌訊息"><a href="#雜誌訊息">雜誌訊息</a></h1>
+<h2 id="讀者訂閱"><a href="#讀者訂閱">讀者訂閱</a></h2>
+<p>程式人雜誌是一個結合「開放原始碼與公益捐款活動」的雜誌，簡稱「開放公益雜誌」。開放公益雜誌本著「讀書做善事、寫書做公益」的精神，我們非常歡迎程式人認養專欄、或者捐出您的網誌，如果您願意成為本雜誌的專欄作家，請加入 <a href="https://www.facebook.com/groups/programmerMagazine/">程式人雜誌社團</a> 一同共襄盛舉。</p>
+<p>我們透過發行這本雜誌，希望讓大家可以讀到想讀的書，學到想學的技術，同時也讓寫作的朋友的作品能產生良好價值 – 那就是讓讀者根據雜誌的價值捐款給慈善團體。 讀雜誌做公益也不需要有壓力，您不需要每讀一本就急著去捐款，您可以讀了十本再捐，或者使用固定的月捐款方式，當成是雜誌訂閱費，或者是季捐款、一年捐一次等都 OK ! 甚至是單純當個讀者我們也都很歡迎！ 本雜誌每期參考價：NT 50 元，如果您喜歡本雜誌，請將書款捐贈公益團體。例如可捐贈給「羅慧夫顱顏基金會 彰化銀行(009) 帳號：5234-01-41778-800」。(若匯款要加註可用「程式人雜誌」五個字)</p>
+<p>想訂閱本雜誌的讀者，請按 <a href="https://docs.google.com/spreadsheet/viewform?fromEmail=true&amp;formkey=dG1TcER6Q3h1ZkpacFpDeEVFTDBLeVE6MQ">雜誌訂閱</a> 連結並填寫表單，我們會在每一期雜誌出刊時寄送通知與下載網址到您的信箱。</p>
+<h2 id="投稿須知"><a href="#投稿須知">投稿須知</a></h2>
+<p><em>給專欄寫作者：</em> 做公益不需要有壓力。如果您願意撰寫專欄，您可以輕鬆的寫，如果當月的稿件出不來，我們會安排其他稿件上場。</p>
+<p><em>給網誌捐贈者：</em> 如果您沒時間寫專欄或投稿，沒關係，只要將您的網誌以 [創作共用的「姓名標示、非商業性、相同方式分享」授權] 並通知我們，我們會自動從中選取需要的文章進行編輯，放入適當的雜誌當中出刊。</p>
+<p><em>給文章投稿者：</em> 程式人雜誌非常歡迎您加入作者的行列，如果您想撰寫任何文章或投稿，請用 markdown 或 LibreOffice 編輯好您的稿件，並於每個月 25 日前投稿到<a href="https://www.facebook.com/groups/programmerMagazine/">程式人雜誌社團</a> 的檔案區，我們會盡可能將稿件編入隔月1號出版程式人雜誌當中，也歡迎您到社團中與我們一同討論。</p>
+<p>如果您要投稿給程式人雜誌，我們最希望的格式是採用 markdown 的格式撰寫，然後將所有檔按壓縮為 zip 上傳到社團檔案區給我們， 如您想學習 markdown 的撰寫出版方式，可以參考 [程式人雜誌的出版方法] 一文。</p>
+<p>如果您無法採用 markdown 的方式撰寫，也可以直接給我們您的稿件，像是 MS. Word 的 doc 檔或 LibreOffice 的 odt 檔都可以，我們 會將這些稿件改寫為 markdown 之後編入雜誌當中。</p>
+<h2 id="參與編輯"><a href="#參與編輯">參與編輯</a></h2>
+<p>您也可以擔任程式人雜誌的編輯，甚至創造一個全新的公益雜誌，我們誠摯的邀請您加入「開放公益出版」的行列，如果您想擔任編輯或創造新雜誌，也歡迎到 <a href="https://www.facebook.com/groups/programmerMagazine/">程式人雜誌社團</a> 來與我們討論相關事宜。</p>
+<h2 id="公益資訊"><a href="#公益資訊">公益資訊</a></h2>
+<table>
+<col width="22%" />
+<col width="20%" />
+<col width="28%" />
+<col width="28%" />
+<thead>
+<tr class="header">
+<th align="left">公益團體</th>
+<th align="left">聯絡資訊</th>
+<th align="left">服務對象</th>
+<th align="left">捐款帳號</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">財團法人羅慧夫顱顏基金會</td>
+<td align="left"><a href="http://www.nncf.org/">http://www.nncf.org/</a> <BR/> <script type="text/javascript">
+<!--
+h='&#110;&#110;&#x63;&#102;&#46;&#x6f;&#114;&#x67;';a='&#64;';n='&#108;&#x79;&#110;&#110;';e=n+a+h;
+document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'">'+e+'<\/'+'a'+'>');
+// -->
+</script><noscript>&#108;&#x79;&#110;&#110;&#32;&#x61;&#116;&#32;&#110;&#110;&#x63;&#102;&#32;&#100;&#x6f;&#116;&#32;&#x6f;&#114;&#x67;</noscript> <BR/> 02-27190408分機 232</td>
+<td align="left">顱顏患者 (如唇顎裂、小耳症或其他罕見顱顏缺陷）</td>
+<td align="left">銀行：009彰化銀行民生分行<BR/> 帳號：5234-01-41778-800</td>
+</tr>
+<tr class="even">
+<td align="left">社團法人台灣省兒童少年成長協會</td>
+<td align="left"><a href="http://www.cyga.org/">http://www.cyga.org/</a> <BR/> <script type="text/javascript">
+<!--
+h='&#x67;&#x6d;&#x61;&#x69;&#108;&#46;&#x63;&#x6f;&#x6d;';a='&#64;';n='&#x63;&#x79;&#x67;&#x61;&#x39;&#x39;';e=n+a+h;
+document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'">'+e+'<\/'+'a'+'>');
+// -->
+</script><noscript>&#x63;&#x79;&#x67;&#x61;&#x39;&#x39;&#32;&#x61;&#116;&#32;&#x67;&#x6d;&#x61;&#x69;&#108;&#32;&#100;&#x6f;&#116;&#32;&#x63;&#x6f;&#x6d;</noscript> <BR/> 04-23058005</td>
+<td align="left">單親、隔代教養.弱勢及一般家庭之兒童青少年</td>
+<td align="left">銀行：新光銀行 <BR/> 戶名：台灣省兒童少年成長協會 <BR/> 帳號：103-0912-10-000212-0</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="footer">
+<a href="https://www.facebook.com/groups/programmerMagazine/">程式人雜誌</a> ，採用 <a href="http://creativecommons.org/licenses/by-sa/3.0/tw/ ">創作共用：姓名標示、相同方式分享</a> 授權，歡迎加入 <a href="https://www.facebook.com/groups/programmerMagazine/">雜誌社團</a>
+</div>
+</body>
+</html>

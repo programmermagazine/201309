@@ -1,0 +1,179 @@
+## JavaScript (9) – Google 的語音合成 API 之使用 (作者：陳鍾誠)
+
+### 簡介
+
+我還記得在 1996 年時，我到中研院許老師的實驗室當助理，做了兩年自然語言處理的相關程式，
+學習到其中主要較成熟的技術像是「注音轉國字」(對應產品為自然輸入法)，然後這兩年整個實驗室
+還試圖去研究一些較不成熟，但卻具有挑戰性的技術，特別是「自然語言理解」領域的一些嘗試，例如
+有位同事就發展出了一個有趣的程式，當您輸入小學課本中的數學問題時，該程式可以輸出該問題的解答。
+
+自然語言技術一直是筆者相當關心的領域，雖然筆者的關注比較偏向「文字」部分，在去年於金門大學
+教授「計算語言學」這門課時，我就將這些相關的技術寫成了一本書，放在筆者的 github 當中，您可以
+從以下的網址找到這本書。
+
+* 陳鍾誠的教科書 -- <http://ccckmit.github.io/home/>
+* 語言處理技術 -- <http://ccckmit.github.io/BookLanguageProcessing/>
+
+但是，自然語言處理可以說是一門既深奧又困難的領域，雖然研究了很久，但筆者一直還沒有去觸碰
+「語音合成」與「語音辨識」這兩個領域的主題，對這種「語音領域」的東西可以說是既期待又怕受傷害啊！
+
+不過、現在由於「微軟」與 Google 等軟體大廠，都已經投入了非常多的資源在研究這些先進的領域，
+並且製作出了足以商品化的功能，因此我們只要善用他們所釋出的 API，就可以輕鬆的應用這些功能了。
+
+在本文中，我們將介紹如何使用 HTML+JavaScript 技術，去使用 Google 所提供的「語音辨識與合成」的服務。
+
+### 語音合成的 Google 服務
+
+Google 的語音合成服務非常容易使用，因為您只要利用 Google 翻譯中的 TTS (Text to Speech) 功能，將
+文字放到以下網址中的 {query} 欄位中，然後設定正確的語言欄 {lang}，就可以取得這句話的語音檔了。
+
+> http://translate.google.com/translate_tts?ie=utf-8&tl={lang}&q={query}
+
+舉例而言，假如您想讓瀏覽器說出 Text to speech 這句英文，只要將 {lang} 設為 en，然後將 {query} 設為 Text to speech 
+即可，您可以點選下列網址聽到 Google 所合成的語音。
+
+* [http://translate.google.com/translate_tts?ie=utf-8&tl=en&q=Text to speech](http://translate.google.com/translate_tts?ie=utf-8&tl=en&q=Text to speech)
+
+如果您想讓瀏覽器說中文，那麼 {lang} 欄位就必須要設定為 zh，例如您可以點選下列網址廳到「語音合成」這句話。
+
+* <http://translate.google.com/translate_tts?ie=utf-8&tl=zh&q=語音合成>
+
+一但瞭解了 Google TTS 功能的使用方式之後，您就可以很容易的在網頁中嵌入這樣的「功能元件」了。
+
+在 HTML 5.0 當中有個特殊的標記， 可以在網頁中嵌入語音，那就是 `<audio src="...">` 標記，您只要在 src 欄位中
+填入正確的語音檔網址，該標記就可以用來控制語音的播放，如果您在 `<audio>` 當中加上 controls 這個屬性，那麼
+畫面上就會出現一個像錄音機的控制面版，讓你自行操控語音的「播放與暫停」等功能。
+
+舉例而言，以下是一個很簡單的程式，其中有兩個「語音控制項」，一個按下後可以播放「你好、這是谷歌的語音合成測試！」
+這句中文，另一個按下後可以播放「Hi! This is the text to speech function of Google.」這句英文。
+
+![圖、簡單的語音合成範例](../img/textToSpeech1.png)
+
+您可以透過這樣的控制項，控制「播放、暫停、調整音量」等等功能，上述畫面的 HTML 原始程式碼如下：
+
+檔案：textToSpeech1.html
+網址：<https://dl.dropboxusercontent.com/u/101584453/pmag/201309/code/textToSpeech1.html>
+
+```HTML
+<html>
+<head><meta charset="utf-8" /></head>
+<body>
+  <audio controls src="http://translate.google.com/translate_tts?ie=utf-8&tl=zh&q=你好、這是谷歌的語音合成測試！">
+  </audio> 
+  中文 (zh): 你好、這是谷歌的語音合成測試！<BR/>
+  <audio controls src="http://translate.google.com/translate_tts?ie=utf-8&tl=en&q=Hi! This is the text to speech function of Google.">
+  </audio> 
+  英文 (en): Hi! This is the text to speech function of Google. <BR/>
+</body>
+</html>
+```
+
+說明：必須注意的一點是，目前並非每種瀏覽器都有支援 `<audio>` 標記，而且下節當中所使用的 JavaScript 程式也不見得都能正常運作，
+像是在 IE 9.0 當中就似乎不支援 audio 標記，但是在 Firefox 22.0 與 Google Chrome 28.0 當中就支援了 audio 標記，而且
+以下程式均能正常運作。
+
+### 使用 JavaScript 控制 audio 元件
+
+有時，我們不希望出現預設的語音控制項，但是卻又希望在某些按鈕被按下時能夠合成語音，這時候我們就需要撰寫一些 JavaScript 程式來控制
+audio 元件的播放行為，這時我們可以呼叫 audio 元件的 play() 函數，以進行播放動作。舉例而言，以下程式就改用了按鈕控制
+
+![圖、按鈕按下後會播放合成的語音](../img/textToSpeech2.png)
+
+檔案：textToSpeech2.html
+網址：<https://dl.dropboxusercontent.com/u/101584453/pmag/201309/code/textToSpeech2.html>
+
+```html
+<html>
+<head><meta charset="utf-8" /></head>
+<body>
+  <audio id="audio1" src="http://translate.google.com/translate_tts?ie=utf-8&tl=zh&q=你好、這是谷歌的語音合成測試！">
+  </audio> 
+  中文 (zh): 你好、這是谷歌的語音合成測試！
+  <button onclick="document.getElementById('audio1').play();">播放</button>
+</body>
+</html>
+```
+
+當然、上述的程式用途不大，因為播放的語句是固定的，如果我們想讓網頁能播放使用者輸入的內容，就必須要動態的在 audio 元件的
+src 欄位當中，塞入使用者所輸入的文字，以下程式示範了這樣的功能。
+
+檔案：textToSpeech3.html
+網址：<https://dl.dropboxusercontent.com/u/101584453/pmag/201309/code/textToSpeech3.html>
+
+```html
+<html>
+<head><meta charset="utf-8" /></head>
+<body>
+<script>
+  function playAudio(id, lang, text) {
+    var audio = document.getElementById(id); // 取得 audio 控制項
+    audio.src = "http://translate.google.com/translate_tts?ie=utf-8&tl="+lang+"&q="+text; // 設定語音為 google TTS。
+    audio.addEventListener('ended', function(){ this.currentTime = 0; }, false); // 當播放完畢，強制回到開頭。
+    audio.play(); // 播放語音。
+  }
+</script>
+  <audio id="audio1"></audio> 
+  <textarea id="text" rows=10 cols=60>
+  你好、這是谷歌的語音合成測試！
+  我們呼叫谷歌翻譯的 TTS API 去合成語音。
+  </textarea><BR/>
+  <button onclick="playAudio('audio1', 'zh', document.getElementById('text').value);">播放</button>
+</body>
+</html>
+```
+
+在上面的程式中，我們在 button 「播放」按鈕按下時，會呼叫下列指令去播放 text 這個 textarea 中的文字。
+
+```javascript
+playAudio('audio1', 'zh', document.getElementById('text').value);
+```
+
+而在 playAudio() 函數中，我們用下列指令設定 audio 控制項的語音網址為 Google TTS 的網址，然後播放，如下程式碼所示：
+
+```javascript
+    var audio = document.getElementById(id); // 取得 audio 控制項
+    audio.src = "http://translate.google.com/translate_tts?ie=utf-8&tl="+lang+"&q="+text; // 設定語音為 google TTS。
+    audio.play(); // 播放語音。
+```
+
+原本其實只要上述三行就夠了，但是由於在 Chrome 當中，audio 控制項在呼叫完 play() 之後，似乎並不會自動回到開頭，
+導致第二次的無法播放聲音 (因為已經在最後了)，因此才需要加入下列這行，強制 play() 函數在播放完成之後回到開頭，
+以便在下一次播放時能聽得到聲音。
+
+```javascript
+    audio.addEventListener('ended', function(){ this.currentTime = 0; }, false); // 當播放完畢，強制回到開頭。
+```
+
+### 結語
+
+現在、我們已經講解完整個 Google 語音合成 API 的使用方式了，筆者覺得 Google 的這種設計方式其實很棒，讓我們可以
+很容易的在任何網頁中加入 Text to Speech 的功能，而且不需要安裝任何的軟體。
+
+不過、筆者發現目前的Google 語音合成服務還有幾個小問題，例如在中文的模式下，如果夾雜英文的時候，Google TTS 會用
+逐字的方式念初英文。舉例而言，假如我們想讓 Google TTS 念初下列文章。
+
+> Hello, 你好！
+
+則 Google TTS 所念出的語句，將會變成下列情況：
+
+> H. e. l. l. o, 你好！
+
+這聽起來很怪！但可惜的是，筆者還不知道有沒有甚麼方法可以讓 Google TTS 平順的念出中文中所夾雜的英文，如果有人知道
+也請告訴我！
+
+不過如果將 {lang} 欄位設定為 en (英文模式)，那麼 Google TTS 就可以平順的念出英文，而且品質還不錯。所以目前如果要
+做中英夾雜的發音，可能要用 JavaScript 自行將中英文切割，然後利用類似下列方法，自行切換 {lang} 欄位，以便能順利的念出
+中英夾雜的句子，只是這樣真的很不方便就是了。
+
+```javascript
+audio.addEventListener('ended', function() { .....} );
+```
+
+在下期當中，我們將會繼續探討有關 Google 語音服務的主題，不過不再是「語音合成」 (Text to Speech) 了，而是「語音辨識」
+(Speech to Text)。
+
+這是一個在技術上更困難的主題，不過幸運的是，Google 已經幫我們完成了這些程式，我們只要懂得如何用 JavaScript 呼叫就行了。
+
+### 參考文獻
+* [Google Text-To-Speech (TTS)](http://weston.ruter.net/2009/12/12/google-tts/)
+* [The Unofficial Google Text-To-Speech API](http://techcrunch.com/2009/12/14/the-unofficial-google-text-to-speech-api/)
