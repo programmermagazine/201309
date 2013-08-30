@@ -423,13 +423,31 @@ run(process.argv[2]);
 透過 VM0，筆者希望能夠讓讀者清楚的瞭解虛擬機的設計方式，當然、VM0 是一個「跑得很慢」的虛擬機。
 
 如果要讓虛擬機跑得很快，通常要搭配「立即編譯技術」(Just in Time Compiler, JIT) ，像是 Java 虛擬機 JVM 
-就是利用 JIT 才能夠讓 Java 程式跑得夠快，而 QEMU 則是機器碼反編譯為 C 語言基本運算後，再度用 gcc 編譯
-為機器碼，才能達到高速執行的目的。
+就是利用 JIT 才能夠讓 Java 程式跑得夠快。
 
-而另外、像是 VMWare、VirtualBox 等，則是在相同的 x86 架構下去執行的，因此重點變成「如何有效的繞過作業系統
+另外、像是 VMWare、VirtualBox 等，則是在相同的 x86 架構下去執行的，因此重點變成「如何有效的繞過作業系統
 的控管，讓機器碼在 CPU 上執行」的問題了。
 
-瞭解了 VM0 虛擬機之後，我們就要進入開放電腦計畫的另一個部分，CPU 的硬體設計了，這就不再是用 JavaScript 這樣
+在開放原始碼的領域，QEMU 是一個非常重要的虛擬機，其做法可以參考下列 QEMU 原作者 bellard 的論文：
+
+* <https://www.usenix.org/legacy/event/usenix05/tech/freenix/full_papers/bellard/bellard.pdf>
+
+摘要如下：
+
+> The ﬁrst step is to split each target CPU instruction into fewer simpler instructions called micro operations. Each micro operation is implemented by a small piece of C
+code. This small C source code is compiled by GCC to an object ﬁle. The micro operations are chosen so that their number is much smaller (typically a few hundreds) than all the combinations of instructions and operands of the target CPU. The translation from target CPU instructions to micro operations is done entirely with hand coded code. The source code is optimized for readability and compactness because the speed of this stage is less critical than in an interpreter.
+> 
+> A compile time tool called dyngen uses the object ﬁle containing the micro operations as input to generate a dynamic code generator. This dynamic code generator is invoked at runtime to generate a complete host function which concatenates several micro operations.
+
+筆者先前粗略的看了一下，原本以為「QEMU 則是機器法反編譯為 C 語言基本運算後，再度用 gcc 編譯 為機器碼，才能達到高速執行的目的」，但是仔細看又不是這樣，想想還是不要自己亂解釋好了，不過有高手 J 兄來信說明如下，原文附上：
+
+> QEMU 採取的技術為 portable JIT，本質上是一種 template-based compilation，事先透過 TCG 做 code generation，使得 C-like template 得以在執行時期可對應到不同平台的 machine code，而執行時期沒有 gcc 的介入，我想這點該澄清。
+
+像 bellard 這種高手寫的虛擬機，果然是又快又好啊！
+
+VM0 與 QEMU 相比，速度上致少慢了幾十倍，不過程式碼絕對是簡單很多就是了。
+
+在瞭解了 VM0 虛擬機之後，我們就要進入開放電腦計畫的另一個部分，CPU 的硬體設計了，這就不再是用 JavaScript 這樣
 的高階語言去模擬 CPU 的行為了，而是直接用硬體描述語言 Verilog 來設計一顆 CPU。
 
 當然、我們設計的 CPU 仍然是 CPU0，不過卻是用 Verilog 設計的 CPU0，可以被燒錄到 FPGA 上去執行，成為真正的硬體。
