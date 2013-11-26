@@ -29,7 +29,7 @@
     * [R 統計軟體(6) – 迴歸分析 (作者：陳鍾誠)](article3.html)
     * [Verilog (3) – 組合邏輯電路 (作者：陳鍾誠)](article4.html)
     * [開放電腦計畫 (3) – VM0 虛擬機：使用 JavaScript+Node.js 實作 (作者：陳鍾誠)](article5.html)
-    * [R 講題分享 – 利用 R 和 Shiny 製作網頁應用 (作者：Taiwan R User Group)](article5.html)
+    * [R 講題分享 – 利用 R 和 Shiny 製作網頁應用 (作者：Taiwan R User Group)](article6.html)
 * [雜誌訊息](info.html)
 
 ### 雜誌取得
